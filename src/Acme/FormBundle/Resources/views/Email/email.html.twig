@@ -1,0 +1,243 @@
+{% set form_action = templateObj.action|trans  %}
+{% set form_type = templateObj.type|humanize|trans %}
+{% set form_area = templateObj.area|humanize|trans %}
+{% set form_localization = templateObj.localization|humanize|trans %}
+
+{% set form_buildingType = templateObj.buildingType|humanize|trans %}
+{% set form_roomsCount = templateObj.roomsCount|humanize|trans %}
+{% set form_priceMax = templateObj.priceMax|humanize|trans %}
+{% set form_storey = templateObj.storey|humanize|trans %}
+{% set form_priceperMeterMax = templateObj.priceperMeterMax|humanize|trans %}
+{% set form_propertyType = templateObj.propertyType|humanize|trans %}
+{% set form_priceperMeterMax = templateObj.priceperMeterMax|humanize|trans %}
+{% set form_loadingRamp = templateObj.loadingRamp|humanize|trans %}
+{% set form_maneuverField = templateObj.maneuverField|humanize|trans %}
+{% set form_blockType = templateObj.blockType|humanize|trans %}
+{% set form_standard = templateObj.standard|humanize|trans %}
+
+{% set form_email = templateObj.email|humanize|trans %}
+{% set form_phone = templateObj.phone|humanize|trans %}
+
+{% set form_media = '' %}
+{% set mediaArr = templateObj.media|split(',') %}
+{% if mediaArr %}
+	{% for singleMedia in mediaArr %}
+		{% set form_media = form_media ~ singleMedia|humanize|trans ~ ', ' %}
+	{% endfor %}
+{% endif %}
+
+{% set form_title_action = 'Formularz' %}
+{% if templateObj.action == 'buy-property' %}
+	{% set form_title_action = form_title_action ~ ' kupna ' %}
+{% elseif templateObj.action == 'rent-property' %}
+	{% set form_title_action = form_title_action ~ ' wynajmu ' %}
+{% else %}
+{% endif %}
+{% if templateObj.type == 'hause' %}
+	{% set form_title_action = form_title_action ~ 'domu ' %}
+{% elseif templateObj.type == 'flat' %}
+	{% set form_title_action = form_title_action ~ 'mieszkania ' %}
+{% elseif templateObj.type == 'local' %}
+	{% set form_title_action = form_title_action ~ 'lokalu użytkowego/biura ' %}
+{% elseif templateObj.type == 'parcel' %}
+	{% set form_title_action = form_title_action ~ 'nieruchomośći gruntowej ' %}
+{% elseif templateObj.type == 'storage' %}
+	{% set form_title_action = form_title_action ~ 'hali/magazynu ' %}
+{% else %}
+{% endif %}
+<table border="0">
+	<tr>
+		<td colspan="2">
+			<h4 class="single-form-title">{{ form_title_action }}</h4>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Chciałbym:</strong>
+		</td>
+		<td>
+			 {{ form_action }}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Rodzaj nieruchomości:</strong> 
+		</td>
+		<td>
+			{{ form_type }}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Powierzchnia:</strong> 
+		</td>
+		<td>
+			{{ form_area }}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Lokalizacja:</strong> 
+		</td>
+		<td>
+			{{ form_localization }}
+		</td>
+	</tr>
+	{% if templateObj.type == 'hause' %}
+	<tr>
+		<td>
+			<strong>Rodzaj zabudowy:</strong>
+		</td>
+		<td>
+			{{ form_buildingType }}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Ilość pomieszczeń:</strong> 
+		</td>
+		<td>
+			{{ form_roomsCount }} 
+		</td>
+	</tr>		
+	<tr>
+		<td>
+			<strong>Cena maks.:</strong>
+		</td>
+		<td>
+			{{ form_priceMax }}
+		</td>
+	</tr>	
+	{% elseif templateObj.type == 'flat' %}
+	<tr>
+		<td>
+			<strong>Ilość pomieszczeń:</strong> 
+		</td>
+		<td>
+			{{ form_roomsCount }}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Piętro:</strong> 
+		</td>
+		<td>
+			{{ form_storey }}
+		</td>
+	</tr>		
+	<tr>
+		<td>
+			<strong>Cena maks.:</strong> 
+		</td>
+		<td>
+			{{ form_priceMax }}
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<strong>Rodzaj bloku:</strong> 
+		</td>
+		<td>
+			{{ form_blockType }}
+		</td>
+	</tr>			
+	<tr>
+		<td>
+			<strong>Standard:</strong> 
+		</td>
+		<td>
+			{{ form_standard }}
+		</td>
+	</tr>	
+	{% elseif templateObj.type == 'local' %}
+	<tr>
+		<td>
+			<strong>Ilość pomieszczeń:</strong> 
+		</td>
+		<td>
+			{{ form_roomsCount }}
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<strong>Piętro:</strong> 
+		</td>
+		<td>
+			{{ form_storey }}
+		</td>
+	</tr>			
+	<tr>
+		<td>
+			<strong>Cena za metr maks.:</strong> 
+		</td>
+		<td>
+			{{ form_priceperMeterMax }}
+		</td>
+	</tr>		
+	{% elseif templateObj.type == 'parcel' %}
+	<tr>
+		<td>
+			<strong>Rodzaj nieruchomości:</strong> 
+		</td>
+		<td>
+			{{ form_propertyType }}
+		</td>
+	</tr>			
+	<tr>
+		<td>
+			<strong>Media:</strong> 
+		</td>
+		<td>
+			{{ form_media }}
+		</td>
+	</tr>	
+	{% elseif templateObj.type == 'storage' %}
+	<tr>
+		<td>
+			<strong>Cena za metr maks.:</strong> 
+		</td>
+		<td>
+			{{ form_priceperMeterMax }} 
+		</td>
+	</tr>			
+	<tr>
+		<td>
+			<strong>Rampa załadunkowa:</strong> 
+		</td>
+		<td>
+			{{ form_loadingRamp }}
+		</td>
+	</tr>		
+	<tr>
+		<td>
+			<strong>Plac manewrowy:</strong> 
+		</td>
+		<td>
+			{{ form_maneuverField }}
+		</td>
+	</tr>				
+	{% else %}
+	
+	{% endif %}
+	<tr>
+		<td colspan="2">
+			<h4 class="single-form-title">Dane do kontaktu</h4>
+		</td>
+	</tr>		
+	<tr>
+		<td>
+			<strong>Email:</strong>
+		</td>
+		<td>
+			 {{ form_email }}
+		</td>
+	</tr>		
+	<tr>
+		<td>
+			<strong>Telefon:</strong> 
+		</td>
+		<td>
+			{{ form_phone }}
+		</td>
+	</tr>		
+</table>

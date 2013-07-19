@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block javascripts_extends  %}
+
+{% endblock %}
+
+{% block main_column  %}
+{{ facebook_initialize({'xfbml': true, 'fbAsyncInit': 'onFbInit();'}) }}
+<h1>tresc petycji</h1>
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+{{ facebook_login_button({'autologoutlink': true}) }}
+<script type="text/javascript">
+
+	function postToWallUsingFBApi()
+	{
+		FB.ui({{facebook_feed_render('main-feed')}}, function(response){});
+	}
+    function goLogIn(){
+    	console.log('goLogIn');
+        window.location.href = "{{ path('_security_check') }}";
+    }
+
+    function onFbInit() {
+        if (typeof(FB) != 'undefined' && FB != null ) {              
+            FB.Event.subscribe('auth.statusChange', function(response) {
+                if (response.session || response.authResponse) {
+                    //setTimeout(goLogIn, 500);
+                    postToWallUsingFBApi();
+                } else {
+                	console.log('onFbInit');
+                    window.location.href = "{{ path('_security_logout') }}";
+                }
+            });
+        }
+    }
+</script>
+{% endblock %}

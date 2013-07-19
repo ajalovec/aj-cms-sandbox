@@ -1,0 +1,12 @@
+parameters:
+#    acme_email.example.class: Acme\EmailBundle\Example
+
+services:
+    acme_email.email.component:
+        class: Acme\EmailBundle\Component\EmailComponent
+        arguments: [@mailer, @doctrine.orm.entity_manager, @templating, @session ]
+    acme_email.invations.email_send.listener:
+        class: Acme\EmailBundle\EventListener\EmailSendListener
+        arguments: [@doctrine.orm.entity_manager]
+        tags:
+            - { name: kernel.event_listener, event: acme_email.send_email_event, method: emailSendAction }

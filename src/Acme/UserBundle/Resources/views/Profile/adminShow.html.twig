@@ -1,0 +1,7 @@
+{% extends 'ApplicationSonataAdminBundle::standard_layout.html.twig' %}
+
+{% block sonata_admin_content %}
+{% include "FOSUserBundle:Profile:show_content.html.twig" %}
+<p><a href="{{ path('admin_fos_user_profile_edit') }}">Edytuj</a></p>
+<p><a href="{{ path('admin_fos_user_change_password') }}">Zmień hasło</a></p> 
+{% endblock sonata_admin_content %}

@@ -1,0 +1,5 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+{% block footer_scripts %}
+    {{ tinymce_init_extended() }}
+    {{ elfinder_tinymce_init_extended() }}
+{% endblock %}

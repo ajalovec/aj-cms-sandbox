@@ -1,0 +1,32 @@
+acme_facebook_homepage:
+    pattern:  /facebook
+    defaults: { _controller: AcmeFacebookBundle:Facebook:facebook }
+_secured:
+    pattern:  /fb_secured
+    defaults: { _controller: AcmeFacebookBundle:Facebook:fbSecured }
+acme_facebook_ajax_save_facebook_user:
+    pattern:  /fb_secured/ajax/saveFacebookUserToAssortment/{facebookUserId}
+    defaults: { _controller: AcmeFacebookBundle:FacebookAjax:saveFacebookUserToAssortment }
+    options:
+        expose: true
+acme_facebook_ajax_facebook_test:
+    pattern:  /facebook-test
+    defaults: { _controller: AcmeFacebookBundle:Facebook:test }
+    options:
+        expose: true
+acme_facebook_ajax_facebook_user_id:
+    pattern:  /facebook-user-id
+    defaults: { _controller: AcmeFacebookBundle:FacebookAjax:facebookUserId }
+    options:
+        expose: true
+acme_facebook_ajax_facebook_check_granded:
+    pattern:  /facebook-check-granded
+    defaults: { _controller: AcmeFacebookBundle:FacebookAjax:facebookCheckGranted }
+    options:
+        expose: true
+acme_facebook_ajax_facebook_non_secured:
+    pattern:  /facebook-non-secured
+    defaults: { _controller: AcmeFacebookBundle:Facebook:fbNonSecured }
+acme_facebook_users_list:
+    pattern:  /facebookowicze
+    defaults: { _controller: AcmeFacebookBundle:Facebook:facebookUsersList }

@@ -1,0 +1,12 @@
+{% extends sonata_block.templates.block_base %}
+{% form_theme form 'AcmeFormBundle:Form:form_div_layout.html.twig' %}
+{% block block %}
+<h3 class="underlined-head">Skontaktuj się z nami</h3>
+<form action="{{ path(app.request.attributes.get('_route')) }}" method="post" {{ form_enctype(form) }}>
+    {{ form_widget(form) }}
+	<div style="text-align: center" class="row-box row-submit-box">
+		<input type="submit" value="Wyślij wiadomość" class="stylized-button stylized-very-long-button" role="button" aria-disabled="false">
+	</div>
+    
+</form>
+{% endblock %}

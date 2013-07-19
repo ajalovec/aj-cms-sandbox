@@ -1,0 +1,12 @@
+parameters:
+#    acme_newsletter.example.class: Acme\NewsletterBundle\Example
+
+services:
+#    acme_newsletter.example:
+#        class: %acme_newsletter.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+   acme_newsletter.admin.newsleter:
+      class: Acme\NewsletterBundle\Admin\NewsletterAdmin
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: acme_newsletter, label: newsletter }
+      arguments: [null, Acme\NewsletterBundle\Entity\Newsletter, AcmeNewsletterBundle:NewsletterAdmin ]

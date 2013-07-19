@@ -1,0 +1,34 @@
+{% extends sonata_block.templates.block_base %}
+{% block block_content_sub_id %}
+{% spaceless %}
+	{% if content.type is defined %}
+		{{ content.type }}
+	{% endif %}
+{% endspaceless %}
+{% endblock %}
+
+{% if block.settings.blockTitle is defined %}
+	{% set block_title = block.settings.blockTitle %}
+	{% set block_title = 'title="'~ block_title ~ '"' %}
+{% endif %}
+
+{% block block_title %}
+{% spaceless %}
+{% if block.settings.blockTitle is defined %}
+	title="{{block.settings.blockTitle}}"
+{% endif %}
+{% endspaceless %}
+{% endblock %}
+
+{% block block %}
+	{% if content.title is defined %}
+	    <h2 class="block-content-title">{{ content.title }}</h2>
+	{% endif %}
+	<div class="block-content-body">
+		{% if content.body is defined %}
+		    {{ content.body|raw }}
+		{% endif %}
+	</div>
+
+	
+{% endblock %}

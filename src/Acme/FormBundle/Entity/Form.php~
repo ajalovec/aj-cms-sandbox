@@ -1,0 +1,133 @@
+<?php
+// src/Acme/StoreBundle/Entity/Product.php
+namespace Acme\FormBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="form")
+ */
+class Form
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+    /**
+     * @ORM\Column(type="string", length=100, name="action", nullable=true)
+     */
+    protected $action;	
+    /**
+     * @ORM\Column(type="string", length=100, name="type", nullable=true)
+     */
+    protected $type;
+    /**
+     * @ORM\Column(type="decimal", scale=2, nullable=true)
+     */
+    protected $area;
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    protected $localization;
+    /**
+     * @ORM\Column(type="string", length=100, name="building_type", nullable=true)
+     */
+    protected $buildingType;		
+    /**
+     * @ORM\Column(type="integer", name="rooms_count", nullable=true)
+     */
+    protected $roomsCount;	
+    /**
+     * @ORM\Column(type="decimal", scale=2, name="price_max", nullable=true)
+     */	
+	protected $priceMax;
+    /**
+     * @ORM\Column(type="decimal", scale=2, name="price_per_meter_max", nullable=true)
+     */	
+	protected $pricePerMeterMax;     	
+    /**
+     * @ORM\Column(type="integer",  name="storey", nullable=true)
+     */	
+	protected $storey;  
+    /**
+     * @ORM\Column(type="string", length=100, name="block_type", nullable=true)
+     */	
+	protected $blockType;  	
+    /**
+     * @ORM\Column(type="string", length=100, name="standard", nullable=true)
+     */	
+	protected $standard;  		
+    /**
+     * @ORM\Column(type="string", length=100, name="property_type", nullable=true)
+     */	
+	protected $propertyType;  		
+    /**
+     * @ORM\Column(type="string", length=100, name="media", nullable=true)
+     */	
+	protected $media;  		
+    /**
+     * @ORM\Column(type="string", length=100, name="loading_ramp", nullable=true)
+     */	
+	protected $loadingRamp;  		
+    /**
+     * @ORM\Column(type="string", length=100, name="maneuver_field", nullable=true)
+     */	
+	protected $maneuverField;
+    /**
+     * @ORM\Column(type="string", length=100, name="email", nullable=true)
+     */	
+	protected $phone;
+	/**
+     * @ORM\Column(type="string", length=100, name="phone", nullable=true)
+     */	
+	protected $email;
+
+	public function __toString(){
+		return (string)$this->action;
+	}
+	public function getActionTranslator()
+	{
+		$action = $this->action;
+		$actionTranslated = 'Nie podano';
+		switch ($action) {
+			case 'buy-property':
+				$actionTranslated = 'Kupić nieruchomość';
+				break;
+			case 'rent-property':
+				$actionTranslated = 'Wynająć nieruchomość';
+				break;
+			default:
+				$actionTranslated = 'Nie podano';
+				break;
+		}
+		return $actionTranslated;
+	}
+	public function getTypeTranslator()
+	{
+		$type = $this->type;
+		$typeTranslated = 'Nie podano';
+		switch ($type) {
+			case 'hause':
+				$typeTranslated = 'Dom';
+				break;
+			case 'flat':
+				$typeTranslated = 'Mieszkanie';
+				break;
+			case 'local':
+				$typeTranslated = 'Lokal użytkowy/biuro';
+				break;
+			case 'parcel':
+				$typeTranslated = 'Nieruchomość gruntowa';
+				break;
+			case 'storage':
+				$typeTranslated = 'Hala/Magazyn';
+				break;
+			default:
+				$typeTranslated = 'Nie podano';
+				break;
+		}
+		return $typeTranslated;
+	}
+}

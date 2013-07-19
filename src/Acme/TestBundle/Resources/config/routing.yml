@@ -1,0 +1,9 @@
+acme_test_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: AcmeTestBundle:Default:index }
+welcome:
+    pattern:  /test_xxx
+    defaults: { _controller: AcmeTestBundle:Default:indexNoName }
+etst2345:
+    pattern:  /admin/test1
+    defaults: { _controller: AcmeTestBundle:Default:indexNoName }

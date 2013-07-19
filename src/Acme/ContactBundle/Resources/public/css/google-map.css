@@ -1,0 +1,12 @@
+#google-map {
+    background-color: #E5E3DF;
+    overflow: hidden;
+    position: relative;
+
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 2px #010B17;
+    color: #000000;
+    height: 370px;
+    margin-top: 30px;
+    width: 626px;
+}

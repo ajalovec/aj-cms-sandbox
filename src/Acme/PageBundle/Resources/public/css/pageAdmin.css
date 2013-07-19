@@ -1,0 +1,8 @@
+.sonata-bc legend .sonata-ba-collapsed-pagebundle, .sonata-ba-collapsed-pagebundle{
+    color:#333333;
+    text-decoration:underline;
+}
+.sonata-bc textarea.tinymce{
+    width:680px;
+    height:400px;
+}

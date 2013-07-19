@@ -1,0 +1,1322 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"real",
+				"realpath  (function)"
+			],
+			[
+				"getE",
+				"getEnvParameters  (function)"
+			],
+			[
+				"get_def",
+				"get_defined_vars"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"borde",
+				"border-top"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"func_ge",
+				"func_get_args"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"templa",
+				"templatePath"
+			],
+			[
+				"pa",
+				"pathArray"
+			],
+			[
+				"new",
+				"newPath"
+			],
+			[
+				"AJ",
+				"AJTemplateBundle"
+			],
+			[
+				"act",
+				"activeTemplate"
+			],
+			[
+				"ModuleT2Oprema",
+				"ModuleT2OpremaBundle"
+			],
+			[
+				"Templa",
+				"TemplateBundle"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"cate",
+				"category_id"
+			],
+			[
+				"ca",
+				"category_id"
+			],
+			[
+				"bun",
+				"bundle"
+			],
+			[
+				"initia",
+				"initializeBundles"
+			],
+			[
+				"Module",
+				"ModuleT2OpremaBundle"
+			],
+			[
+				"id",
+				"idCategory"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"elem",
+				"elemText"
+			],
+			[
+				"vie",
+				"viewHeight"
+			],
+			[
+				"scro",
+				"scroller"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"of",
+				"offsetY"
+			],
+			[
+				"curr",
+				"currentPage"
+			],
+			[
+				"hi",
+				"hidden"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"A",
+				"Assetic"
+			],
+			[
+				"requ",
+				"require_once"
+			],
+			[
+				"str_rep",
+				"str_replace"
+			],
+			[
+				"con",
+				"config"
+			],
+			[
+				"array_u",
+				"array_unique"
+			],
+			[
+				"array_rep",
+				"array_replace_recursive"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/config/sonata/sonata_page.yml",
+			"settings":
+			{
+				"buffer_size": 2358,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/config/parameters.yml",
+			"settings":
+			{
+				"buffer_size": 1132,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vendor/sonata-project/media-bundle/Sonata/MediaBundle/Resources/config/block.xml",
+			"settings":
+			{
+				"buffer_size": 1949,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vendor/sonata-project/block-bundle/Sonata/BlockBundle/Block/BaseBlockService.php",
+			"settings":
+			{
+				"buffer_size": 3420,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Sonata/Bundle/DemoBundle/Resources/views/Demo/media.html.twig",
+			"settings":
+			{
+				"buffer_size": 1253,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/views/base_layout.html.twig",
+			"settings":
+			{
+				"buffer_size": 8599,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/User/PHP.sublime-build",
+	"command_palette":
+	{
+		"height": 380.0,
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Disable Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"packi",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pacli",
+				"Package Control: List Packages"
+			],
+			[
+				"pal",
+				"Package Control: List Packages"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"pro",
+				"Preferences: Browse Packages"
+			],
+			[
+				"paci",
+				"Package Control: Install Package"
+			],
+			[
+				"pacl",
+				"Package Control: Enable Package"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"php",
+				"Insert PHP namespace"
+			],
+			[
+				"addf",
+				"Project: Add Folder"
+			],
+			[
+				"instpa",
+				"Package Control: Install Package"
+			],
+			[
+				"instapac",
+				"Package Control: Install Package"
+			],
+			[
+				"conta",
+				"SymfonyCommander container:debug"
+			],
+			[
+				"containe",
+				"SymfonyCommander container:debug"
+			],
+			[
+				"contai",
+				"SymfonyCommander container:debug"
+			],
+			[
+				"symfonyco",
+				"SymfonyCommander container:debug"
+			],
+			[
+				"packli",
+				"Package Control: List Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"htmlprettify",
+				"HTMLPrettify: Prettify"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Function"
+			],
+			[
+				"p",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 496.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/localhost/wamp/www/_git/sandbox/app/config/knp_behat.yml",
+		"/C/localhost/wamp/www/_git/sandbox/app/config/sonata/sonata_block.yml",
+		"/C/localhost/wamp/www/_git/sandbox/app/config/sonata/sonata_admin.yml",
+		"/C/localhost/wamp/www/_git/sandbox/web/app.php",
+		"/C/localhost/wamp/www/_git/sandbox/web/app_dev.php",
+		"/C/localhost/wamp/www/_git/sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Admin/PageAdmin.php",
+		"/C/localhost/wamp/www/_git/sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Resources/views/Media/view.html.twig",
+		"/C/localhost/wamp/www/_git/sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/views/layout.html.twig",
+		"/C/localhost/wamp/www/_git/sandbox/app/config/sonata/sonata_page.yml",
+		"/C/localhost/wamp/www/_git/sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Resources/views/Gallery/index.html.twig",
+		"/C/localhost/wamp/www/_git/sandbox/app/AppKernel.php",
+		"/C/localhost/wamp/www/_git/sandbox/src/Sonata/Bundle/DemoBundle/Controller/DemoController.php",
+		"/C/localhost/wamp/www/_git/sandbox/app/config/parameters.yml",
+		"/C/localhost/wamp/www/_git/sandbox/app/config/parameters.yml.sample",
+		"/C/Users/AJ/AppData/Local/Temp/sonata_sitemap_c1f3c29a773b0f0cd0ef402bcf124315/sitemap_00001.xml",
+		"/C/localhost/wamp/www/_git/sandbox/src/Application/Sonata/PageBundle/Resources/config/doctrine/Block.orm.xml",
+		"/C/localhost/wamp/www/_git/sandbox/src/Application/Sonata/PageBundle/Entity/Block.php",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/app/config/phpcr.yml",
+		"/C/Users/AJ/AppData/Local/Temp/scp48239/domains/teja.si/public_html/new/wp-config.php",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/src/Sandbox/MainBundle/Resources/views/Demo/controller.html.twig",
+		"/C/Users/AJ/AppData/Local/Temp/scp37397/domains/cnj.si/html/index.php",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/app/config/parameters.yml",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/User/SublimeMagick.sublime-settings",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/SublimeMagick/SublimeMagick.sublime-settings",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/src/Sandbox/MainBundle/Resources/views/Homepage/index.html.twig",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/src/Sandbox/MainBundle/Resources/views/Homepage/switcher_links.html.twig",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/app/Resources/CmfSimpleCmsBundle/views/Page/index.html.twig",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/app/config/parameters.yml.dist",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/composer.json",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/src/Sandbox/MainBundle/Resources/config/services.yml",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/src/Sandbox/MainBundle/Controller/ContentController.php",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/src/Sandbox/MainBundle/Resources/data/page.yml",
+		"/C/localhost/wamp/www/_git/cmf-sandbox/app/config/phpcr_doctrine_dbal.yml.dist",
+		"/C/localhost/wamp/www/_git/symfony-cmf-website/vendor/doctrine/cache/lib/Doctrine/Common/Cache/FilesystemCache.php",
+		"/C/localhost/wamp/www/_git/symfony-cmf-website/web/app_dev.php",
+		"/C/localhost/wamp/www/_git/symfony-cmf-website/app/config/parameters.yml",
+		"/C/localhost/wamp/www/_git/symfony-cmf-website/app/.htaccess",
+		"/C/localhost/wamp/www/_git/symfony-cmf-website/app/Resources/CmfSimpleCmsBundle/views/Page/index.html.twig",
+		"/C/localhost/wamp/www/_git/symfony-cmf-website/app/config/routing_dev.yml",
+		"/C/localhost/wamp/www/_git/symfony-cmf-website/app/config/routing.yml",
+		"/C/localhost/wamp/www/_projects/ATIS/_projekti/baznik/web/newpage/app/bootstrap.php",
+		"/C/localhost/wamp/www/_projects/ATIS/_projekti/fiteh.si/web/getHash.php",
+		"/C/localhost/wamp/www/_projects/ATIS/_projekti/teja.si/public_html/index.html",
+		"/C/Users/AJ/AppData/Local/Temp/scp26417/domains/cnj.si/html/cookielaw/cookielaw.js",
+		"/C/Users/AJ/AppData/Local/Temp/scp49192/domains/cnj.si/html/cookielaw/plugin.js",
+		"/C/Users/AJ/AppData/Local/Temp/scp33609/domains/cnj.si/html/cookielaw/plugin.min.js",
+		"/C/Users/AJ/AppData/Local/Temp/scp41218/domains/cnj.si/html/cookielaw/style.css",
+		"/C/Users/AJ/Desktop/cookielaw-about.html",
+		"/C/localhost/wamp/www/_code/js/jquery/ui/js/jquery-1.8.2.js",
+		"/C/localhost/wamp/www/_code/js/jquery/jquery.1.8.2.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/js/lib/aj/class.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/css/theme.css.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/js/app.js.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/js/app/mixins.js",
+		"/C/localhost/wamp/www/_code/js/boilerplate/js/main.js",
+		"/C/localhost/wamp/www/_code/js/boilerplate/js/plugins.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/js/app/facebook-.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/scripts/app/app.js",
+		"/C/localhost/wamp/www/_code/js/bootstrap/twitter-bootstrap-v2.2.1/js/bootstrap-tab.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/js/app/views/_example.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/content/lokal_detail.html",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/content/js/lokal.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/content/js/zemljevid.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/content/js/aktivnosti.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/content/aktivnosti.html",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/content/zemljevid.html",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/content/o_akciji.html",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/content/js/default.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/content/predlog_detail.html",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/content/js/predlog.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/html/templates.html",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app_new/index.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/facebook/app/scripts/app/app.js",
+		"/C/localhost/wamp/www/_git/example-jquery-shim/www/js/app.js",
+		"/C/localhost/wamp/www/_git/example-jquery-shim/www/js/app/main.js",
+		"/C/localhost/wamp/www/_git/example-jquery-shim/www/js/lib/jquery.alpha.js",
+		"/C/localhost/wamp/www/_git/example-jquery-shim/www/js/lib/jquery.beta.js",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/src/Site/T2/Oprema/SiteBundle/Resources/config/routing.yml",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/app/AppKernel.php-.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/ClassCollectionLoader.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Composer/ScriptHandler.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/mobile/examples/kendo/css/kendo.mobile.all.css",
+		"/C/Users/AJ/AppData/Local/Temp/scp18400/domains/teja.si/public_html/.htaccess",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/web/.gitignore",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/union/za-jazzy/web/app/config/parameters.yml",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/app/AppKernel.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/composer.json",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/_CNJ/spletne_strani/framework/test3/composer.json",
+		"/C/Users/AJ/AppData/Local/Temp/scp19351/domains/teja.si/public_html/.htaccess",
+		"/C/Users/AJ/AppData/Local/Temp/scp18870/domains/teja.si/public_html/.htaccess",
+		"/C/Users/AJ/AppData/Local/Temp/scp23375/domains/teja.si/public_html/temp-page/index.html",
+		"/C/Users/AJ/AppData/Local/Temp/scp24936/domains/teja.si/public_html/test.html",
+		"/C/Users/AJ/AppData/Local/Temp/scp12791/domains/teja.si/public_html/cgi-bin/.htaccess",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/vendor/composer/autoload_namespaces.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/vendor/composer/autoload_classmap.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/test.php",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/SublimeCodeIntel/Base File.sublime-settings",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/User/PHP.sublime-build",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/Vintage/Preferences.sublime-settings",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/te4.sublime-project",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/web/app.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/composer.lock",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/vendor/autoload.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/app/autoload.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/bin/doctrine.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/bin/doctrine.php.bat",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/User/Base File.sublime-settings",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/vendor/composer/autoload_real.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/t2/www.te4.si/vendor/kriswallsmith/assetic/src/functions.php",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/Package Control/example-packages.json",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences (Windows).sublime-settings",
+		"/C/Program Files/Sublime Text 2/Pristine Packages/User.sublime-package",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/SymfonyCommander/SymfonyCommander.sublime-settings",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/User/SymfonyCommander.sublime-settings",
+		"/C/localhost/wamp/www/_code/php/symfony2/symfony-2.2.0/vendor/symfony/symfony/src/Symfony/Component/ClassLoader/ClassCollectionLoader.php",
+		"/C/localhost/wamp/www/_code/php/symfony2/symfony-2.2.0/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/bin/build_bootstrap.php",
+		"/C/localhost/wamp/www/_code/php/symfony2/symfony-2.2.0/composer.json",
+		"/C/localhost/wamp/www/_code/php/symfony2/symfony-2.2.0/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Composer/ScriptHandler.php",
+		"/C/localhost/wamp/www/_code/php/symfony2/symfony-2.2.0/app/bootstrap.php.cache",
+		"/C/localhost/wamp/www/_code/php/symfony2/symfony-2.2.0/app/autoload.php",
+		"/C/localhost/wamp/www/_code/php/symfony2/symfony-2.2.0/web/app_dev.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor\\sonata-project\\",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\app\\config",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\app",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\app\\config, C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\app\\Resources",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\app,-cache\\*",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\app,-cache",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\app,-C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\app\\cache",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\app\\config",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\union\\za-jazzy\\facebook\\app_new",
+			"C:\\localhost\\wamp\\www\\_code\\html\\kendoui.complete.2013.1.514.trial\\styles",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\t2\\www.te4.si",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\t2\\www.te4.si\\vendor",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\",
+			"<open files>,C:\\Users\\AJ\\AppData\\Roaming\\Sublime Text 2\\Packages",
+			"<open files>",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\src\\Site\\T2\\Oprema,C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\src\\Module\\T2\\Reality\\TekmovalkaBundle",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\src\\Site\\T2\\Oprema,C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\src\\Module\\T2\\Reality\\TekmovalkaBundle,C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\apps\\dev",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\src\\Site\\T2\\Oprema,C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\src\\Module\\T2\\Reality\\TekmovalkaBundle",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\src",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\vendor\\",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\vendor\\twig\\twig\\lib\\Twig",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\vendor",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\vendor\\twig",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\vendor\\symfony",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\vendor",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\vendor",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\vendor\\symfony",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\src\\Site\\T2\\Oprema\\SiteBundle\\Resources\\themes\\default\\bootstrap",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\test1\\src\\Module\\ProductBundle",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\src\\Module\\ProductBundle",
+			"C:\\localhost\\wamp\\www\\_projects\\CNJ\\_projekti\\_CNJ\\spletne_strani\\framework\\src\\Site\\T2\\Oprema\\SiteBundle\\Resources\\public\\bootstrap",
+			"C:\\localhost\\wamp\\www\\_code\\vendor\\",
+			"C:\\localhost\\wamp\\www\\_code\\vendor\\symfony",
+			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\,*.php",
+			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\,-*.twig",
+			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\",
+			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\src\\",
+			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\src\\Page\\Zare\\",
+			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\src\\Page\\Zare\\AppBundle",
+			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\src\\Page\\Zare",
+			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\",
+			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\src\\Page\\ZareBundle",
+			"C:\\localhost\\wamp\\www\\_code\\php\\symfony2",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"knp_behat.yml",
+			"hos",
+			"sonata_page:",
+			"sonata_media.cdn.host",
+			"tag name=\"sonata.block\"",
+			"implements BlockServiceInterface",
+			"BlockServiceInterface",
+			"Sonata\\PageBundle\\Block\\BlockServiceInterface",
+			"sonata.page.block.container",
+			"sonata_block",
+			"DemoBundle",
+			"site_audit",
+			"page__site_audit",
+			"sonata_admin:",
+			"sonata_admin",
+			"validation_parameters",
+			"production_parameters",
+			"symfony_cmf_routing_extra",
+			"\" -",
+			"\"-",
+			"\" -",
+			"\"-\"",
+			"d.",
+			"js",
+			"core_toString",
+			"class2type",
+			"$",
+			"jQuery",
+			"isFunction =",
+			"isFunction = f",
+			"isFunction ",
+			"jQuery.isFunction ",
+			"$.extend",
+			"extend",
+			"this.",
+			"app.",
+			"app",
+			"this.",
+			".test",
+			"kendoApp",
+			"APP_DEBUG",
+			"../vendor/aj/css/",
+			"userData",
+			".secured",
+			"secured",
+			"url",
+			"styles/",
+			"scripts/",
+			"km-",
+			".km-",
+			"\\\\",
+			"\\",
+			"commandmo",
+			"generated by Composer",
+			"auto",
+			"ClassCollectionLoader",
+			"SERV",
+			"_SERV",
+			"Sensio\\Bundle\\DistributionBundle\\Composer",
+			"Sensio\\Bundle\\DistributionBundle\\Composer::ScriptHandler",
+			"Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler",
+			"auto",
+			"autoload",
+			"executeBuildBootstrap",
+			"\\\\",
+			"AJ_BOOTSTRAP_DIR",
+			"AJ_VENDOR_DIR",
+			"initializeBundles",
+			"container",
+			"getCompilerPassConfig",
+			"registerContainerConfiguration",
+			"getContainerLoader",
+			"getContainerBuilder",
+			"getKernelParameters",
+			"__DIR__",
+			"initializeBundles",
+			"registerBundles",
+			"initializeBundles",
+			"initializeContainer",
+			"AJ_APP_DIR",
+			"AJ_VENDOR_DIR",
+			"',",
+			"AJ_APP_DIR",
+			"AJ_WEB_DIR",
+			"AJ_BOOTSTRAP_DIR",
+			"aj_web_dir",
+			"AJ_WEB_DIR",
+			"$root_dir.'",
+			"AJ_WEB_DIR",
+			"settin",
+			"SymfonyCommander",
+			"folder",
+			"path",
+			"dir",
+			"$file",
+			"\\",
+			"debug(",
+			"asset_theme",
+			"asset_tpl",
+			"Module\\T2\\Reality\\TekmovalkaBundle",
+			"TekmovalkaBundle",
+			"t2_reality_tekmovalka",
+			"T2RealityTekmovalka",
+			"data.",
+			"function",
+			"function ",
+			"function",
+			"attrs",
+			"en",
+			"form",
+			" form",
+			"-form",
+			"form ",
+			"form",
+			"date",
+			"page_main",
+			"getTemplatePath('Component:Block:content2.html.twig",
+			"fontSize",
+			".fontSize",
+			"fontSize",
+			"headingSize",
+			":first-child",
+			"headingsColor",
+			"baseLineHeight",
+			"base",
+			"headings",
+			"printAttributes",
+			"span3"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"kendo",
+			"defaultOptions.debug",
+			".options.secured",
+			"__DIR__.'/..",
+			"theme_path",
+			"tpl_path",
+			"Module\\TekmovalkaBundle",
+			"tekmovalka",
+			"Tekmovalka",
+			"getTemplatePath('Component:Block:content.html.twig",
+			"ImportFilter",
+			"CssFilter",
+			"aj_module.manager",
+			"aj_template.active_template",
+			"Model ",
+			"Model->",
+			"Model",
+			"aj.twig.templating_extension",
+			"twig",
+			"templating.",
+			"category_id",
+			"",
+			"	/**",
+			"		",
+			"	 *",
+			"	 * ",
+			"	 *",
+			"	",
+			"Module\\ProductBundle\\",
+			"namespace Module\\ProductBundle",
+			"namespace Module\\\\ProductBundle",
+			"Module\\ProductBundle",
+			"ModuleProductBundle",
+			"protected",
+			"page",
+			".page",
+			"video",
+			"\"",
+			"pagesArray",
+			"scrolltick",
+			"scrollrefresh",
+			"Group",
+			"kopalnicaTween",
+			"bathroomTween",
+			"addScrollerListener",
+			"PertotGallery",
+			".page-navbar",
+			".page-logo",
+			".page-header",
+			".page-nav",
+			"#page .btn-nav",
+			"#page .page-body",
+			"#header .navbar",
+			"addElementListener",
+			"this",
+			"Page",
+			"page",
+			"AJ\\Component",
+			"AJ\\Misc\\Arr",
+			"AJ\\Framework",
+			"/",
+			"module_project.controller.data",
+			"    ",
+			"PageZareBundle",
+			"PageZareAppBundle",
+			"Page\\Zare\\AppBundle",
+			"Page\\Zare\\PageBundle",
+			"	",
+			"Page\\Zare",
+			"PageZare"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/config/sonata/sonata_page.yml",
+					"settings":
+					{
+						"buffer_size": 2358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								475,
+								479
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/config/parameters.yml",
+					"settings":
+					{
+						"buffer_size": 1132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								603,
+								603
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "vendor/sonata-project/media-bundle/Sonata/MediaBundle/Resources/config/block.xml",
+					"settings":
+					{
+						"buffer_size": 1949,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								783,
+								783
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "vendor/sonata-project/block-bundle/Sonata/BlockBundle/Block/BaseBlockService.php",
+					"settings":
+					{
+						"buffer_size": 3420,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1330,
+								1330
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/Sonata/Bundle/DemoBundle/Resources/views/Demo/media.html.twig",
+					"settings":
+					{
+						"buffer_size": 1253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								475,
+								475
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Twig/Syntaxes/HTML (Twig).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/views/base_layout.html.twig",
+					"settings":
+					{
+						"buffer_size": 8599,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1608,
+								1608
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Twig/Syntaxes/HTML (Twig).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1158.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SymfonyCommander":
+	{
+		"height": 227.0
+	},
+	"output.exec":
+	{
+		"height": 193.0
+	},
+	"output.find_results":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"web/ap",
+				"web/app_dev.php"
+			],
+			[
+				"kriswallsmith/assetic/src/functions",
+				"www.te4.si/vendor/kriswallsmith/assetic/src/functions.php"
+			],
+			[
+				"classcollectionloader",
+				"vendor/symfony/symfony/src/Symfony/Component/ClassLoader/ClassCollectionLoader.php"
+			],
+			[
+				"scripthandler",
+				"vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Composer/ScriptHandler.php"
+			],
+			[
+				"sensio/bundle/distributionbundle/composer/scripthandler",
+				"vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Composer/ScriptHandler.php"
+			],
+			[
+				"assetic/extension/twig/assetictokenparser",
+				"test1/vendor/kriswallsmith/assetic/src/Assetic/Extension/Twig/AsseticTokenParser.php"
+			],
+			[
+				"symfony/bundle/asseticbundle/twig/assetictokenparser",
+				"test1/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Twig/AsseticTokenParser.php"
+			],
+			[
+				"formv",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/FormView.php"
+			],
+			[
+				"form",
+				"vendor/symfony/symfony/src/Symfony/Component/DomCrawler/Form.php"
+			],
+			[
+				"symfony/bundle/twigbundle/controller/exceptioncontroller",
+				"vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Controller/ExceptionController.php"
+			],
+			[
+				"kernel",
+				"vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php"
+			],
+			[
+				"containerin",
+				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerInterface.php"
+			],
+			[
+				"symfony/bundle/asseticbundle/twig/asseticextension",
+				"vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/Twig/AsseticExtension.php"
+			],
+			[
+				"aj/template/twig/extension/templatecontrollerawareextension",
+				"vendor/aj/aj/src/AJ/Template/Twig/Extension/TemplateControllerAwareExtension.php"
+			],
+			[
+				"knp/menu/twig",
+				"vendor/knp/knp-menu/src/Knp/Menu/Twig/Helper.php"
+			],
+			[
+				"knp/menu/twig/helper",
+				"vendor/knp/knp-menu/src/Knp/Menu/Twig/Helper.php"
+			],
+			[
+				"knp/menu/twig/menuextension",
+				"vendor/knp/knp-menu/src/Knp/Menu/Twig/MenuExtension.php"
+			],
+			[
+				"routerinte",
+				"vendor/symfony/symfony/src/Symfony/Component/Routing/RouterInterface.php"
+			],
+			[
+				"symfony/bundle/frameworkbundle/httpkernel",
+				"test1/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/HttpKernel.php"
+			],
+			[
+				"aj/component/httpkernel/controller/controller",
+				"test1/vendor/aj/aj/src/AJ/Component/HttpKernel/Controller/Controller.php"
+			],
+			[
+				"restcontroller",
+				"framework/test1/vendor/aj/aj/src/AJ/Component/HttpKernel/Controller/RESTController.php"
+			],
+			[
+				"sensio/bundle/frameworkextrabundle/configuration/ca",
+				"vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Configuration/Cache.php"
+			],
+			[
+				"symfony/component/httpfoundation/request",
+				"vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php"
+			],
+			[
+				"request",
+				"vendor/symfony/symfony/src/Symfony/Component/BrowserKit/Request.php"
+			],
+			[
+				"formbu",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilder.php"
+			],
+			[
+				"symfony/component/console/output/output",
+				"vendor/symfony/symfony/src/Symfony/Component/Console/Output/Output.php"
+			],
+			[
+				"symfony/component/console/output/consoleoutput",
+				"vendor/symfony/symfony/src/Symfony/Component/Console/Output/ConsoleOutputInterface.php"
+			],
+			[
+				"symfony/component/console/application",
+				"vendor/symfony/symfony/src/Symfony/Component/Console/Application.php"
+			],
+			[
+				"symfony/bundle/frameworkbundle/console/application",
+				"vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Console/Application.php"
+			],
+			[
+				"symfony/component/console/input/argvinput",
+				"vendor/symfony/symfony/src/Symfony/Component/Console/Input/ArgvInput.php"
+			],
+			[
+				"symfony/bundle/frameworkbundle/controller/controller",
+				"vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php"
+			],
+			[
+				"assetfac",
+				"vendor/kriswallsmith/assetic/src/Assetic/Factory/AssetFactory.php"
+			],
+			[
+				"assetic/asset/fileasset",
+				"vendor/kriswallsmith/assetic/src/Assetic/Asset/FileAsset.php"
+			],
+			[
+				"assetic/asset/assetcollection",
+				"vendor/kriswallsmith/assetic/src/Assetic/Asset/AssetCollection.php"
+			],
+			[
+				"symfony/bundle/frameworkbundle/templating/templatenameparser",
+				"vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Templating/TemplateNameParser.php"
+			],
+			[
+				"assetinterface",
+				"vendor/kriswallsmith/assetic/src/Assetic/Asset/AssetInterface.php"
+			],
+			[
+				"twigformulaloader",
+				"vendor/kriswallsmith/assetic/src/Assetic/Extension/Twig/TwigFormulaLoader.php"
+			],
+			[
+				"assetic/extension/twig/asseticextension",
+				"vendor/kriswallsmith/assetic/src/Assetic/Extension/Twig/AsseticExtension.php"
+			],
+			[
+				"templatecontrollerawareextension",
+				"vendor/aj/aj/src/AJ/Template/Twig/Extension/TemplateControllerAwareExtension.php"
+			],
+			[
+				"kerne",
+				"vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php"
+			],
+			[
+				"symfony/component/dependencyinjection/container",
+				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php"
+			],
+			[
+				"container",
+				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerBuilder.php"
+			],
+			[
+				"symfony/bridge/twig/node/searchandrenderblocknode",
+				"vendor/symfony/symfony/src/Symfony/Bridge/Twig/Node/SearchAndRenderBlockNode.php"
+			],
+			[
+				"configuration",
+				"vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/DependencyInjection/Configuration.php"
+			],
+			[
+				"assetic/asset/base",
+				"vendor/kriswallsmith/assetic/src/Assetic/Asset/BaseAsset.php"
+			],
+			[
+				"ajfil",
+				"src/Framework/TemplateBundle/Assetic/Filter/AjCssFilter.php"
+			],
+			[
+				"component/dependencyinjection/parameterbag/parameterbag",
+				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ParameterBag/ParameterBag.php"
+			],
+			[
+				"symfony/component/config/definition/configurationinterface",
+				"vendor/symfony/symfony/src/Symfony/Component/Config/Definition/ConfigurationInterface.php"
+			],
+			[
+				"configurationinterface",
+				"vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Configuration/ConfigurationInterface.php"
+			],
+			[
+				"symfony/component/config/definition/builder/treebuilder",
+				"vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/TreeBuilder.php"
+			],
+			[
+				"bundleinterface",
+				"vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Bundle/BundleInterface.php"
+			],
+			[
+				"containeraware",
+				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerAware.php"
+			],
+			[
+				"symfony/component/httpkernel/bundle/bundle",
+				"vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Bundle/Bundle.php"
+			],
+			[
+				"symfony/component/dependencyinjection/extension/configurationextensioninterface",
+				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Extension/ConfigurationExtensionInterface.php"
+			],
+			[
+				"symfony/component/dependencyinjection/extension/extensioninterface",
+				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Extension/ExtensionInterface.php"
+			],
+			[
+				"symfony/component/httpkernel/dependencyinjection/extension",
+				"vendor/symfony/symfony/src/Symfony/Component/HttpKernel/DependencyInjection/Extension.php"
+			],
+			[
+				"choicelistinterface",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Core/ChoiceList/ChoiceListInterface.php"
+			],
+			[
+				"nameparse",
+				"vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/Templating/Helper/Fixtures/StubTemplateNameParser.php"
+			],
+			[
+				"frameworkbundle/controller/controllernameparser",
+				"vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerNameParser.php"
+			],
+			[
+				"frameworkbundle/templating/templatenameparser",
+				"vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Templating/TemplateNameParser.php"
+			],
+			[
+				"formview",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/FormView.php"
+			],
+			[
+				"symfony/bundle/frameworkbundle/routing/router",
+				"vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Routing/Router.php"
+			],
+			[
+				"symfony/component/form/abstracttype",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/AbstractType.php"
+			],
+			[
+				"component/form/extension/core/type/texttype",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Core/Type/TextType.php"
+			],
+			[
+				"component/form/resolvedformtype",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/ResolvedFormType.php"
+			],
+			[
+				"form/fo",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/Form.php"
+			],
+			[
+				"form/form",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/Forms.php"
+			],
+			[
+				"formconfi",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/FormConfigBuilder.php"
+			],
+			[
+				"formbuilder",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilder.php"
+			],
+			[
+				"symfony/component/form/formfactory",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/FormFactory.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/localhost/wamp/www/_code/php/symfony2/aj_symfony2.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 285.0,
+	"status_bar_visible": true
+}

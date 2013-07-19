@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+	{% block left_top_column  %}
+		{{ knp_menu_render('assortmentCategory') }}
+	{% endblock %}
+	{% block main_column  %}
+		<ul class="items-list">
+		     {% for item in pagination %}
+			     <li class="item {% if loop.index is odd %}color{% endif %}">
+			     	<h2 class="item-name">{{ item.name }}</h2>
+			     	<img src="https://graph.facebook.com/{{ item.facebookUserId	 }}/picture?width=100&height=100">
+			     </li>
+		     {% endfor %}
+		</ul>
+		<div class="navigation">
+		    {{ knp_pagination_render(pagination) }}
+		</div>
+		
+	{% endblock %} 	

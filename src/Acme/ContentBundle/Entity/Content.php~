@@ -1,0 +1,48 @@
+<?php
+namespace Acme\ContentBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="content")
+ */
+class Content
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string", length=1000)
+     */
+    protected $title;
+
+    /**
+     * @ORM\Column(type="string", length=140)
+     */
+    protected $description;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    protected $body;
+	
+    /**
+     * @ORM\Column(type="string", length=140)
+     */
+    protected $type;
+	
+    /**
+     * @ORM\Column(type="boolean", nullable=true, name="absolute_path_flag")
+     */
+    protected $absolutePathFlag;
+	
+	public function __toString()
+	{
+		return $this->getTitle();
+	}
+}

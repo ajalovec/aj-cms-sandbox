@@ -1,0 +1,51 @@
+parameters:
+#    acme_form.example.class: Acme\FormBundle\Example
+    acme_form_hause_type_class: Acme\FormBundle\Form\Type\HauseType  
+    acme_form_main_type_class: Acme\FormBundle\Form\Type\MainType  
+    acme_form_storage_type_class: Acme\FormBundle\Form\Type\StorageType
+    acme_form_parcel_type_class: Acme\FormBundle\Form\Type\ParcelType
+    acme_form_local_type_class: Acme\FormBundle\Form\Type\LocalType
+    acme_form_flat_type_class: Acme\FormBundle\Form\Type\FlatType
+services:
+#    acme_form.example:
+#        class: %acme_form.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    acme_form.admin.form:
+        class: Acme\FormBundle\Admin\FormAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: acme_form, label: Form }
+        arguments: [null, Acme\FormBundle\Entity\Form, SonataAdminBundle:CRUD]
+    acme_form.constraintbothfield:
+      class: Acme\FormBundle\Validator\Constraints\ConstraintBothFieldValidator
+      tags:
+      - { name: validator.constraint_validator, alias: constraintbothfield }
+      arguments: [ @service_container ]
+    acme_form.block.service.form:
+        class: Acme\FormBundle\Block\FormBlockService
+        tags:
+            - {name: "sonata.block"}
+        arguments: [acme_form.block.service.form, @templating, @service_container, @acme_email.email.component]
+    acme_form.main_type:
+      class: %acme_form_main_type_class%
+      calls:
+        - [ setTranslator, [ @translator ] ]
+    acme_form.hause_type:
+      class: %acme_form_hause_type_class%
+      calls:
+        - [ setTranslator, [ @translator ] ]
+    acme_form.flat_type:
+      class: %acme_form_flat_type_class%
+      calls:
+        - [ setTranslator, [ @translator ] ]
+    acme_form.local_type:
+      class: %acme_form_local_type_class%
+      calls:
+        - [ setTranslator, [ @translator ] ]
+    acme_form.parcel_type:
+      class: %acme_form_parcel_type_class%
+      calls:
+        - [ setTranslator, [ @translator ] ]
+    acme_form.storage_type:
+      class: %acme_form_storage_type_class%
+      calls:
+        - [ setTranslator, [ @translator ] ]

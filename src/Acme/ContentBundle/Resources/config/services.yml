@@ -1,0 +1,17 @@
+parameters:
+#    acme_content.example.class: Acme\ContentBundle\Example
+
+services:
+#    acme_content.example:
+#        class: %acme_content.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    acme_content.admin.content:
+        class: Acme\ContentBundle\Admin\ContentAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: acme_content, label: Content }
+        arguments: [null, Acme\ContentBundle\Entity\Content, SonataAdminBundle:CRUD]
+    acme_content.block.service.content:
+        class: Acme\ContentBundle\Block\ContentBlockService
+        tags:
+            - {name: "sonata.block"}
+        arguments: [acme_content.block.service.content, @templating, @doctrine.orm.entity_manager]

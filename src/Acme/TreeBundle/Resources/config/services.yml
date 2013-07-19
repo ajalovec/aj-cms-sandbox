@@ -1,0 +1,12 @@
+parameters:
+#    acme_tree.example.class: Acme\TreeBundle\Example
+
+services:
+#    acme_tree.example:
+#        class: %acme_tree.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+#    acme_tree.test:
+#        class: Acme\TreeBundle\Admin\TestAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: testapp, label: test }
+#        arguments: [null, Acme\TreeBundle\Entity\Test, AcmeTreeBundle:TestAdmin]

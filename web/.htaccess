@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+	# Config for Liip
+	#RewriteCond %{REQUEST_URI} ^/data/
+	#RewriteCond /path/to/project/%{SCRIPT_FILENAME} !-s
+	#RewriteRule ^/(.*)$ http://%{HTTP_HOST}/app.php/$1 [QSA,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ app.php [QSA,L]
+
+</IfModule>

@@ -1,0 +1,89 @@
+{
+	"folders":
+	[
+		/*{
+			"name": "Application",
+			"path": "/C/localhost/wamp/www/_git/aj-cms-sandbox",
+			"folder_exclude_patterns": [
+				"vendor", "bin", "features", "Resources",
+				"app/cache", "app/logs"
+			],
+			"file_exclude_patterns": [
+				".gitignore",
+				"Capfile",
+				"behat.yml",
+				"composer.lock",
+				"LICENSE",
+				"phpunit.watchr",
+				"README.rst",
+				"*.sublime-workspace",
+				
+				"app/AppCache",
+				"app/autoload",
+				"app/*.php.cache",
+				"app/check",
+				"app/*.xml.dist",
+				"app/SymfonyRequirements",
+				"app/console",
+				"app/.htaccess"
+			]
+		},*/
+		{
+			"name": "Web",
+			"path": "web"
+		},
+		{
+			"name": "Config",
+			"path": "app/config"
+		},
+		{
+			"name": "Application",
+			"path": "src"
+		},
+		{
+			"name": "Sonata - PageBundle",
+			"path": "vendor/sonata-project/page-bundle/Sonata/PageBundle"
+		},
+		{
+			"name": "Sonata - BlockBundle",
+			"path": "vendor/sonata-project/block-bundle/Sonata/BlockBundle"
+		},
+		{
+			"name": "Sonata - AdminBundle",
+			"path": "vendor/sonata-project/admin-bundle/Sonata/AdminBundle"
+		},
+		{
+			"name": "Sonata - SeoBundle",
+			"path": "vendor/sonata-project/seo-bundle/Sonata/SeoBundle"
+		},
+		{
+			"name": "Sonata - MediaBundle",
+			"path": "vendor/sonata-project/media-bundle/Sonata/MediaBundle"
+		},
+		{
+			"name": "Sonata - NewsBundle",
+			"path": "vendor/sonata-project/news-bundle/Sonata/NewsBundle"
+		},
+		{
+			"name": "Sonata",
+			"path": "vendor/sonata-project",
+			"folder_exclude_patterns": [
+				"vendor/sonata-project/page-bundle",
+				"vendor/sonata-project/block-bundle",
+				"vendor/sonata-project/admin-bundle",
+				"vendor/sonata-project/seo-bundle",
+				"vendor/sonata-project/media-bundle",
+				"vendor/sonata-project/news-bundle"
+			]
+		},
+		{
+			"name": "Project files",
+			"path": "./"
+		}
+//		{
+//			"name": "Resources",
+//			"path": "/C/localhost/wamp/www/_git/aj-cms-sandbox",
+//			"folder_exclude_patterns": ["web", "app", "src"]
+//		},
+	]
+}

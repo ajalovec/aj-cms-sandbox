@@ -1,0 +1,42 @@
+        {% extends 'AcmePageBundle::pageView.html.twig' %}
+{% block front_page_wrap_start  %}
+<div id="front-page-wrapper">
+{% endblock %} 
+        {% block main_column  %}
+            <div id="front-page-dialog-handler">
+            	
+            </div>
+        	{% set blockSubIds = '' %}
+
+        	{% if modules %}
+			    {% for module in modules %}
+			    	{% if module.blockSubId is empty %}
+					{% else %}
+						{% set blockSubIds = blockSubIds ~ module.blockSubId ~ ' '%}
+					{% endif %}
+			    {% endfor %}
+		    {% endif %}
+            <div class="custom-ui-dialog right-column-content front-page-right-column-content pTop pBottomLarge pBottom pLeft pRight {{ blockSubIds }}">
+
+
+                <h1 class="page-title">{{ title }}</h1>
+                <div class="page-content">	
+                    {{ body|raw }}
+                </div>
+
+                <div id="front-page-modules">
+	            	{% if modules %}
+					    {% for module in modules %}
+					    	{% if module.blockName is empty %}
+							{% else %}
+								{{ sonata_block_render({'type': module.blockName }) }}
+							{% endif %}
+					    {% endfor %}
+				    {% endif %}	
+                </div>
+            </div>
+
+        {% endblock %}
+{% block front_page_wrap_stop  %}
+</div>
+{% endblock %} 
