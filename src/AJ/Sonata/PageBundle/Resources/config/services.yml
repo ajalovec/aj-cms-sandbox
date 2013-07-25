@@ -1,0 +1,66 @@
+parameters:
+#    acme_page.example.class: Acme\PageBundle\Example
+
+services:
+#    acme_page.example:
+#        class: %acme_page.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    acme_page.admin.page:
+        class: Acme\PageBundle\Admin\PageAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: acme_page, label: Pages }
+        arguments: [null, Acme\PageBundle\Entity\Page, SonataAdminBundle:CRUD, @doctrine.orm.entity_manager]
+#        calls:
+#            - [ setEntityMenager, [ @doctrine.orm.entity_manager ] ]   
+    acme_page.block.service.front_page:
+        class: Acme\PageBundle\Block\FrontPageBlockService
+        tags:
+            - {name: "sonata.block"}
+        arguments: [acme_page.block.service.front_page, @templating]
+    acme_page.routing.router:
+        class: Acme\PageBundle\Routing\RouteProvider
+        arguments: [ "@doctrine.orm.entity_manager", "@service_container" ]
+    acme_page.routing.content:
+        class: Acme\PageBundle\Routing\ContentRepository  
+    acme_page.page.page_component:
+        class: Acme\PageBundle\Component\PageComponent
+        arguments: [ "@doctrine.orm.entity_manager", "@sonata.seo.page" , "@service_container" ]
+    acme_page.page.modules_sorter_component:
+        class: Acme\PageBundle\Component\ModulesSorterComponent
+    acme_page.menu.menu_builder:
+        class: Acme\PageBundle\Menu\MenuBuilder
+        arguments: ["@knp_menu.factory", "@doctrine.orm.entity_manager","@security.context"]
+
+    acme_page.menu.main:
+        class: Knp\Menu\MenuItem # the service definition requires setting the class
+        factory_service: acme_page.menu.menu_builder
+        factory_method: createMainMenu
+        arguments: ["@request", "main-menu horizontal-list"]
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: main } # The alias is what is used to retrieve the menu
+    acme_page.menu.footer:
+        class: Knp\Menu\MenuItem # the service definition requires setting the class
+        factory_service: acme_page.menu.menu_builder
+        factory_method: createFooterMenu
+        arguments: ["@request", "main-menu horizontal-list"]
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: footer } # The alias is what is used to retrieve the menu
+    acme_page.menu.breadcrumb:
+        class: Knp\Menu\MenuItem # the service definition requires setting the class
+        factory_service: acme_page.menu.menu_builder
+        factory_method: createBreadcrumbMenu
+        arguments: ["@request"]
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: breadcrumb } # The alias is what is used to retrieve the menu
+    acme_page.route_seo_form:
+        class: Acme\PageBundle\Form\Type\RouteSeoType
+        arguments: [ @translator ]
+        tags:
+            -  { name: form.type, alias: route_seo }
+    acme_page.twig.acme_page:
+        class: Acme\PageBundle\Twig\Extension\AcmePageBundleExtension
+        tags:
+            - { name: twig.extension, alias: acme_page }

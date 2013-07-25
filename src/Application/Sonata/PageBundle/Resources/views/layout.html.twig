@@ -11,6 +11,7 @@ file that was distributed with this source code.
 {% extends 'SonataPageBundle::base_layout.html.twig' %}
 
 {% block page_container %}
+                    {{ sonata_page_render_container('aj_content', page) }}
     <div class="container">
         <div class="content">
             <div class="page-header">
@@ -33,7 +34,6 @@ file that was distributed with this source code.
                     {{ sonata_page_render_container('content_top', page) }}
                 </div>
             {% endif %}
-
             <div class="row">
                 {% if content is defined %}
                     {{ content|raw }}

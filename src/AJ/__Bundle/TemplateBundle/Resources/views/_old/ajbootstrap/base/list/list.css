@@ -1,0 +1,225 @@
+/*=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+ #==========================================================
+ #
+ # List
+ #
+ #==========================================================
+*#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#*/
+[data-list] {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+}
+[data-list]> * {
+	display: block;
+}
+[data-list]> * 			{padding: 6px 8px;}
+[data-list~=small]> * 	{padding: 2px 6px; font-size: 12px;	line-height: 15px;}
+[data-list~=big]> * 	{padding: 10px 12px; font-size: 16px; line-height: 20px;}
+
+
+[data-list~=nospace]> *{padding: 0;}
+[data-list~=extra-condesed]> *{padding: 1px 3px;}
+[data-list~=condesed]> *{padding: 2px 6px;}
+[data-list~=spacy]> * 	{padding: 10px 12px;}
+
+[data-list]> .append	{padding-bottom: 3px;}
+[data-list]> .append + *{padding-top: 3px;}
+
+
+/*==========================================================
+ * List bordered
+**===============*/
+[data-list~=bordered]> * {
+	border-bottom: #cdcdcd 1px solid;
+}
+[data-list~=bordered]> *:first-child {
+	border-top: #cdcdcd 1px solid;
+}
+[data-list~=bordered-inside]> * {
+	border-top: #cdcdcd 1px solid;
+}
+[data-list~=bordered-inside]> *:first-child {
+	border-top: 0;
+}
+
+/*==========================================================
+ * List stripped
+**===============*/
+[data-list~=stripped]> * {
+	color: #555555;
+}
+[data-list]> *.even,
+[data-list~=stripped]> *:nth-child(even) {
+	background: #f7f7f7;
+}
+
+
+
+
+
+/*==========================================================
+ * List styled
+**=============*/
+[data-list~=styled] {
+	display: block;
+	margin-left: 25px;
+	
+}
+
+[data-list~=styled]> * {
+	padding-left: 0;
+	padding-right: 0;
+	display: list-item;
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+[data-list~=styled][data-list~=icon-check]> * {
+	padding-left: 40px;
+}
+[data-list~=styled]> * > .icon  {vertical-align: middle; position: relative;}
+
+
+[data-list~=styled][data-list~=icon-check]> * {padding-left: 40px;}
+[data-list~=styled][data-list~=icon-check]> * .icon {
+	width: 20px;
+	height: 18px;
+	background-position: -740px -260px;
+	
+	margin-left: -20px;
+	left: -10px;
+}
+[data-list~=styled][data-list~=icon-check-small]> * {padding-left: 24px;}
+[data-list~=styled][data-list~=icon-check-small]> * .icon {
+	width: 10px;
+	height: 10px;
+	background-position: -720px -260px;
+	
+	margin-left: -10px;
+	left: -7px;
+}
+
+
+
+
+
+
+
+
+
+/*==========================================================
+ * List reset
+**============*/
+ul,ol {
+	display: block;
+	padding: 0;
+	margin: 0 0 10px 30px;
+}
+ul ul, ul ol,
+ol ol, ol ul {
+  margin-bottom: 0;
+}
+li { line-height: normal;}
+
+
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+/*==========================================================
+ * Definition list - dt = title, dd = data
+**=========================================*/
+dl 		{ margin: 0 0 10px 0;}
+dt,dd 	{ line-height: 1.25em; padding: 2px 0;}
+dt 		{ font-weight: bold;}
+dd 		{ margin-left: 10px;}
+
+.dl-horizontal:after {clear::after();}
+.dl-horizontal dt {width: 35%; float:left; clear: both; vertical-align:top;}
+.dl-horizontal dd {margin-left: 2%; width: 63%; float:left; vertical-align:top;}
+
+
+
+
+/*==========================================================
+ * List hanging
+**==============*/
+[data-list~=hanging] {*zoom:1;}
+[data-list]> .hanging,
+[data-list~=hanging]> * {
+	*zoom:1;
+	text-align: center;
+	margin: 0;
+}
+
+[data-list~=hanging] > *:before	{clear::before();}
+[data-list~=hanging] > *:after	{clear::after();}
+
+[data-list]> .hanging > *:first-child,
+[data-list~=hanging] > * > *:first-child {
+	margin: 0;
+	padding-right: 5px;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+	float:left;
+	box::sizing();
+}
+[data-list]> .hanging > *:first-child + *,
+[data-list~=hanging] > * > *:first-child + * {
+	margin: 0;
+	padding-left: 5px;
+	text-align:right;
+	float:right;
+	box::sizing();
+	
+}
+[data-list~=hanging]> * [data-list]> * {padding-right: 0;}
+[data-list~=hanging]> * > [data-list] {float: none; font-weight: inherit; padding: 0;}
+
+
+
+
+
+
+
+/*=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+ #==========================================================
+ #
+ # List styles
+ #
+ #==========================================================
+*#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#*/
+
+
+/*==========================================================
+ * List spacing
+**==========================================================*/
+#body [data-list~=no-wrap]> *		{padding: 0;}
+#body [data-list~=no-wrap-x]> *		{padding-left: 0;padding-right: 0;}
+#body [data-list~=no-wrap-y]> *		{padding-top: 0;padding-bottom: 0;}
+#body [data-list]> *.no-wrap		{padding: 0;}
+#body [data-list~=no-wrap]> .append	{padding-bottom: 0px;}
+#body [data-list~=no-wrap]> .append + *{padding-top: 0px;}
+#body [data-list~=no-space]> *			{margin-top: 0;}
+
+
+
+/*==========================================================
+ * Horizontal list spacing
+**==========================================================*/
+
+
+
+
+

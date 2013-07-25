@@ -1,0 +1,70 @@
+<?php
+namespace Acme\PageBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="route")
+ */
+class Route {
+	
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+    /**
+	 * Pattern - sciezka Route 
+	 *
+     * @ORM\Column(type="string", length=2000, nullable=true)
+     */
+    protected $pattern;
+
+    /**
+	 * Unikalny index dla sciezki 
+	 *
+     * @ORM\Column(name="route_name", type="string", length=100, nullable=true)
+     */
+    protected $routeName;
+
+	 /**
+	  * Kontroler
+	  *
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+	protected $controller;
+	
+    /**
+	 * Seo tytul
+	 *
+     * @ORM\Column(name="seo_title", type="string", length=1000, nullable=true)
+     */
+    protected $seoTitle;	
+	
+    /**
+	 * Seo description
+	 *
+     * @ORM\Column(name="seo_description", type="string", length=1000, nullable=true)
+     */
+    protected $seoDescription;	
+	
+    /**
+	 * Seo keywords 
+	 *
+     * @ORM\Column(name="seo_key_words", type="string", length=1000, nullable=true)
+     */
+    protected $seoKeyWords;		
+	
+	/**
+	 * Czy statyczna
+	 *
+	 * @ORM\Column(type="boolean", name="is_route_static", nullable=true)
+	 */
+    protected $isRouteStatic;
+	
+    public function __toString()
+    {
+        return $this->routeName;
+    }
+}

@@ -1,0 +1,12 @@
+
+<table class="table table-bordered">
+	<thead title="[ModuleBundle]">
+		<tr>
+			{{ block('head') }}
+		</tr>
+	</thead>
+	<tbody>
+	{% for data in data.list %}
+		{{ block('body') }}
+	{% endfor %}
+</table>

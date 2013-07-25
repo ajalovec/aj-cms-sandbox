@@ -1,0 +1,128 @@
+/*=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+ #==========================================================
+ #
+ # Box
+ #
+ #==========================================================
+*#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#*/
+[data-box] {
+	*zoom:1;
+	margin: 0 auto;
+	box::sizing();
+	position: relative;
+}
+[data-box]:before {clear::before();}
+[data-box]:after {clear::before();}
+
+
+[data-box] {}
+
+/*==========================================================
+ * Corners
+**============*/
+#html #body [data-box~=corners-top] {
+	fn::css3(border-top-left-radius, 3px);
+	fn::css3(border-top-right-radius, 3px);
+	fn::css3(border-bottom-left-radius, 0);
+	fn::css3(border-bottom-right-radius, 0);
+}
+#body [data-box~=corners-bottom] {
+	fn::css3(border-top-left-radius, 0);
+	fn::css3(border-top-right-radius, 0);
+	fn::css3(border-bottom-left-radius, 3px);
+	fn::css3(border-bottom-right-radius, 3px);
+}
+#html #body [data-box~=corners-left] {
+	fn::css3(border-top-left-radius, 3px);
+	fn::css3(border-bottom-left-radius, 3px);
+	fn::css3(border-top-right-radius, 0);
+	fn::css3(border-bottom-right-radius, 0);
+}
+#html #body [data-box~=corners-right] {
+	fn::css3(border-top-left-radius, 0);
+	fn::css3(border-bottom-left-radius, 0);
+	fn::css3(border-top-right-radius, 3px);
+	fn::css3(border-bottom-right-radius, 3px);
+}
+#html #body [data-box~=corner-top-left] {
+	fn::css3(border-top-left-radius, 3px);
+}
+#html #body [data-box~=corner-top-right] {
+	fn::css3(border-top-right-radius, 3px);
+}
+#html #body [data-box~=corner-bottom-left] {
+	fn::css3(border-bottom-left-radius, 3px);
+}
+#html #body [data-box~=corner-bottom-right] {
+	fn::css3(border-bottom-right-radius, 3px);
+}
+
+
+#body [data-box~=mini-space] {margin-top: 5px;}
+#body [data-box~=small-space] {margin-top: 10px;}
+#body [data-box~=normal-space] {margin-top: 20px;}
+#body [data-box~=medium-space] {margin-top: 40px;}
+#body [data-box~=big-space] {margin-top: 60px;}
+#body [data-box~=huge-space] {margin-top: 80px;}
+
+#body [data-box~=mini] {padding: 5px;}
+#body [data-box~=small] {padding: 10px;}
+#body [data-box~=normal] {padding: 20px;}
+#body [data-box~=big] {padding: 20px;}
+#body [data-box~=huge] {padding: 30px;}
+
+#body [data-box~=no-wrap] {padding: 0px;}
+#body [data-box~=no-wrap-x] {padding-left: 0px; padding-right: 0px;}
+#body [data-box~=no-wrap-y] {padding-top: 0px; padding-bottom: 0px;}
+#body [data-box~=no-space] {margin-top: 0;}
+#body [data-box~=no-corners] {border::radius(0);}
+#body [data-box~=no-shadow] {box::shadow(none);}
+#body [data-box~=no-border] {border: 0;}
+#body [data-box~=no-corners] {border::radius(0);}
+
+
+/*==========================================================
+ * Box backgrounds
+**==========================================================*/
+
+
+[data-box~=bg-grey] {
+	background: #959595;
+	border::radius(3px);
+}
+#body [data-box~=bg-grey],
+#body [data-box~=bg-grey] * {
+	color: #fff;
+}
+[data-box~=bg-orange] {
+	background: #FF9F33;
+	background: fn::color($color.orange);
+	border::radius(3px);
+}
+#body [data-box~=bg-orange],
+#body [data-box~=bg-orange] * {
+	color: #fff;
+}
+[data-box~="white"] {
+	background: #fff; /* Old browsers */
+	border::radius(3px);
+}
+
+
+
+
+
+
+#body [data-bind] {cursor:pointer;}
+#body [data-collapsable] {display: none;}
+.jq-tabs .nav.nav-pills {
+	margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+

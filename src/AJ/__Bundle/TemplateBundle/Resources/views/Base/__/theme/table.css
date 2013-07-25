@@ -1,0 +1,113 @@
+<?php
+$table = new \stdClass();
+$table->borderRadius = 0;
+$table->borderColor = "#58585a";
+$table->borderInnerColor = "#58585a";
+
+?>
+/*=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+ #==========================================================
+ #
+ # Table
+ #
+ #==========================================================
+*#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#*/
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent;
+}
+
+.table-layout {
+	width:100%;
+}
+.table {
+  width: 100%;
+  margin-bottom: 18px;
+}
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #58585a;
+}
+.table thead:first-child tr:first-child th,
+.table tbody:first-child tr:first-child td {
+  border-top: 0;
+}
+
+
+/*==========================================================
+ * Condensed
+**==============*/
+.table-condensed th,
+.table-condensed td {
+  padding: 4px 5px;
+}
+
+/*==========================================================
+ * Striped
+**==============*/
+.table-striped tbody tr:nth-child(odd) td,
+.table-striped tbody tr:nth-child(odd) th {
+  background-color: #58585a;
+}
+
+/*==========================================================
+ * Bordered
+**==============*/
+.table-bordered {
+  border-collapse: separate;
+  *border-collapse: collapse;
+  
+  
+  border: 1px solid $table.borderColor;
+  -webkit-border-radius: $table.borderRadiuspx;
+  -moz-border-radius: $table.borderRadiuspx;
+  border-radius: $table.borderRadiuspx;
+}
+.table-bordered th:first-child,
+.table-bordered td:first-child {
+  border-left: 0;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border-left: 1px solid $table.borderInnerColor;
+  
+}
+
+.table-bordered> *:first-child tr> * {border-top:0;}
+
+
+
+.table-bordered thead:first-child tr:first-child th:first-child,
+.table-bordered tbody:first-child tr:first-child td:first-child {
+  -webkit-border-radius: $table.borderRadiuspx 0 0 0;
+  -moz-border-radius: $table.borderRadiuspx 0 0 0;
+  border-radius: $table.borderRadiuspx 0 0 0;
+}
+.table-bordered thead:first-child tr:first-child th:last-child,
+.table-bordered tbody:first-child tr:first-child td:last-child {
+  -webkit-border-radius: 0 $table.borderRadiuspx 0 0;
+  -moz-border-radius: 0 $table.borderRadiuspx 0 0;
+  border-radius: 0 $table.borderRadiuspx 0 0;
+}
+.table-bordered thead:last-child tr:last-child th:first-child,
+.table-bordered tbody:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 $table.borderRadiuspx;
+  -moz-border-radius: 0 0 0 $table.borderRadiuspx;
+  border-radius: 0 0 0 $table.borderRadiuspx;
+}
+.table-bordered thead:last-child tr:last-child th:last-child,
+.table-bordered tbody:last-child tr:last-child td:last-child {
+  -webkit-border-radius: 0 0 $table.borderRadiuspx 0;
+  -moz-border-radius: 0 0 $table.borderRadiuspx 0;
+  border-radius: 0 0 $table.borderRadiuspx 0;
+}
+
+
+.table tr.noborder> * {border-top: 0;}
+.table-bordered tr.text-center> * {text-align: center;}

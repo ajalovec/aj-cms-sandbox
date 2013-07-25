@@ -15,8 +15,19 @@ class AppKernel extends Kernel
         parent::init();
     }
 
+    protected function getKernelParameters()
+    {
+        $params = parent::getKernelParameters();
+        $params['base_path'] = dirname($_SERVER['SCRIPT_NAME']);
+        
+        return $params;
+    }
+
     public function registerBundles()
     {
+        /*
+         * Bundle core
+         */
         $bundles = array(
             // SYMFONY STANDARD EDITIONEurope/Ljubljana
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
@@ -32,54 +43,77 @@ class AppKernel extends Kernel
             // DOCTRINE
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
-
-
-            // TEMPLATE HELPER BUNDLES
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
-            new Sonata\SeoBundle\SonataSeoBundle(),
-            new Sonata\jQueryBundle\SonatajQueryBundle(),
-            new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
-            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
-
-            // ADMINISTRATION
-            new Sonata\AdminBundle\SonataAdminBundle(),
-            new Sonata\NotificationBundle\SonataNotificationBundle(),
+            
+            // SONATA CORE & HELPER BUNDLES
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+            new Sonata\IntlBundle\SonataIntlBundle(),
+            new Sonata\FormatterBundle\SonataFormatterBundle(),
+            new Sonata\CacheBundle\SonataCacheBundle(),
+            
+            /*
+             * Bundle framework
+             */
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
             new FOS\UserBundle\FOSUserBundle(),
+            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+            
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),
+            new Sonata\NotificationBundle\SonataNotificationBundle(),
+            //new Application\Sonata\NotificationBundle\ApplicationSonataNotificationBundle(),
             
             // PAGE
             new Sonata\PageBundle\SonataPageBundle(),
-            new Sonata\BlockBundle\SonataBlockBundle(),
-            new Sonata\NewsBundle\SonataNewsBundle(),
-            new Sonata\MediaBundle\SonataMediaBundle(),
-            // new Liip\ImagineBundle\LiipImagineBundle(),
-
-            // CUSTOM BUNDLES
-            new Sonata\Bundle\DemoBundle\SonataDemoBundle(),
-
-            
-            // APPLICATION
-            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
-            new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),
             new Application\Sonata\PageBundle\ApplicationSonataPageBundle(),
+
+            new Sonata\NewsBundle\SonataNewsBundle(),
             new Application\Sonata\NewsBundle\ApplicationSonataNewsBundle(),
-            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
-            new Application\Sonata\NotificationBundle\ApplicationSonataNotificationBundle(),
+            new Sonata\MediaBundle\SonataMediaBundle(),
+            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(), 
+            
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\SeoBundle\SonataSeoBundle(),
 
 
             // Enable this if you want to audit backend action
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
             // CMF Integration
+
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
-            
-            // SONATA CORE & HELPER BUNDLES
-            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
-            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-            new Sonata\IntlBundle\SonataIntlBundle(),
-            new Sonata\FormatterBundle\SonataFormatterBundle(),
-            new Sonata\CacheBundle\SonataCacheBundle(),
+
+            new AJ\Template\AssetsBundle\AJTemplateAssetsBundle(),
+            new AJ\Template\ComponentBundle\AJTemplateComponentBundle(),
+            new AJ\Template\LayoutBundle\AJTemplateLayoutBundle(),
+            new AJ\Template\BootstrapBundle\AJTemplateBootstrapBundle(),
         );
+
+        /*
+         * Bundle application
+         */
+        $applicationBundles = array(
+            // CUSTOM BUNDLES
+            new Sonata\Bundle\DemoBundle\SonataDemoBundle(),
+            
+        );
+        
+        /*
+         * Bundle frontend
+         */
+        $frontendBundles = array(
+            // new Liip\ImagineBundle\LiipImagineBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
+            new Sonata\MarkItUpBundle\SonataMarkItUpBundle(),
+            new Ivory\CKEditorBundle\IvoryCKEditorBundle(),
+
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
+        );
+
+        
+        $bundles = array_merge($bundles, $applicationBundles, $frontendBundles);
+
+
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();

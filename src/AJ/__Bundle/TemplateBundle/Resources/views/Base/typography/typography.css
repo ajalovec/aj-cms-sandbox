@@ -1,0 +1,163 @@
+/*==========================================================
+ * Content
+**==========================================================*/
+var {font-style:inherit;}
+span {}
+abbr {}
+small {font-size: 80%; }
+
+br {}
+hr {}
+
+p {}
+blockquote {}
+address {}
+
+ul {}
+ol {}
+dl {}
+
+img {}
+figure {}
+figure figcaption{}
+
+ul,ol,
+p,
+figure {
+	margin: 0;
+	fn::css3(margin-after, 0);
+	fn::css3(margin-before, 0);
+	fn::css3(margin-start, 0);
+	fn::css3(margin-end, 0);
+}
+
+br {
+	
+}
+hr,
+.hr {
+  margin: 0;
+  height: 0;
+  border: 0;
+  clear: both;
+  *zoom:1;
+}
+
+p,ul,ol,.block,[data-list]	{margin-top: 10px;}
+p[class*=span],ul[class*=span],ol[class*=span],.block[class*=span],[data-list][class*=span]	{margin-top: 0px;}
+
+/*==========================================================
+ * Headings
+**==========================================================*/
+.heading, h1,h2,h3,h4,h5,h6 {
+	display: block;
+	font-family: inherit;
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	font-weight: inherit;
+	text-rendering: optimizelegibility;
+	text-align: left;
+	vertical-align: baseline;
+	margin: 0;
+}
+.heading small,h1 small,h2 small,h3 small,h4 small,h5 small,h6 small {
+	color: #333;
+	font-weight: normal;
+	font-size: 75%;
+}
+
+a.heading, .heading a
+{text-decoration: none;}
+a.heading:hover, .heading a:hover
+{text-decoration: underline;}
+
+
+
+/*==========================================================
+ * Text
+**==========================================================*/
+#body .font-bold 		{font-weight: bold;}
+#body .font-italic 		{font-style: italic;}
+#body .font-normal 		{font-weight: normal;}
+#body .text-capitalize 	{text-transform: capitalize;}
+#body .text-underline 	{text-decoration: underline;}
+#body .text-overline 	{text-decoration: overline;}
+#body .text-strikeout 	{text-decoration: line-through;}
+#body .text-uppercase 	{text-transform: uppercase;}
+#body .text-lowercase 	{text-transform: lowercase;}
+#body .text-normalcase 	{text-transform: none;}
+#body .text-hide {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+/*==========================================================
+ * Line styles
+**==========================================================*/
+#body .text-right 		{text-align:right;}
+#body .text-left 		{text-align:left;}
+#body .text-center 		{text-align:center;}
+#body .text-justify 	{text-align:justify;}
+
+#body .vat 	{vertical-align: top;}
+#body .vat 	{vertical-align: top;}
+#body .vam 	{vertical-align: middle;}
+#body .vab 	{vertical-align: bottom;}
+#body .vabl {vertical-align: baseline;}
+
+
+
+
+
+/*==========================================================
+ * Code
+**==========================================================*/
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+code {
+  padding: 2px 4px;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+pre {
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 9px;
+  font-size: 12.025px;
+  line-height: 18px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+pre.prettyprint {
+  margin-bottom: 18px;
+}
+pre code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+
+
+
+
+

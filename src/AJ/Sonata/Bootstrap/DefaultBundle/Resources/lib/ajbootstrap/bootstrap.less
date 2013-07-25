@@ -1,0 +1,51 @@
+#@import "base/icon/icon.css";
+@import "tpl:/document/css/table.css";
+@import "../Components/button.less";
+@import "root:/Components/button.less";
+@import "@{webPath}/Resources/lib/bootstrap/less/bootstrap.less";
+
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+     -moz-transition: opacity 0.15s linear;
+       -o-transition: opacity 0.15s linear;
+          transition: opacity 0.15s linear;
+}
+
+.fade.in {
+  opacity: 1;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+
+.button() {
+  display: block;
+  border: 1px solid black;
+  background: url(@{pageUrl}/images/bg.jpg) no-repeat center top;
+  &:hover { background-color: white }
+}
+
+#@import 'css/typography.css';
+#@import 'css/image.css';
+#@import 'css/icon.css';
+#@import 'css/btn.css';
+#@import 'css/form.css';
+
+
+
+#@import 'css/layout.css';
+#@import 'css/table.css';
+#@import 'css/list.css';
+#@import 'css/box.css';
+
+
+#@import 'css/nav.css';
+
+
+

@@ -1,0 +1,141 @@
+/*=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+ #==========================================================
+ #
+ # Slider
+ #
+ #==========================================================
+*#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#*/
+.ui-slider 						{ position: relative; text-align: left;}
+.ui-slider .wrapper 			{ position: relative; height: 100%;}
+.ui-slider .ui-slider-handle 	{ position: absolute; z-index: 5; cursor: pointer; display: block;}
+.ui-slider .ui-slider-range		{ position: absolute; z-index: 2; font-size: .7em; overflow: hidden;}
+.ui-slider .ui-slider-range-min { left: 0; bottom: 0; }
+.ui-slider .ui-slider-range-max { right: 0; top: 0;}
+
+.ui-slider .definition 			{ position: absolute; width: 100%; min-height: 100%; }
+.ui-slider .definition> * {
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+}
+.ui-slider .definition .icon {position: relative; vertical-align: top;}
+
+
+
+.ui-slider {
+	font-size: 10px;
+	line-height: 10px;
+	 
+	border::radius(5px);
+	background: url(images/orange_stripes.png) repeat top left;
+}
+
+.ui-slider .ui-slider-handle {
+	width: 26px;
+	height: 26px;
+	background: url(images/slider-pin.png) no-repeat top left;
+	margin-left:-13px;
+}
+.ui-slider .ui-slider-range {
+	background: #ddd;
+	border::radius(5px);
+	
+}
+
+.ui-slider .definition.top> * {
+	bottom:0;
+}
+
+.ui-slider .definition.top,
+.ui-slider .definition.bottom {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.ui-slider .definition .icon.default {
+	width: 8px;
+	height: 8px;
+	
+	background: #fff;
+	
+	border::radius(20px);
+}
+
+
+/*==========================================================
+ * Horizontal
+**=============*/
+.ui-slider-horizontal {
+	height: 1em;
+	margin: 30px 0;
+	padding: 0px 4px;
+	
+}
+.ui-slider-horizontal .ui-slider-handle {
+	top: 50%;
+	margin-top:-13px;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0; height: 100%;
+	padding: 0 4px;
+	margin: 0 -4px;
+	background: #ddd;
+}
+
+.ui-slider-horizontal .definition.top 		{bottom: 22px;}
+.ui-slider-horizontal .definition.bottom 	{top: 22px;}
+.ui-slider-horizontal .definition> *:first-child	{ margin-left: 0px; text-align: left; }
+.ui-slider-horizontal .definition> *:last-child 	{ margin-left: -40px; text-align: right; }
+.ui-slider-horizontal .definition> * {
+	width: 40px;
+	min-height: 100%;
+	margin-left: -20px;
+}
+.ui-slider-horizontal .definition .icon {top: 50%;}
+.ui-slider-horizontal .definition .icon.default {margin-top: 1px;}
+
+
+/*==========================================================
+ * Vertical
+**============*/
+.ui-slider-vertical {
+	width: 1em;	height: 30em;
+	margin: 0 30px;
+	padding: 6px 0px;
+}
+.ui-slider-vertical .ui-slider-handle {
+	left: 50%;
+	margin-bottom: -13px
+}
+.ui-slider-vertical .ui-slider-range {
+	left: 0; width: 100%; 
+	padding: 6px 0;
+	margin: -6px 0;
+	
+}
+.ui-slider-vertical  .definition.top 		{right: 25px; text-align: right;}
+.ui-slider-vertical  .definition.bottom 	{left: 25px; text-align: left;}
+.ui-slider-vertical .definition> * {
+	height: 40px;
+	width: 40px;
+	margin-bottom: -33px;
+	text-align: left;
+}
+.ui-slider-vertical  .definition.top 		{right: 25px; text-align: right;}
+.ui-slider-vertical  .definition.bottom 	{left: 25px; text-align: left;}
+
+.ui-slider-vertical .definition .icon 			{top: -2px; margin-top: .5em;}
+.ui-slider-vertical .definition .icon.default 	{margin-left: 1px;}
+
+
+
+/*==========================================================
+ * Vertical
+**============*/
+.ui-slider.slider-boolean {
+	width: 38px
+}
+
+

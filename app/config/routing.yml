@@ -1,3 +1,21 @@
+
+aj_template_assets:
+    resource: "@AJTemplateAssetsBundle/Resources/config/routing.xml"
+    prefix:   /aj-template
+
+aj_template_component:
+    resource: "@AJTemplateComponentBundle/Resources/config/routing.xml"
+    prefix:   /aj-template
+
+aj_template_layout:
+    resource: "@AJTemplateLayoutBundle/Resources/config/routing.xml"
+    prefix:   /aj-template
+
+aj_template_bootstrap:
+    resource: "@AJTemplateBootstrapBundle/Resources/config/routing.xml"
+    prefix:   /aj-template
+
+
 # Internal routing configuration to handle ESI
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
@@ -52,6 +70,7 @@ sonata_media_pixlr:
 #_imagine:
 #    resource: .
 #    type:     imagine
+
 
 blog:
     resource: '@SonataNewsBundle/Resources/config/routing/news.xml'

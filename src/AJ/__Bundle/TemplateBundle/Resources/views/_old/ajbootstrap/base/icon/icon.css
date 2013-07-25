@@ -1,0 +1,51 @@
+/*=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+ #==========================================================
+ #
+ # Icons
+ #
+ #==========================================================
+*#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#*/
+
+#body .icon {
+	*font-size: 0;
+	*line-height: 0;
+}
+.icon,
+[class^="icon-"],
+[class*=" icon-"] {
+	display: inline-block;
+	*display: inline; *zoom:1;
+	text-indent: -9999px;
+	*text-indent: 0;
+	
+	
+	width: 14px;
+	height: 14px;
+	overflow: hidden;
+	
+	
+	font-size: 10px;
+	white-space: no-wrap;
+	background: url("images/noScale.png") no-repeat;
+	
+}
+.icon:last-child,
+[class^="icon-"]:last-child,
+[class*=" icon-"]:last-child {
+	*margin-left: 0;
+}
+
+.text-icon {
+	display: inline-block; *display: inline; *zoom: 1;
+	text-align: center;
+	font-size:12px; line-height:1.2em;
+}
+.text-icon .icon:first-child {margin-left:0;}
+.text-icon .icon:last-child {margin-right:0;}
+
+
+.icon.centerIcon {
+	margin: 0 auto;
+	display: block;
+}
+

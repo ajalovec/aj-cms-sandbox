@@ -40,13 +40,39 @@ twig:
 # Assetic Configuration
 assetic:
     debug:          %kernel.debug%
-    use_controller: false
+    use_controller: %kernel.debug%
+    java: %assetic.path.java%
+    node: %assetic.path.node%
+    node_paths: %assetic.path.node_paths%
+    bundles: ~
     filters:
         cssrewrite: ~
-        # closure:
-        #     jar: %kernel.root_dir%/java/compiler.jar
-        # yui_css:
-        #     jar: %kernel.root_dir%/java/yuicompressor-2.4.2.jar
+        #cssmin: ~
+        #less: ~
+        lessphp:
+            file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
+            apply_to: "\.(less|css\.twig)$"
+
+        uglifycss:
+            bin: %assetic.path.uglifycss%
+            #apply_to: "\.(less|css)$"
+        uglifyjs2:
+            bin: %assetic.path.uglifyjs%
+            #apply_to: "\.(js)$"
+    #assets:
+    #    bootstrap_css:
+    #        inputs:
+    #            # This is a custom build file which works together with bootswatch.
+    #            # Note that all files you specify here are processed one after each other,
+    #            # so you can't simply add twitter's bootstrap.less and your local variables.less here.
+    #            # You can choose whatever directory you wish, and name it whatever you wish.
+    #            - %kernel.root_dir%/Resources/public/build.less
+    #        filters:
+    #            - lessphp
+    #            - cssrewrite
+    #            # This is the output file which you'll have to include using asset('css/bootstrap.css') in your template.
+    #            # You can generate the CSS file by using the assetic:dump sf2 command (php app/console assetic:dump)
+    #        output: css/bootstrap.css
 
 # Doctrine Configuration
 doctrine:

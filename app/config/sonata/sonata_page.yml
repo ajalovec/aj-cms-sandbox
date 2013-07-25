@@ -37,21 +37,23 @@ sonata_page:
         classes:
             "Application\Sonata\PageBundle\Entity\Block": getId
 
+    default_page_service:  sonata.page.service.default
     default_template: default
     templates:
         default: { path: 'SonataPageBundle::layout.html.twig', name: 'default' }
+        master_small: { path: 'SonataPageBundle::layout2.html.twig', name: 'master_small' }
 
     page_defaults:
         homepage: {decorate: false, enabled: true}
 
     caches:
         esi:
-            token:    add an unique token here # default is a random value
+            token:    %secret% # default is a random value
             servers:
                 - varnishadm -T 127.0.0.1:2000 {{ COMMAND }} "{{ EXPRESSION }}"
 
         ssi:
-            token:    add an unique token here # default is a random value
+            token:    %secret% # default is a random value
 
     catch_exceptions:
         not_found: [404]    # render 404 page with "not_found" key (name generated: _page_internal_error_{key})

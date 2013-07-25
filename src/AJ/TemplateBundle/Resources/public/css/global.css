@@ -1,0 +1,89 @@
+
+
+#body .pointer {cursor: pointer;}
+
+
+/*==========================================================
+ * Display
+**==========================================================*/
+#body .db	{display:block;}
+#body .dib	{display:inline-block; *display:inline; zoom:1;}
+#body .di	{display:inline;}
+#body .dn	{display:none;}
+#body .oh	{overflow: hidden;}
+
+#body .pr	{position:relative;}
+
+/*==========================================================
+ * Float
+**==========================================================*/
+#body .fl, #body .pull-left		{float:left;}
+#body .fr, #body .pull-right	{float:right;}
+
+
+/*==========================================================
+ * Clear
+**==========================================================*/
+#body .cb{clear:both;}
+
+#body .clearfix { *zoom: 1;}
+#body .clearfix:before {display: table; content: ""; font-size:0; line-height: 0;}
+#body .clearfix:after {display: table; content: ""; clear: both; font-size:0; line-height: 0;}
+
+
+	
+/*==========================================================
+ * Height spaces - simulates vertical break
+**==========================================================*/
+#body [class^="hs"], #body [class*=" hs"]		
+{display: block; *zoom: 1; font-size: 0; line-height: 0;}
+
+#body [class^="hs"]:before, #body [class*=" hs"]:before
+{display: table; content: "";}
+
+#body [class^="hs"]:after, #body [class*=" hs"]:after
+{display: table; content: ""; clear: both;}
+
+#body .hs2{ height:2px;}
+#body .hs5{ height:5px;}
+#body .hs8{ height:8px;}
+#body .hs10{ height:10px;}
+#body .hs15{ height:15px;}
+#body .hs20{ height:20px;}
+#body .hs25{ height:25px;}
+#body .hs30{ height:30px;}
+#body .hs35{ height:35px;}
+#body .hs40{ height:40px;}
+#body .hs45{ height:45px;}	
+
+	
+/*==========================================================
+ * Width spaces - simulates horizontal break
+**==========================================================*/
+#body [class^="ws"], #body [class*=" ws"]
+{display: inline-block; *display: inline; *zoom:1;}
+#body [class^="ws"]:after, #body [class*=" ws"]:after
+{content: " ";}
+
+#body .ws2 { width: 2px; min-width: 2px; }
+#body .ws4 { width: 4px; min-width: 4px; }
+#body .ws5 { width: 5px; min-width: 5px; }
+#body .ws8 { width: 8px; min-width: 8px; }
+#body .ws10 { width: 10px; min-width: 10px; }
+#body .ws15 { width: 15px; min-width: 15px; }
+#body .ws20 { width: 20px; min-width: 20px; }
+#body .ws25 { width: 25px; min-width: 25px; }
+#body .ws30 { width: 30px; min-width: 30px; }
+#body .ws35 { width: 35px; min-width: 35px; }	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

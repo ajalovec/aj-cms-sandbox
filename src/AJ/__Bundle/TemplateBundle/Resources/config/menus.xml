@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+ 
+<parameters>
+	<parameter key="aj_template.knp_menu.twig.extension.class">AJ\Bundle\TemplateBundle\Twig\MenuExtension</parameter>
+	
+</parameters>
+
+<services>
+
+	<service id="aj_template.knp_menu.twig.extension" class="%aj_template.knp_menu.twig.extension.class%" public="false">
+        <tag name="twig.extension" />
+        <argument type="service" id="knp_menu.helper" />
+    </service>
+		
+<!-- # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+	-# 
+	-# MENU BUILDER
+	-# 
+	-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # -->
+		
+		<!-- Knp menu 
+		<service id="knp_menu.factory" class="%knp_menu.factory.class%">
+				<argument type="service" id="router" />
+		</service>
+				
+		<service id="knp_menu.matcher" class="%knp_menu.matcher.class%" />
+
+		<service id="knp_menu.renderer.list" class="%knp_menu.renderer.list.class%">
+				<tag name="knp_menu.renderer" alias="list" />
+				<argument type="service" id="knp_menu.matcher" />
+				<argument>%knp_menu.renderer.list.options%</argument>
+				<argument>%kernel.charset%</argument>
+		</service>
+		-->
+
+</services>
+ 
+</container>

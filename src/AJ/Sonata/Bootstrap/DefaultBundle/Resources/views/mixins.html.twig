@@ -1,0 +1,5 @@
+{% macro ajtest(name, class) %}
+    <div class="{{ attr_class('block-'~name, class|default(null)) }}">
+        class
+    </div>
+{% endmacro %}

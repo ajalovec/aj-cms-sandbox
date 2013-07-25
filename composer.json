@@ -57,7 +57,8 @@
 
         "dflydev/markdown": "1.0.2",
         "simplethings/entity-audit-bundle": "dev-master",
-        "willdurand/faker-bundle": "dev-master"
+        "willdurand/faker-bundle": "dev-master",
+        "leafo/lessphp": "0.3.9"
     },
 
     "require-dev": {

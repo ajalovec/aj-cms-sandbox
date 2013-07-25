@@ -1,29 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" ?>
+
 <container xmlns="http://symfony.com/schema/dic/services"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-
+    <!--
     <parameters>
-        <parameter key="sonata.media.block.gallery.class">Application\Sonata\MediaBundle\Block\GalleryBlockService</parameter>
-    </parameters>
-<!--
-    <parameters>
-        <parameter key="sonata.page.block.container.class">Sonata\PageBundle\Block\ContainerBlockService</parameter>
-        <parameter key="sonata.page.block.children_pages.class">Sonata\PageBundle\Block\ChildrenPagesBlockService</parameter>
-        <parameter key="sonata.page.block.ajax.class">Sonata\PageBundle\Controller\AjaxController</parameter>
+        <parameter key="sonata_page.example.class">AJ\Template\LayoutBundle\Example</parameter>
     </parameters>
 
     <services>
-        
-        <service id="sonata.media.block.gallery" class="%sonata.media.block.gallery.class%">
-            <tag name="sonata.block" />
-            <argument>sonata.media.block.gallery</argument>
-            <argument type="service" id="templating" />
-            <argument type="service" id="service_container" />
-            <argument type="service" id="sonata.media.manager.gallery" />
+        <service id="sonata_page.example" class="%sonata_page.example.class%">
+            <argument type="service" id="service_id" />
+            <argument>plain_value</argument>
+            <argument>%parameter_name%</argument>
         </service>
-        
     </services>
--->
+    -->
 </container>

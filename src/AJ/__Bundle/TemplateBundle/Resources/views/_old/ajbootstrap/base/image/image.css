@@ -1,0 +1,80 @@
+/*==========================================================
+ * Image defaults
+**==========================================================*/
+.img {
+  display: block;
+  *zoom:1;
+  line-height: 1;
+  text-align: center;
+  background: #fff;
+  padding: 0;
+  overflow: hidden;
+  border::radius(0px);
+}
+a.img:hover {
+  border-color: #0088cc;
+}
+
+.img > img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img .caption {
+  padding: 9px;
+}
+
+
+/*==========================================================
+ * Style
+**==========================================================*/
+.img-transparent {
+	background: 0;
+	padding: 0;
+	border: 0;
+}
+.img.fit> img,
+.img-autofit {
+  display: inline-block;
+  *display: inline; *zoom:1;
+  
+  width: auto; height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.img.fill> img,
+.img-autofill {
+  display: inline-block;
+  *display: inline; *zoom:1;
+	
+	width: auto; height: auto;
+	min-width: 100%;
+	min-height: 100%;
+  max-width: none;
+  max-height: none;
+}
+
+img.img-autowidth {width: 100%; height: auto;}
+img.img-autoheight {width: auto; height: 100%;}
+
+
+
+
+
+[class*='img-offset-top-'] {
+	position: relative;
+	margin-top: -10px;
+}
+.img-offset-top-15 {margin-top: -15px;}
+.img-offset-top-20 {margin-top: -20px;}
+.img-offset-top-25 {margin-top: -25px;}
+.img-offset-top-30 {margin-top: -30px;}
+.img-offset-top-35 {margin-top: -35px;}
+.img-offset-top-40 {margin-top: -40px;}
+
+
+

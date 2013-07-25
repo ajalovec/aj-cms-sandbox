@@ -1,0 +1,53 @@
+/*=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+ #==========================================================
+ #
+ # Dropdown
+ #
+ #==========================================================
+*#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#*/
+.dropdown {
+	*zoom:1;
+	display: block;
+}
+.dropdown .dropdown-box,
+.dropdown .dropdown-menu {
+	display: block;
+	position: absolute;
+	visibility:hidden;
+	z-index:100;
+	
+	opacity: 0;
+	fn::transition(opacity .3s linear, visibility .3s);
+	
+	
+}
+.dropdown.open .dropdown-box,
+.dropdown:hover .dropdown-box,
+.dropdown.open .dropdown-menu,
+.dropdown:hover .dropdown-menu {
+	visibility: visible;
+	opacity: 1;
+}
+
+.dropdown.close .dropdown-box,
+.dropdown.close .dropdown-menu {
+	display: none;
+}
+
+
+.dropdown .dropdown-box:before,
+.dropdown .dropdown-box:after {display: table;  content: ""}
+.dropdown .dropdown-box:after {clear:both}
+
+
+.open {
+  *z-index: 1000;
+}
+
+.open > .dropdown-menu {
+  display: block;
+}
+
+/*==========================================================
+ * Custom
+**==============*/

@@ -30,7 +30,7 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
 
     function getOrder()
     {
-        return 2;
+        return 201;
     }
 
     public function setContainer(ContainerInterface $container = null)

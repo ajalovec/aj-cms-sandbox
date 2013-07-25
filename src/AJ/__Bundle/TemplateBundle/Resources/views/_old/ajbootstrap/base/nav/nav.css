@@ -1,0 +1,42 @@
+/*=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#
+ #==========================================================
+ #
+ # Navigation
+ #
+ #==========================================================
+*#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#=#*/
+.nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	*zoom:1;
+}
+.nav:before,
+.nav:after {display: table;  content: ""}
+.nav:after {clear:both}
+
+.nav > li {
+	position: relative;
+	display: block;
+	float:left;
+}
+
+.nav > li > a {
+	display: block;
+	white-space: nowrap;
+	text-decoration: none;
+}
+#body .nav > li.disabled > a,
+#body .nav > li.disabled:hover > a {
+	text-decoration: none;
+	cursor: default;
+}
+
+#body .nav.nav-list > li,
+#body .nav[data-list]> li {
+	float:none;
+	display: block;
+}
+
+

@@ -1,0 +1,24 @@
+{% set _form_attrs = attrs({
+	action: "",
+	method: "post",
+	class: 'form'
+}, form_attrs|default({})) %}
+
+{#% form_theme formView with ['AJTemplateBundle:Base:form/form.html.twig', formBlocks] %#}
+{% form_theme formView with ['AJTemplateBundle:Base:form/form.html.twig']|merge(formTheme) %}
+
+{% if data.status == 'success' %}
+
+	{% block page_success %}
+		<p>Uspešno ste zaključili.</p>
+	{% endblock %}
+
+{% else %}
+
+	<form {{ _form_attrs|raw }} {{ form_enctype(formView) }}>
+		{% block page_form %}
+			<p>Forma</p>
+		{% endblock %}
+	</form>
+
+{% endif %}

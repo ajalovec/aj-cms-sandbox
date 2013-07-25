@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+<parameters>
+	<parameter key="aj_template.manager.class">AJ\Bundle\TemplateBundle\TemplateManager</parameter>
+	<parameter key="aj_template.active_template.class">AJ\Bundle\TemplateBundle\ActiveTemplate</parameter>
+</parameters>
+
+<services>
+	<service id="aj_template.manager"
+			 class="%aj_template.manager.class%"> 
+		<argument type="service" id="service_container" />
+	</service>
+
+
+    <service id="aj_template.active_template"
+    		 class="%aj_template.active_template.class%">
+        <argument type="service" id="liip_theme.active_theme"/>
+        <argument>%base_url%</argument>
+    </service>
+
+<!--Kernel controller event 
+	<service id="aj_template.theme.controller_listener"
+			 class="AJ\Bundle\TemplateBundle\EventListener\ActiveTemplateControllerListener">
+		<tag name="kernel.event_listener" event="kernel.controller" method="onKernelController" />
+		<argument type="service" id="aj_template.active_template" />
+		<argument type="service" id="kernel" />
+	</service>
+-->
+
+
+	<!--service id="module_peter_demo.controller" class="%module_peter_demo.controller.class%"> 
+		<call method="setContainer">
+					 <argument type="service" id="service_container" />
+			</call>
+	</service-->
+
+</services>
+ 
+</container>

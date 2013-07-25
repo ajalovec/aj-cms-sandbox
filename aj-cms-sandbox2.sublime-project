@@ -1,0 +1,21 @@
+{
+	"folders":
+	[
+		{
+			"name": "Application",
+			"path": "/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources"
+		},
+		{
+			"name": "Config",
+			"path": "/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config"
+		},
+		{
+			"name": "src",
+			"path": "src"
+		},
+		{
+			"name": "Project files",
+			"path": "/C/localhost/wamp/www/_git/aj-cms-sandbox"
+		}
+	]
+}

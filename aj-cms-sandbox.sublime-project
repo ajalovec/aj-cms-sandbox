@@ -41,12 +41,12 @@
 			"path": "src"
 		},
 		{
-			"name": "Sonata - PageBundle",
-			"path": "vendor/sonata-project/page-bundle/Sonata/PageBundle"
-		},
-		{
 			"name": "Sonata - BlockBundle",
 			"path": "vendor/sonata-project/block-bundle/Sonata/BlockBundle"
+		},
+		{
+			"name": "Sonata - PageBundle",
+			"path": "vendor/sonata-project/page-bundle/Sonata/PageBundle"
 		},
 		{
 			"name": "Sonata - AdminBundle",

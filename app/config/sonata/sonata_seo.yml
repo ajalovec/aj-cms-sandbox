@@ -2,10 +2,10 @@
 # more information can be found here http://sonata-project.org/bundles/page
 #
 sonata_seo:
-    encoding:             UTF-8
     page:
+        encoding:         UTF-8
         default:          sonata.seo.page.default
-        title:            Sonata Project
+        title:            ""
         metas:
             name:
                 keywords:             foo bar

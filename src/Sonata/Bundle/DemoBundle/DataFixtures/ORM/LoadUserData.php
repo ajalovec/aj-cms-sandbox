@@ -25,7 +25,7 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, O
 
     function getOrder()
     {
-        return 1;
+        return 2;
     }
 
     public function setContainer(ContainerInterface $container = null)
@@ -40,13 +40,25 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, O
 
         $user = $manager->createUser();
         $user->setUsername('admin');
-        $user->setEmail($faker->safeEmail);
+        $user->setEmail("admin@cnj.si");
         $user->setPlainPassword('admin');
         $user->setEnabled(true);
         $user->setSuperAdmin(true);
         $user->setLocked(false);
 
         $manager->updateUser($user);
+
+        $user = $manager->createUser();
+        $user->setUsername('aj');
+        $user->setEmail("andraz@cnj.si");
+        $user->setPlainPassword('aj123');
+        $user->setEnabled(true);
+        $user->setSuperAdmin(true);
+        $user->setLocked(false);
+
+        $manager->updateUser($user);
+
+        $this->addReference('user-admin', $user);
 
         $user = $manager->createUser();
         $user->setUsername('secure');
@@ -60,18 +72,16 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, O
 
         $manager->updateUser($user);
 
-        $this->addReference('user-admin', $user);
+        
+        $user = $manager->createUser();
+        $user->setUsername('editor');
+        $user->setEmail("andraz.jalovec@gmail.com");
+        $user->setPlainPassword('editor');
+        $user->setEnabled(true);
+        $user->setLocked(false);
+        $user->addGroup($this->getReference('user-group-editor'));
 
-        foreach (range(1, 20) as $id) {
-            $user = $manager->createUser();
-            $user->setUsername($faker->userName);
-            $user->setEmail($faker->safeEmail);
-            $user->setPlainPassword($faker->randomNumber());
-            $user->setEnabled(true);
-            $user->setLocked(false);
-
-            $manager->updateUser($user);
-        }
+        $manager->updateUser($user);
     }
 
     /**
@@ -82,6 +92,7 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, O
         return $this->container->get('fos_user.user_manager');
     }
 
+
     /**
      * @return \Faker\Generator
      */
@@ -89,4 +100,6 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, O
     {
         return $this->container->get('faker.generator');
     }
+
+
 }

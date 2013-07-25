@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+ 
+<parameters>
+	<parameter key="assetic.controller.class">AJ\Bundle\TemplateBundle\Controller\AsseticController</parameter>
+	<parameter key="aj_template.assetic.filter_css.class">AJ\Bundle\TemplateBundle\Assetic\Filter\CssFilter</parameter>
+	<parameter key="aj_template.assetic.filter_import.class">AJ\Bundle\TemplateBundle\Assetic\Filter\ImportFilter</parameter>
+	<parameter key="aj_template.assetic.twig_extension.class">AJ\Bundle\TemplateBundle\Twig\AsseticExtension</parameter>
+</parameters>
+
+<services>
+<!-- Assetic filters -->
+	<service id="aj_template.assetic.filter_css"
+			 class="%aj_template.assetic.filter_css.class%">
+		<tag name="assetic.filter" alias="ajcss" />
+		<argument>%base_url%</argument>
+	</service>
+
+	<service id="aj_template.assetic.filter_import"
+			 class="%aj_template.assetic.filter_import.class%">
+		<tag name="assetic.filter" alias="ajimport"></tag>
+	</service>
+
+<!-- # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+	-# 
+	-# Template
+	-# 
+	-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # -->
+	<service id="aj_template.assetic.twig_extension" class="%aj_template.assetic.twig_extension.class%" public="false">
+		<tag name="twig.extension" />
+		<tag name="assetic.templating.twig" />
+		<argument type="service" id="aj_template.active_template" />
+		<argument type="service" id="assetic.asset_factory" />
+		<argument type="service" id="templating.name_parser" />
+		<argument>%assetic.use_controller%</argument>
+		<argument>%assetic.twig_extension.functions%</argument>
+		<argument>%assetic.bundles%</argument>
+		<argument type="service" id="assetic.value_supplier" on-invalid="null" />
+	</service>
+	
+
+
+
+</services>
+</container>
