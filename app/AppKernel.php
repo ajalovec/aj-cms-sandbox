@@ -61,7 +61,7 @@ class AppKernel extends Kernel
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),
             new Sonata\NotificationBundle\SonataNotificationBundle(),
-            //new Application\Sonata\NotificationBundle\ApplicationSonataNotificationBundle(),
+            new Application\Sonata\NotificationBundle\ApplicationSonataNotificationBundle(),
             
             // PAGE
             new Sonata\PageBundle\SonataPageBundle(),
@@ -86,6 +86,7 @@ class AppKernel extends Kernel
             new AJ\Template\ComponentBundle\AJTemplateComponentBundle(),
             new AJ\Template\LayoutBundle\AJTemplateLayoutBundle(),
             new AJ\Template\BootstrapBundle\AJTemplateBootstrapBundle(),
+            new JMI\SiteBundle\JMISiteBundle(),
         );
 
         /*
