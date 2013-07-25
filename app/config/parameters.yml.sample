@@ -1,9 +1,9 @@
 parameters:
     database_driver:   pdo_mysql
-    database_host:
-    database_name:
-    database_user:
-    database_password:
+    database_host:     localhost
+    database_name:     aj_cms_sandbox
+    database_user:     root
+    database_password: root
 
     mailer_transport:   smtp
     mailer_host:        localhost
@@ -12,11 +12,24 @@ parameters:
 
     locale:             en
 
-    secret:             ThisTokenIsNotSoSecretChangeIt
+    secret:             asdjhkl5jkh43k6g3464i36l34ihzilr8tezwr8tz948z3
+
+    # Assetic paths
+
+    #assetic.path.java:            c:\Windows\system32\java.exe
+    assetic.path.java:            %kernel.root_dir%/../bin/java.exe
+
+    #assetic.path.node:            C:\localhost\wamp\bin\node.exe
+    assetic.path.node:            %kernel.root_dir%/../bin/node.exe
+    assetic.path.node_paths:            [%kernel.root_dir%/../bin/node_modules]
+
+    assetic.path.uglifycss:       %kernel.root_dir%/../bin/node_modules/uglifycss/uglifycss
+    assetic.path.uglifyjs:        %kernel.root_dir%/../bin/node_modules/uglify-js/uglify-js
 
     # Sonata Admin Options
-    sonata_admin.title:             Sonata Project
-    sonata_admin.logo_title:        /bundles/sonataadmin/logo_title.png
+    sonata_admin.title:             "AJ CMS Project"
+    sonata_admin.logo_title:        %base_path%/bundles/sonataadmin/logo_title.png
+
 
     # Sonata News Options
     sonata_news.blog_title:         My Awesome Blog
@@ -27,7 +40,7 @@ parameters:
     sonata_news.comment.email_from: no-reply@example.org
 
     # Sonata Media options
-    sonata_media.cdn.host:          /uploads/media
+    sonata_media.cdn.host:          %base_path%/uploads/media
 
     # Sonata User Options
-    sonata_user.google_authenticator.server:  demo.sonata-project.org
+    sonata_user.google_authenticator.server:  localhost
