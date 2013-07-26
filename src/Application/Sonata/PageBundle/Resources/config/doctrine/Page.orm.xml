@@ -17,5 +17,7 @@
             <generator strategy="AUTO"/>
         </id>
 
+        <field name="contentType" type="boolean" column="content_type" default="true" />
+
     </entity>
 </doctrine-mapping>

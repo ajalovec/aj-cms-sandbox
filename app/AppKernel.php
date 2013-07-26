@@ -25,6 +25,8 @@ class AppKernel extends Kernel
 
     public function registerBundles()
     {
+
+        
         /*
          * Bundle core
          */
@@ -86,7 +88,22 @@ class AppKernel extends Kernel
             new AJ\Template\ComponentBundle\AJTemplateComponentBundle(),
             new AJ\Template\LayoutBundle\AJTemplateLayoutBundle(),
             new AJ\Template\BootstrapBundle\AJTemplateBootstrapBundle(),
-            new JMI\SiteBundle\JMISiteBundle(),
+        );
+        
+        $acmeBundles = array(
+            //new Acme\TestBundle\AcmeTestBundle(),
+            new Acme\PageBundle\AcmePageBundle(),
+            new Acme\TreeBundle\AcmeTreeBundle(),
+            new Acme\TinyMceBundle\AcmeTinyMceBundle(),
+            //new Acme\NewsletterBundle\AcmeNewsletterBundle(),
+            new Acme\ContentBundle\AcmeContentBundle(),
+            new Acme\FormBundle\AcmeFormBundle(),
+            //new Acme\FancyBundle\AcmeFancyBundle(),
+            //new Acme\EmailBundle\AcmeEmailBundle(),
+            //new Acme\ContactBundle\AcmeContactBundle(),
+            //new Acme\ElFinderBundle\AcmeElFinderBundle(),
+            //new Acme\UserBundle\AcmeUserBundle(),
+            new Acme\AssortmentBundle\AcmeAssortmentBundle(),
         );
 
         /*
@@ -94,7 +111,9 @@ class AppKernel extends Kernel
          */
         $applicationBundles = array(
             // CUSTOM BUNDLES
-            new Sonata\Bundle\DemoBundle\SonataDemoBundle(),
+            new Application\Sonata\PageDataBundle\ApplicationSonataPageDataBundle(),
+            //new Sonata\Bundle\DemoBundle\SonataDemoBundle(),
+            new JMI\SiteBundle\JMISiteBundle(),
             
         );
         
@@ -112,7 +131,12 @@ class AppKernel extends Kernel
         );
 
         
-        $bundles = array_merge($bundles, $applicationBundles, $frontendBundles);
+        $bundles = array_merge(
+            $bundles
+          , $applicationBundles
+          , $frontendBundles
+        //  , $acmeBundles
+        );
 
 
 

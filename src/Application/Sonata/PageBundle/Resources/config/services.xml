@@ -4,17 +4,18 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
+    
     <parameters>
-        <parameter key="sonata_page.example.class">AJ\Template\LayoutBundle\Example</parameter>
+        <parameter key="sonata.page.admin.page.class">Application\Sonata\PageBundle\Admin\PageAdmin</parameter>
     </parameters>
-
+    
+<!--
+        <parameter key="sonata_page.admin.page.extension.class">Application\Sonata\PageBundle\Admin\PageAdminExtension</parameter>
     <services>
-        <service id="sonata_page.example" class="%sonata_page.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
+        <service id="sonata_page.admin.page.extension" class="%sonata_page.admin.page.extension.class%">
+            <tag name="sonata.admin.extension" target="sonata.page.admin.page" />
         </service>
     </services>
-    -->
+-->
+    
 </container>

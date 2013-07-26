@@ -28,6 +28,7 @@ class Page extends BasePage
      */
     protected $id;
 
+
     /**
      * Get id
      *
@@ -36,5 +37,33 @@ class Page extends BasePage
     public function getId()
     {
         return $this->id;
+    }
+    
+    /**
+     * @var boolean
+     */
+    protected $contentType;
+    
+    /**
+     * Set contentType
+     *
+     * @param boolean $contentType
+     * @return Page
+     */
+    public function setContentType($contentType)
+    {
+        $this->contentType = $contentType;
+    
+        return $this;
+    }
+
+    /**
+     * Get contentType
+     *
+     * @return boolean 
+     */
+    public function getContentType()
+    {
+        return $this->contentType;
     }
 }

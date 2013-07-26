@@ -29,15 +29,38 @@
 			]
 		},*/
 		{
-			"name": "Web",
+			"name": "WEB",
 			"path": "web"
 		},
 		{
-			"name": "Config",
-			"path": "app/config"
+			"name": "APP",
+			"path": "app",
+			"folder_exclude_patterns": [
+				"vendor", "bin", "features", "Resources"
+				//, "app/cache", "app/logs"
+			],
+			"file_exclude_patterns": [
+				".gitignore",
+				"Capfile",
+				"behat.yml",
+				"composer.lock",
+				"LICENSE",
+				"phpunit.watchr",
+				"README.rst",
+				"*.sublime-workspace",
+				
+				"app/AppCache",
+				"app/autoload",
+				"app/*.php.cache",
+				"app/check",
+				"app/*.xml.dist",
+				"app/SymfonyRequirements",
+				"app/console",
+				"app/.htaccess"
+			]
 		},
 		{
-			"name": "Application",
+			"name": "SRC",
 			"path": "src"
 		},
 		{
