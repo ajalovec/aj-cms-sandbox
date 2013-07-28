@@ -36,7 +36,7 @@
 			"name": "APP",
 			"path": "app",
 			"folder_exclude_patterns": [
-				"vendor", "bin", "features", "Resources"
+				"vendor", "bin", "features"//, "Resources"
 				//, "app/cache", "app/logs"
 			],
 			"file_exclude_patterns": [

@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @ORM\Entity
- * @ORM\Table(name="form")
+ * @ORM\Table(name="acme_form")
  */
 class Form
 {

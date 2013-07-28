@@ -2,16 +2,20 @@
 	"folders":
 	[
 		{
-			"name": "Application",
-			"path": "/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources"
-		},
-		{
 			"name": "Config",
-			"path": "/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config"
+			"path": "app/config"
 		},
 		{
-			"name": "src",
-			"path": "src"
+			"name": "Resources",
+			"path": "app/Resources"
+		},
+		{
+			"name": "JMISite",
+			"path": "src/JMI/SiteBundle"
+		},
+		{
+			"name": "AJTemplate",
+			"path": "src/AJ/Template"
 		},
 		{
 			"name": "Project files",

@@ -4,7 +4,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @ORM\Entity
- * @ORM\Table(name="assortment_page_has_media")
+ * @ORM\Table(name="acme_assortment_page_has_media")
  */
 class AssortmentPageHasMedia
 {

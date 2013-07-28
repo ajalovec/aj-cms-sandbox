@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="email")
+ * @ORM\Table(name="acme_email")
  */
 class Email
 {

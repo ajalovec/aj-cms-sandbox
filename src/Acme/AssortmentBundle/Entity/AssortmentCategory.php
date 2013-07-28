@@ -7,7 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @Gedmo\Tree(type="nested")
  * @ORM\Entity
- * @ORM\Table(name="assortment_category")
+ * @ORM\Table(name="acme_assortment_category")
  * @ORM\Entity(repositoryClass="Acme\AssortmentBundle\Entity\AssortmentCategoryRepository")
  */
 class AssortmentCategory extends BaseTree

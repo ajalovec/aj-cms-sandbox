@@ -7,6 +7,7 @@
     
     <parameters>
         <parameter key="sonata.page.admin.page.class">Application\Sonata\PageBundle\Admin\PageAdmin</parameter>
+        <parameter key="sonata.page.admin.block.class">Application\Sonata\PageBundle\Admin\BlockAdmin</parameter>
     </parameters>
     
 <!--

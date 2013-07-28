@@ -26,7 +26,7 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
 
-        
+
         /*
          * Bundle core
          */
@@ -92,18 +92,18 @@ class AppKernel extends Kernel
         
         $acmeBundles = array(
             //new Acme\TestBundle\AcmeTestBundle(),
-            new Acme\PageBundle\AcmePageBundle(),
-            new Acme\TreeBundle\AcmeTreeBundle(),
-            new Acme\TinyMceBundle\AcmeTinyMceBundle(),
+            //new Acme\PageBundle\AcmePageBundle(),
+            //new Acme\TreeBundle\AcmeTreeBundle(),
+            //new Acme\TinyMceBundle\AcmeTinyMceBundle(),
             //new Acme\NewsletterBundle\AcmeNewsletterBundle(),
             new Acme\ContentBundle\AcmeContentBundle(),
-            new Acme\FormBundle\AcmeFormBundle(),
+            //new Acme\FormBundle\AcmeFormBundle(),
             //new Acme\FancyBundle\AcmeFancyBundle(),
             //new Acme\EmailBundle\AcmeEmailBundle(),
             //new Acme\ContactBundle\AcmeContactBundle(),
             //new Acme\ElFinderBundle\AcmeElFinderBundle(),
             //new Acme\UserBundle\AcmeUserBundle(),
-            new Acme\AssortmentBundle\AcmeAssortmentBundle(),
+            //new Acme\AssortmentBundle\AcmeAssortmentBundle(),
         );
 
         /*
@@ -135,7 +135,7 @@ class AppKernel extends Kernel
             $bundles
           , $applicationBundles
           , $frontendBundles
-        //  , $acmeBundles
+          , $acmeBundles
         );
 
 

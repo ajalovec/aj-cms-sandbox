@@ -4,6 +4,32 @@
 #   prefix:   /_internal
 
 
+# AJ Template bundle
+
+#aj_template_assets:
+#    resource: "@AJTemplateAssetsBundle/Resources/config/routing.xml"
+#    prefix:   /aj-template
+#
+#aj_template_component:
+#    resource: "@AJTemplateComponentBundle/Resources/config/routing.xml"
+#    prefix:   /aj-template
+#
+#aj_template_layout:
+#    resource: "@AJTemplateLayoutBundle/Resources/config/routing.xml"
+#    prefix:   /aj-template
+#
+
+aj_template_bootstrap:
+    resource: "@AJTemplateBootstrapBundle/Resources/config/routing.xml"
+    prefix:   /template-bootstrap
+
+
+# Site bundle
+jmi_site:
+    resource: "@JMISiteBundle/Resources/config/routing.yml"
+
+
+
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
@@ -56,32 +82,6 @@ sonata_media_pixlr:
 blog:
     resource: '@SonataNewsBundle/Resources/config/routing/news.xml'
     prefix: /blog
-
-
-
-# AJ Template bundle
-
-#aj_template_assets:
-#    resource: "@AJTemplateAssetsBundle/Resources/config/routing.xml"
-#    prefix:   /aj-template
-#
-#aj_template_component:
-#    resource: "@AJTemplateComponentBundle/Resources/config/routing.xml"
-#    prefix:   /aj-template
-#
-#aj_template_layout:
-#    resource: "@AJTemplateLayoutBundle/Resources/config/routing.xml"
-#    prefix:   /aj-template
-#
-
-aj_template_bootstrap:
-    resource: "@AJTemplateBootstrapBundle/Resources/config/routing.xml"
-    prefix:   /template-bootstrap
-
-
-# Site bundle
-jmi_site:
-    resource: "@JMISiteBundle/Resources/config/routing.yml"
 
 
 

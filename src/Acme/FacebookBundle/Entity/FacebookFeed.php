@@ -4,7 +4,7 @@ namespace Acme\FacebookBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity
- * @ORM\Table(name="facebook_feed")
+ * @ORM\Table(name="acme_facebook_feed")
  *
  * Facebook feeds entity class
  */

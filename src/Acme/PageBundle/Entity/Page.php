@@ -8,7 +8,7 @@ use Acme\PageBundle\Entity\MenuGroup;
 /**
  * @Gedmo\Tree(type="nested")
  * @ORM\Entity
- * @ORM\Table(name="page")
+ * @ORM\Table(name="acme_page")
  * @ORM\Entity(repositoryClass="Acme\TreeBundle\Entity\TreeRepository")
  */
 class Page extends BaseTree

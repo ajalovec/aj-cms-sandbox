@@ -5,7 +5,7 @@ namespace Acme\NewsletterBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass="Acme\NewsletterBundle\Entity\NewsletterRepository")
- * @ORM\Table(name="newsletter")
+ * @ORM\Table(name="acme_newsletter")
  */
 class Newsletter 
 {

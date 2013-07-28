@@ -26,5 +26,6 @@ $bundles = array(
 );
 
 $a = array_merge($bundles, getArray());
-
-var_dump($a);
+$b = "sonata.page.sdsa.sadas";
+$c = ltrim($b, "sonata.");
+var_dump($c);

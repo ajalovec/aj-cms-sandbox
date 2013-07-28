@@ -6,7 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Acme\PageBundle\Entity\BasePage;
 /**
  * @ORM\Entity
- * @ORM\Table(name="assortment_page")
+ * @ORM\Table(name="acme_assortment_page")
  */
 class AssortmentPage extends BasePage
 {

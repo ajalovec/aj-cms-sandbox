@@ -5,74 +5,51 @@
 namespace Acme\ContentBundle\Block;
 
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\Options;
+use Symfony\Component\Form\Extension\Core\ChoiceList\SimpleChoiceList;
+use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
+use Doctrine\ORM\EntityManager;
+use Doctrine\Common\Util\Debug;
+
 use Sonata\BlockBundle\Model\BlockInterface;
+use Sonata\BlockBundle\Block\BlockContextInterface;
+use Sonata\BlockBundle\Block\BaseBlockService;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Validator\ErrorElement;
-use Sonata\BlockBundle\Block\BaseBlockService;
-use Doctrine\ORM\EntityManager;
-use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
-use Doctrine\Common\Util\Debug;
+use Sonata\AdminBundle\Admin\AdminInterface;
+
+
 class ContentBlockService extends BaseBlockService
 {
-	protected $name;
-	protected $templating;
 	protected $em;
 	
-    public function __construct($name, EngineInterface $templating, EntityManager $entityManager)
+	public function __construct($name, EngineInterface $templating, EntityManager $entityManager)
     {
-        $this->name       = $name;
-        $this->templating = $templating;
-		$this->em = $entityManager;
+        parent::__construct($name, $templating);
+		$this->em 			= $entityManager;
     }
 	
-    public function execute(BlockInterface $block, Response $response = null)
+	/**
+     * {@inheritdoc}
+     */
+    public function getName()
     {
-		$contentRepo = $this->em->getRepository("AcmeContentBundle:Content");
-    	$settings = array_merge($this->getDefaultSettings(), $block->getSettings());
-		$content = null;
-		$contentSource = null;
-		
-		if(isset($settings['contentId'])){
-			if($settings['contentId']){
-				$contentSource = 'id';
-			}
-		}
-		if(isset($settings['contentType'])){
-			if($settings['contentType']){
-				$contentSource = 'type';
-			}
-		}
-		
-		switch ($contentSource) {
-			case 'id':
-					$content = $contentRepo->find($settings['contentId']);
-				break;
-			case 'type':
-					$content = $contentRepo->findOneByType($settings['contentType']);
-				break;
-			default:
-					$content = null;
-				break;
-		}
-		if(!$content){
-			$content['body'] = 'Nie odnaleziono tresci dla bloku';
-		}
-		if(isset($settings['setBlockTitleFromTitle'])){
-			if($settings['setBlockTitleFromTitle']){
-				$block->setSetting('blockTitle',$content->getTitle());
-			}
-		}
-		if(!$settings['showTitle']){
-			$content->setTitle(null);
-		}
-		if(!$settings['showBody']){
-			$content->setBody(null);
-		}
-		return $this->renderResponse($settings['template'], array(
-			'block' => $block,
-			'content' => $content
-		));
+        return 'Content';
     }
+
+    public function setDefaultSettings(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'title' => "",
+            'showTitle'=> true,
+            'contentId' => false,
+            'content' => false,
+            'template' 	=> 'AcmeContentBundle:Block:content.html.twig',
+        ));
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -81,24 +58,60 @@ class ContentBlockService extends BaseBlockService
         // TODO: Implement validateBlock() method.
     }
 
+   
+    
     /**
      * {@inheritdoc}
      */
     public function buildEditForm(FormMapper $formMapper, BlockInterface $block)
     {
+    	$manager = $this->em->getRepository("AcmeContentBundle:Content");
+
+        $formMapper->add('settings', 'sonata_type_immutable_array', array(
+            'keys' => array(
+                array('title', 'text', array('required' => false)),
+        //        array($contentForm, null, array()),
+                array('contentId', 'choice', array(
+				    'choices'   => function (Options $opts, $previousValue) use ($manager) {
+    					$items = $manager->findAll();
+				    	$list = array();
+    					foreach ($items as $i => $content) {
+    						$list[$content->getId()] = $content->getTitle();
+    					}
+		                return $list;
+		            },
+				    'multiple'  => false,
+				    'expanded'  => false,
+				    //'translation_domain' => $this->getTranslationDomain()
+				))
+            )
+        ));
 
     }
+//public function execute(BlockContextInterface $blockContext, Response $response = null)
+//    {
+//        return $this->renderResponse($blockContext->getTemplate(), array(
+//            'block'      => $blockContext->getBlock(),
+//            'decorator'  => $this->getDecorator($blockContext->getSetting('layout')),
+//            'settings'   => $blockContext->getSettings(),
+//        ), $response);
+//    }
 
-    public function getDefaultSettings()
+    public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
-        return array(
-            'contentId' => null,
-            'contentType' => null,
-            'blockTitle' => null,
-            'template' => 'AcmeContentBundle:Block:content.html.twig',
-            'showTitle' => true,
-            'showBody' => true,
-            'setBlockTitleFromTitle' =>false
-        );
+		$content = $this->em->getRepository("AcmeContentBundle:Content")
+							->find($blockContext->getSetting('contentId'));
+		
+
+		if(! $blockContext->getSetting('showTitle')){
+			$content->setTitle(null);
+		}
+		//$blockContext->setSetting('content', $content);
+
+		return $this->renderResponse($blockContext->getTemplate(), array(
+			'block' => $blockContext->getBlock(),
+			'settings' => $blockContext->getSettings(),
+			'content' => $content
+		), $response);
     }
 }

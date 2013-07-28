@@ -1,4 +1,27 @@
+
+
+
 {% extends sonata_block.templates.block_base %}
+
+
+{% block block_class %} cms-content{% endblock %}
+{% block block_role %}content{% endblock %}
+
+
+{# render container block #}
+{% block block %}
+    {% if content.title is defined %}
+	    <h2 class="block-content-title">{{ content.title }}</h2>
+	{% endif %}
+	<div class="block-content-body">
+		{% if content.body is defined %}
+		    {{ content.body|raw }}
+		{% endif %}
+	</div>
+{% endblock %}
+
+
+{#
 {% block block_content_sub_id %}
 {% spaceless %}
 	{% if content.type is defined %}
@@ -32,3 +55,4 @@
 
 	
 {% endblock %}
+#}

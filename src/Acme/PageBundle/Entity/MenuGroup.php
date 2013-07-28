@@ -4,7 +4,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Acme\PageBundle\Entity\Page;
 /**
  * @ORM\Entity
- * @ORM\Table(name="menu_group")
+ * @ORM\Table(name="acme_menu_group")
  */
 class MenuGroup {
 	

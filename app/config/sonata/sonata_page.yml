@@ -41,7 +41,7 @@ sonata_page:
     default_template: default
     templates:
         default: { path: 'SonataPageBundle::layout.html.twig', name: 'default' }
-        master_small: { path: 'SonataPageBundle::layout2.html.twig', name: 'master_small' }
+        jmi_default: { path: 'JMISiteBundle::layout.html.twig', name: 'jmi_default' }
 
     page_defaults:
         homepage: {decorate: false, enabled: true}
@@ -68,3 +68,4 @@ doctrine:
                 mappings:
                     ApplicationSonataPageBundle: ~
                     SonataPageBundle: ~
+                    AcmeContentBundle: ~

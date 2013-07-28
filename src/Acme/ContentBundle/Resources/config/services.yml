@@ -10,8 +10,24 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: acme_content, label: Content }
         arguments: [null, Acme\ContentBundle\Entity\Content, SonataAdminBundle:CRUD]
+
     acme_content.block.service.content:
         class: Acme\ContentBundle\Block\ContentBlockService
         tags:
             - {name: "sonata.block"}
         arguments: [acme_content.block.service.content, @templating, @doctrine.orm.entity_manager]
+
+#    acme_content.block.service.content:
+#            class: Acme\ContentBundle\Block\ContentBlockService
+#            tags:
+#                - {name: "sonata.block"}
+#            arguments: [acme_content.block.service.content, @templating]
+#            calls:
+#                - [setContentAdmin, [@acme_content.admin.content]]
+#                - [setEntityManager, [@doctrine.orm.entity_manager]]
+
+#    acme_content.form.type.content_selector:
+#        class: Acme\ContentBundle\Form\Type\ContentSelectorType
+#        tags:
+#            - {name: "form.type", alias: acme_content_selector}
+#        arguments: [@acme_content.admin.content]

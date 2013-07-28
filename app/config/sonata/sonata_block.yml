@@ -17,4 +17,6 @@ sonata_block:
 
         sonata.block.service.text:
         sonata.block.service.rss:
-        aj_template.layout.block.row:
+        
+        acme_content.block.service.content:
+        #aj_template.layout.block.row:

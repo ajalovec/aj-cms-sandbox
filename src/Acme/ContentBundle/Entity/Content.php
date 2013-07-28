@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="content")
+ * @ORM\Table(name="acme_content")
  */
 class Content
 {
@@ -32,7 +32,7 @@ class Content
     protected $body;
 	
     /**
-     * @ORM\Column(type="string", length=140)
+     * @ORM\Column(type="string", length=140, nullable=true)
      */
     protected $type;
 	
@@ -43,7 +43,7 @@ class Content
 	
 	public function __toString()
 	{
-		return $this->getTitle();
+		return (string) $this->getTitle();
 	}
 
     /**

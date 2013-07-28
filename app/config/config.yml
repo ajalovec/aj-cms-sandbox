@@ -44,7 +44,10 @@ assetic:
     java: %assetic.path.java%
     node: %assetic.path.node%
     node_paths: %assetic.path.node_paths%
-    bundles: ~
+    bundles:
+        - AJTemplateBootstrapBundle
+    variables:
+        aj_template_name: ["AJTemplateBootstrapBundle"]
     filters:
         cssrewrite: ~
         #cssmin: ~

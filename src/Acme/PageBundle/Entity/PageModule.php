@@ -4,7 +4,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Acme\PageBundle\Entity\Page;
 /**
  * @ORM\Entity
- * @ORM\Table(name="page_module")
+ * @ORM\Table(name="acme_page_module")
  */
 class PageModule {
 	

@@ -36,4 +36,22 @@ class Block extends BaseBlock
     {
         return $this->id;
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getNamespace()
+    {
+        return $this->getPage()->getName() . " :: " . ( $this->getName() ?: static::trimTypePrefix((string) $this->getType()) );
+    }
+    /**
+     * {@inheritDoc}
+     */
+    static private function trimTypePrefix($type)
+    {
+        //$type = ltrim($type, "sonata.page.");
+        $type = ltrim($type, "sonata.");
+        
+        return $type;
+    }
 }
