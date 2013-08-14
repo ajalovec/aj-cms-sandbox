@@ -1,0 +1,63 @@
+
+@import "bootstrap.less";
+
+
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	background: url("@{asset}/bg-image.jpg") no-repeat center top fixed;
+	background-size: cover;
+
+}
+
+.page {
+	margin-top: 80px;
+	>.header {
+		height: 35px;
+		background: @brand-primary url("@{asset}/header-bg.png") repeat-x center bottom;
+
+		a {
+			color: lighten(@brand-primary, 60%);
+		}
+
+		.page-logo {
+			position: relative;
+			margin-top: -17px;
+		}
+
+		.nav-main {
+			margin-right: 40px;
+		}
+		.nav-main ul {
+			list-style: none;
+		}
+		.nav-main li {
+			display: block;
+			float: left;
+		}
+		.nav-main li> a {
+			display: block;
+			font-size: 12px;
+			line-height: 16px;
+			padding: 10px;
+			text-transform: uppercase;
+			color: #cee6f2;
+			text-shadow: 0 -1px 0 #004b73;
+
+		}
+		.nav-main li:hover> a,
+		.nav-main li.active> a {
+			color: #fff;
+			text-decoration: none;
+		}
+		.nav-main li.active> a {
+			padding-top: 12px;
+			padding-bottom: 8px;
+		}
+	}
+	>.body {
+		background: #fff;
+	}
+}

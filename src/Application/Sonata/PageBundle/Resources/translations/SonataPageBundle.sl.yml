@@ -1,0 +1,34 @@
+form.label_content_type:                'Tip vsebine'
+list.label_namespace:					Namespace
+list.label_parent_namespace:			Parent namespace
+
+btn_save_position:                      __btn_save_position
+button_create_snapshot:                 __button_create_snapshot
+button_create_snapshots:                __button_create_snapshots
+button_save:                            __button_save
+create_page:                            __create_page
+header.create_snapshot:                 __header.create_snapshot
+header.edit_page:                       __header.edit_page
+header.page_is_disabled:                __header.page_is_disabled
+header.show_zone:                       __header.show_zone
+header.sonata_admin_dashboard:          __header.sonata_admin_dashboard
+header.switch_user_exit:                __header.switch_user_exit
+header.view_all_exceptions:             __header.view_all_exceptions
+header.view_all_pages:                  __header.view_all_pages
+link_create_snapshots:                  __link_create_snapshots
+manage_exception:                       __manage_exception
+message_create_block_not_available:     __message_create_block_not_available
+message_create_page:                    __message_create_page
+message_create_snapshot:                __message_create_snapshot
+message_create_snapshots:               __message_create_snapshots
+message_page_does_not_exist:            __message_page_does_not_exist
+message_page_redirected:                __message_page_redirected
+or_list:                                __or_list
+title_create_block_not_available:       __title_create_block_not_available
+title_create_snapshot:                  __title_create_snapshot
+title_create_snapshots:                 __title_create_snapshots
+title_list_exceptions:                  __title_list_exceptions
+title_page_not_found:                   __title_page_not_found
+title_page_redirected:                  __title_page_redirected
+title_parameters:                       __title_parameters
+title_select_site:                      __title_select_site

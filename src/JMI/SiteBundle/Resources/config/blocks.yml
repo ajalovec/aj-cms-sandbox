@@ -1,0 +1,24 @@
+parameters:
+#    acme_content.example.class: Acme\ContentBundle\Example
+
+services:
+    jmi_site.block.data.podatki:
+        class: JMI\SiteBundle\Block\Data\PodatkiBlock
+        tags:
+            - {name: "sonata.block"}
+        arguments: [jmi_site.block.data.podatki, @templating, @doctrine.orm.entity_manager]
+
+#    acme_content.block.service.content:
+#            class: Acme\ContentBundle\Block\ContentBlockService
+#            tags:
+#                - {name: "sonata.block"}
+#            arguments: [acme_content.block.service.content, @templating]
+#            calls:
+#                - [setContentAdmin, [@acme_content.admin.content]]
+#                - [setEntityManager, [@doctrine.orm.entity_manager]]
+
+#    acme_content.form.type.content_selector:
+#        class: Acme\ContentBundle\Form\Type\ContentSelectorType
+#        tags:
+#            - {name: "form.type", alias: acme_content_selector}
+#        arguments: [@acme_content.admin.content]

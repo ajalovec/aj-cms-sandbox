@@ -1,0 +1,11 @@
+.sonata-bc .form-horizontal .controls>.controls {
+  margin-left: 20px;
+}
+
+.sonata-bc .nav-list> li>a {
+	white-space: nowrap;
+	overflow: hidden;
+}
+.sonata-bc .nav-list> li>a:hover {
+	overflow: visible;
+}
