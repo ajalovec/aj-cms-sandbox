@@ -3,7 +3,7 @@
 #
 sonata_media:
     db_driver:       doctrine_orm # | doctrine_mongodb
-    default_context: default
+    default_context: reference
     contexts:
         default:  # the default context is mandatory
             download:
@@ -19,13 +19,6 @@ sonata_media:
                 small: { width: 100, quality: 100}
                 big:   { width: 820 , quality: 100}
 
-        news:
-            providers:
-                - sonata.media.provider.image
-
-            formats:
-                abtract: { width: 100, quality: 100}
-                wide:    { width: 820 , quality: 100}
 
         reference:
             providers:
@@ -35,6 +28,12 @@ sonata_media:
                 abtract: { width: 100, quality: 100}
                 wide:    { width: 820 , quality: 100}
 
+#        news:
+#            providers:
+#                - sonata.media.provider.image
+#            formats:
+#                abtract: { width: 100, quality: 100}
+#                wide:    { width: 820 , quality: 100}
     cdn:
         # define the public base url for the uploaded media
         server:

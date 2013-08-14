@@ -17,10 +17,15 @@ class ContentAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
+            ->add('type', null, array('required' => false, 'label' => $this->trans('Type')))
+            ->add('parent', null, array('required' => false, 'label' => $this->trans('Parent')))
             ->add('title', null, array('required' => false, 'label' => $this->trans('Title'), 'attr'=> array()))
-            ->add('description', null, array('required' => false, 'label' => $this->trans('Description').' (pomocniczy, nie wyświetla się na stronie)', 'attr'=> array()))
-            ->add('type', null, array('required' => false, 'label' => $this->trans('Type'))) 
-            ->add('body', null, array('label' => $this->trans('Body'), 'attr' => array('class'=>'tinymce')))
+            ->add('description', null, array('required' => false, 'label' => $this->trans('Description'), 'attr'=> array()))
+            ->add('bodyFormatter', 'sonata_formatter_type_selector', array(
+                    'source' => 'body',
+                    'target' => 'body'
+                ))
+            ->add('body', null, array('label' => $this->trans('Body'), 'attr' => array('class' => 'span10', 'rows' => 20)))
         ;
     }
  

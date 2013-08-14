@@ -60,6 +60,9 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
             
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\SeoBundle\SonataSeoBundle(),
+            
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),
             new Sonata\NotificationBundle\SonataNotificationBundle(),
@@ -69,50 +72,40 @@ class AppKernel extends Kernel
             new Sonata\PageBundle\SonataPageBundle(),
             new Application\Sonata\PageBundle\ApplicationSonataPageBundle(),
 
-            new Sonata\NewsBundle\SonataNewsBundle(),
-            new Application\Sonata\NewsBundle\ApplicationSonataNewsBundle(),
-            new Sonata\MediaBundle\SonataMediaBundle(),
-            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(), 
             
-            new Sonata\BlockBundle\SonataBlockBundle(),
-            new Sonata\SeoBundle\SonataSeoBundle(),
-
-
             // Enable this if you want to audit backend action
             new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
-            // CMF Integration
 
+            // CMF Integration
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
 
-            new AJ\Template\AssetsBundle\AJTemplateAssetsBundle(),
-            new AJ\Template\ComponentBundle\AJTemplateComponentBundle(),
-            new AJ\Template\LayoutBundle\AJTemplateLayoutBundle(),
+
+            //new AJ\Template\AssetsBundle\AJTemplateAssetsBundle(),
+            //new AJ\Template\ComponentBundle\AJTemplateComponentBundle(),
+            //new AJ\Template\LayoutBundle\AJTemplateLayoutBundle(),
             new AJ\Template\BootstrapBundle\AJTemplateBootstrapBundle(),
         );
         
-        $acmeBundles = array(
-            //new Acme\TestBundle\AcmeTestBundle(),
-            //new Acme\PageBundle\AcmePageBundle(),
-            //new Acme\TreeBundle\AcmeTreeBundle(),
-            //new Acme\TinyMceBundle\AcmeTinyMceBundle(),
-            //new Acme\NewsletterBundle\AcmeNewsletterBundle(),
+        $moduleBundles = array(
+            // NOVICE
+            //new Sonata\NewsBundle\SonataNewsBundle(),
+            //new Application\Sonata\NewsBundle\ApplicationSonataNewsBundle(),
+
+            // MEDIA
+            new Sonata\MediaBundle\SonataMediaBundle(),
+            new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(), 
+            
+            // CONTENT
             new Acme\ContentBundle\AcmeContentBundle(),
-            //new Acme\FormBundle\AcmeFormBundle(),
-            //new Acme\FancyBundle\AcmeFancyBundle(),
-            //new Acme\EmailBundle\AcmeEmailBundle(),
-            //new Acme\ContactBundle\AcmeContactBundle(),
-            //new Acme\ElFinderBundle\AcmeElFinderBundle(),
-            //new Acme\UserBundle\AcmeUserBundle(),
-            //new Acme\AssortmentBundle\AcmeAssortmentBundle(),
         );
+        
 
         /*
          * Bundle application
          */
         $applicationBundles = array(
             // CUSTOM BUNDLES
-            new Application\Sonata\PageDataBundle\ApplicationSonataPageDataBundle(),
-            //new Sonata\Bundle\DemoBundle\SonataDemoBundle(),
+            //new Application\Sonata\PageDataBundle\ApplicationSonataPageDataBundle(),
             new JMI\SiteBundle\JMISiteBundle(),
             
         );
@@ -130,12 +123,26 @@ class AppKernel extends Kernel
             new Sonata\jQueryBundle\SonatajQueryBundle(),
         );
 
-        
+        $acmeBundles = array(
+            //new Acme\TestBundle\AcmeTestBundle(),
+            //new Acme\PageBundle\AcmePageBundle(),
+            //new Acme\TreeBundle\AcmeTreeBundle(),
+            //new Acme\TinyMceBundle\AcmeTinyMceBundle(),
+            //new Acme\NewsletterBundle\AcmeNewsletterBundle(),
+            new Acme\ContentBundle\AcmeContentBundle(),
+            //new Acme\FormBundle\AcmeFormBundle(),
+            //new Acme\FancyBundle\AcmeFancyBundle(),
+            //new Acme\EmailBundle\AcmeEmailBundle(),
+            //new Acme\ContactBundle\AcmeContactBundle(),
+            //new Acme\ElFinderBundle\AcmeElFinderBundle(),
+            //new Acme\UserBundle\AcmeUserBundle(),
+            //new Acme\AssortmentBundle\AcmeAssortmentBundle(),
+        );
         $bundles = array_merge(
             $bundles
           , $applicationBundles
           , $frontendBundles
-          , $acmeBundles
+          , $moduleBundles
         );
 
 

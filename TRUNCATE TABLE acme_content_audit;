@@ -1,0 +1,61 @@
+TRUNCATE TABLE
+
+TRUNCATE TABLE acme_content_audit;
+TRUNCATE TABLE fos_user_group_audit;
+TRUNCATE TABLE fos_user_user_audit;
+TRUNCATE TABLE media__gallery_audit;
+TRUNCATE TABLE media__gallery_media_audit;
+TRUNCATE TABLE media__media_audit;
+TRUNCATE TABLE news__category_audit;
+TRUNCATE TABLE news__comment_audit;
+TRUNCATE TABLE news__post_audit;
+TRUNCATE TABLE news__tag_audit;
+TRUNCATE TABLE page__bloc_audit;
+TRUNCATE TABLE page__page_audit;
+TRUNCATE TABLE page__site_audit;
+TRUNCATE TABLE page__snapshot_audit;
+TRUNCATE TABLE page__snapshot;
+UPDATE `page__page` SET edited=0 WHERE 1
+
+
+SELECT * 
+FROM  page__bloc 
+ORDER BY page_id, parent_id
+LIMIT 0,100
+
+acme_content
+acme_content_audit
+fos_user_group
+fos_user_group_audit
+fos_user_user
+fos_user_user_audit
+fos_user_user_group
+media
+media__gallery
+media__gallery_audit
+media__gallery_media
+media__gallery_media_audit
+media__media
+media__media_audit
+migration_versions
+news
+news__category
+news__category_audit
+news__comment
+news__comment_audit
+news__post
+news__post_audit
+news__post_tag
+news__tag
+news__tag_audit
++ notification (2)
+page
+page__bloc
+page__bloc_audit
+page__page
+page__page_audit
+page__site
+page__site_audit
+page__snapshot
+page__snapshot_audit
+revisions

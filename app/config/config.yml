@@ -9,7 +9,7 @@ imports:
     - { resource: sonata/sonata_block.yml }
     - { resource: sonata/sonata_media.yml }
     - { resource: sonata/sonata_formatter.yml }
-    - { resource: sonata/sonata_news.yml }
+#    - { resource: sonata/sonata_news.yml }
     - { resource: sonata/sonata_cache.yml }
     - { resource: sonata/sonata_seo.yml }
     - { resource: sonata/sonata_notification.yml }
@@ -46,15 +46,15 @@ assetic:
     node_paths: %assetic.path.node_paths%
     bundles:
         - AJTemplateBootstrapBundle
-    variables:
-        aj_template_name: ["AJTemplateBootstrapBundle"]
+        - JMISiteBundle
     filters:
         cssrewrite: ~
         #cssmin: ~
-        #less: ~
-        lessphp:
-            file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
-            apply_to: "\.(less|css\.twig)$"
+        less:
+            apply_to: "\.less$"
+        #lessphp:
+        #    file: %kernel.root_dir%/../vendor/leafo/lessphp/lessc.inc.php
+        #    apply_to: "\.less$"
 
         uglifycss:
             bin: %assetic.path.uglifycss%

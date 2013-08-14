@@ -2,6 +2,7 @@
 namespace Acme\ContentBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -26,25 +27,54 @@ class Content
      */
     protected $description;
 
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $bodyFormatter;
+
     /**
      * @ORM\Column(type="text")
      */
     protected $body;
-	
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    protected $rawBody;
+    
     /**
      * @ORM\Column(type="string", length=140, nullable=true)
      */
     protected $type;
-	
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Content", inversedBy="children")
+     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="SET NULL")
+     */
+    protected $parent;
+
+    protected $parents;
+    
+    /**
+     * @ORM\OneToMany(targetEntity="Content", mappedBy="parent")
+     */
+    protected $children;
+    
     /**
      * @ORM\Column(type="boolean", nullable=true, name="absolute_path_flag")
      */
     protected $absolutePathFlag;
-	
-	public function __toString()
-	{
-		return (string) $this->getTitle();
-	}
+    
+    public function __construct()
+    {
+        $this->children = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return (string) $this->getTitle();
+    }
 
     /**
      * Get id
@@ -54,6 +84,38 @@ class Content
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * @param $contentFormatter
+     */
+    public function setBodyFormatter($bodyFormatter)
+    {
+        $this->bodyFormatter = $bodyFormatter;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getBodyFormatter()
+    {
+        return $this->bodyFormatter;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setRawBody($rawBody)
+    {
+        $this->rawBody = $rawBody;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getRawBody()
+    {
+        return $this->rawBody;
     }
 
     /**
@@ -170,4 +232,87 @@ class Content
     {
         return $this->absolutePathFlag;
     }
+
+
+    /**
+     * {@inheritdoc}
+     */
+    public function addChildren(PageInterface $children)
+    {
+        $this->children[] = $children;
+
+        $children->setParent($this);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getChildren()
+    {
+        return $this->children;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setChildren($children)
+    {
+        $this->children = $children;
+    }
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function setParent(PageInterface $parent = null)
+    {
+        $this->parent = $parent;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getParent($level = -1)
+    {
+        if (-1 === $level) {
+            return $this->parent;
+        }
+
+        $parents = $this->getParents();
+
+        if ($level < 0) {
+            $level = count($parents) + $level;
+        }
+
+        return isset($parents[$level]) ? $parents[$level] : null;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setParents(array $parents)
+    {
+        $this->parents = $parents;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getParents()
+    {
+        if (!$this->parents) {
+
+            $page    = $this;
+            $parents = array();
+
+            while ($page->getParent()) {
+                $page      = $page->getParent();
+                $parents[] = $page;
+            }
+
+            $this->setParents(array_reverse($parents));
+        }
+
+        return $this->parents;
+    }
+
 }

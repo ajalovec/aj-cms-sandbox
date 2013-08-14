@@ -28,6 +28,11 @@ class Page extends BasePage
      */
     protected $id;
 
+    /**
+     * @var boolean
+     */
+    protected $contentType;
+
 
     /**
      * Get id
@@ -38,12 +43,28 @@ class Page extends BasePage
     {
         return $this->id;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getFullName()
+    {
+        if($this->getParent() instanceof self)
+            $parentName = $this->getParent()->getFullName() . '/';
+
+        return $parentName . $this->getName();
+    }
     
     /**
-     * @var boolean
+     * Get contentType
+     *
+     * @return boolean 
      */
-    protected $contentType;
-    
+    public function getContentType()
+    {
+        return $this->contentType;
+    }
+
     /**
      * Set contentType
      *
@@ -57,13 +78,4 @@ class Page extends BasePage
         return $this;
     }
 
-    /**
-     * Get contentType
-     *
-     * @return boolean 
-     */
-    public function getContentType()
-    {
-        return $this->contentType;
-    }
 }
