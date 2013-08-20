@@ -1,0 +1,69 @@
+Application\Sonata\PageBundle\Entity\Site:
+    site0:
+        name:           jmi
+        host:           localhost
+        relativePath:   /_git/aj-cms-sandbox/web
+        enabled:        true
+        isDefault:      true
+        enabledFrom:    <dateTimeBetween('-1 day', 'now')>
+        enabledTo:      <dateTimeBetween($enabledFrom, '+20 years')>
+
+Application\Sonata\PageBundle\Entity\Page:
+    page0:
+        name:           homepage
+        url:            /
+        slug:           $url
+        enabled:        true
+        decorate:       0
+        requestMethod:  GET|POST|HEAD|DELETE|PUT
+        templateCode:   <getPageTemplate()>
+        routeName:      <getCmsPageRouteName()>
+        site:           @site0
+        contentType:	true
+        type:			sonata.page.service.site
+    #page1: [<getTest()>]
+
+#
+#Application\Sonata\PageBundle\Entity\Page:
+#    page0:
+#        slug:           /
+#        url:            /
+#        name:           homepage
+#        enabled:        true
+#        decorate:       0
+#        requestMethod:  GET|POST|HEAD|DELETE|PUT
+#        templateCode:   default
+#        routeName:      <PageInterface::PAGE_ROUTE_CMS_NAME>
+#        site:           @site0
+##Application\Sonata\PageBundle\Entity\Snapshot
+#Application\Sonata\PageBundle\Entity\Block
+#Cnj\NagradneIgre\CoreBundle\Entity\User:
+#    user0:
+#        username:      admin
+#        email:         admin@cnj.si
+#        plainPassword: 123
+#        roles:         [ROLE_SUPER_ADMIN]
+#        enabled:       true
+#
+#Cnj\NagradneIgre\CoreBundle\Entity\Participant:
+#    participant{1..30}:
+#        firstName:  <firstName()>
+#        lastName:   <lastName()>
+#        email:      <email()>
+#        phone:      <phoneNumber()>
+#        facebookId: <numberBetween(100000, 2000000)>
+#        address:    @address<current()>
+#
+#Cnj\NagradneIgre\CoreBundle\Entity\ContestParticipation:
+#    participation{1..30}:
+#        addAnsweredQuestion: [@aQuestion0]
+#        participant:         @participant<current()>
+#        contest:             @contest0
+#INSERT INTO `page__bloc` (`id`, `rev`, `parent_id`, `page_id`, `name`, `type`, `settings`, `enabled`, `position`, `created_at`, `updated_at`, `revtype`) VALUES
+#(1, 15, NULL, 3, 'header', 'sonata.page.block.container', '{"code":"header"}', 1, 1, '2013-08-15 02:14:35', '2013-08-15 02:14:35', 'INS'),
+#(2, 16, NULL, 2, 'content_top', 'sonata.page.block.container', '{"code":"content_top"}', 1, 1, '2013-08-15 02:14:36', '2013-08-15 02:14:36', 'INS'),
+#(3, 17, NULL, 2, 'content', 'sonata.page.block.container', '{"code":"content"}', 1, 1, '2013-08-15 02:14:36', '2013-08-15 02:14:36', 'INS'),
+#(4, 18, NULL, 2, 'content_bottom', 'sonata.page.block.container', '{"code":"content_bottom"}', 1, 1, '2013-08-15 02:14:36', '2013-08-15 02:14:36', 'INS'),
+#(5, 19, NULL, 1, 'content_top', 'sonata.page.block.container', '{"code":"content_top"}', 1, 1, '2013-08-15 02:15:12', '2013-08-15 02:15:12', 'INS'),
+#(6, 20, NULL, 1, 'content', 'sonata.page.block.container', '{"code":"content"}', 1, 1, '2013-08-15 02:15:12', '2013-08-15 02:15:12', 'INS'),
+#(7, 21, NULL, 1, 'content_bottom', 'sonata.page.block.container', '{"code":"content_bottom"}', 1, 1, '2013-08-15 02:15:12', '2013-08-15 02:15:12', 'INS');

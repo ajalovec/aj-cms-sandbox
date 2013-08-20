@@ -1,16 +1,15 @@
 <?php
 
-function getArray()
-{
-    return array(
-        "new Application\Sonata\UserBundle\ApplicationSonataUserBundle()",
-        "new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle()",
-        "new Application\Sonata\PageBundle\ApplicationSonataPageBundle()",
-        "new Application\Sonata\NewsBundle\ApplicationSonataNewsBundle()",
-        "new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle()",
-        "new Application\Sonata\NotificationBundle\ApplicationSonataNotificationBundle()",
-    );
-}
+
+
+$bundles2 = array(
+    "new Application\Sonata\UserBundle\ApplicationSonataUserBundle()",
+    "new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle()",
+    "new Application\Sonata\PageBundle\ApplicationSonataPageBundle()",
+    "new Application\Sonata\NewsBundle\ApplicationSonataNewsBundle()",
+    "new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle()",
+    "new Application\Sonata\NotificationBundle\ApplicationSonataNotificationBundle()",
+);
 
 
 $bundles = array(
@@ -25,7 +24,8 @@ $bundles = array(
     "new JMS\SecurityExtraBundle\JMSSecurityExtraBundle()",
 );
 
-$a = array_merge($bundles, getArray());
+$a = array_merge($bundles, $bundles2);
+var_dump($a);
 $b = "sonata.page.sdsa.sadas";
 $c = ltrim($b, "sonata.");
 var_dump($c);

@@ -1,4 +1,5 @@
 /Resources
+app/Resources/DataFixtures
 app/cache
 app/logs
 app/*.cache

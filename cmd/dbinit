@@ -1,0 +1,4 @@
+cmd/truncate;
+
+app/console doctrine:fixtures:load --fixtures=src/JMI/SiteBundle/DataFixtures --fixtures=src/Application/Sonata/PageBundle/DataFixtures -n;
+

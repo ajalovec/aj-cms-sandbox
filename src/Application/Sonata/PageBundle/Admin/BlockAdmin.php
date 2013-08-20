@@ -163,21 +163,25 @@ sonata_type_immutable_array
         if (!$childAdmin && !in_array($action, array('edit'))) {
             return;
         }
+        $this->getPageAdmin()->configureSideMenu($menu, $action, $childAdmin);
+        return;
+        //$this->buildChildBlocksTree($menu, $this->getSubject());
 
-        $page = $this->getSubject()->getPage();
         
-        // Parent edit
-        if($parent = $this->getSubject()->getParent())
-        {
+        if($this->getPageAdmin()->getSubject() != $this->getSubject()->getPage()) {
             $menu->addChild(
-                "Parent block",
-                array('uri' => $this->generateUrl('edit', array('id' => $parent->getId())))
+                $this->trans('sidemenu.link_edit_page'),
+                array('uri' => $this->getPageAdmin()->generateUrl('edit', array('id' => $this->getSubject()->getPage()->getId())))
             );
         }
 
+        $this->getPageAdmin()->buildBlocksTree($this, $menu, $this->getSubject()->getPage());
+        
+    }
 
-        $children = $this->getSubject()->getChildren();
-
+    protected function buildChildBlocksTree(MenuItemInterface $menu, $subject)
+    {
+        $children = $subject->getChildren();
         if(!$children->isEmpty())
         {
             $menu->addChild('Children blocks')->setAttribute('class', 'nav-header');
@@ -190,9 +194,5 @@ sonata_type_immutable_array
                 );
             }
         }
-
-        
-        $this->getPageAdmin()->buildMenuTree($this, $menu, $this->getSubject()->getPage());
-        //$pageMenu->setDisplay(false);
     }
 }

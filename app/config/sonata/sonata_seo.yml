@@ -8,7 +8,7 @@ sonata_seo:
         title:            ""
         metas:
             name:
-                keywords:             foo bar
+                keywords:             ""
                 description:          The description
                 robots:               index, follow
 

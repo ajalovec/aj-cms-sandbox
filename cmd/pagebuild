@@ -1,0 +1,24 @@
+
+if [ "$1" = "-l" ]; then
+  app/console sonata:page:update-core-routes --site
+  exit 0
+fi
+
+app/console doctrine:fixtures:load --fixtures=src/JMI/SiteBundle/DataFixtures --append;
+
+echo -n "Load core routes? [siteId/n/l]: "
+read core_routes
+
+
+if [ "$core_routes" = "" ]; then
+  exit 0
+elif [ "$core_routes" = "n" ]; then
+  exit 0
+elif [ "$core_routes" = "l" ]; then
+  app/console sonata:page:update-core-routes --site;
+  exit 0
+else 
+  app/console sonata:page:update-core-routes --site=$core_routes;
+fi
+
+exit;

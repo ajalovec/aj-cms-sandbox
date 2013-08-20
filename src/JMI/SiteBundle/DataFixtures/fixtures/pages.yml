@@ -1,0 +1,11 @@
+Application\Sonata\PageBundle\Entity\Page:
+    page0:
+        name:           homepage
+        url:            /
+        slug:           $url
+        enabled:        true
+        decorate:       0
+        requestMethod:  GET|POST|HEAD|DELETE|PUT
+        templateCode:   <getPageTemplate()>
+        routeName:      <getCmsPageRouteName()>
+        site:           @site0

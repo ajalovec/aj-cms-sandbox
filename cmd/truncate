@@ -1,0 +1,5 @@
+
+app/console do:sc:dr --force;
+app/console do:sc:cr;
+
+echo "Database truncated!";

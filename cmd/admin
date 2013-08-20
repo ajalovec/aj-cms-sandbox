@@ -1,0 +1,10 @@
+
+echo "Define admin service name! (sonata.page.admin.page)";
+read admin_name;
+
+if [ "$admin_name" = "" ]; then
+    app/console sonata:admin:list;
+    exit;
+else 
+  app/console sonata:admin:explain $admin_name;
+fi

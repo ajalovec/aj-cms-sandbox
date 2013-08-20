@@ -1,0 +1,18 @@
+
+
+git init;
+
+echo "Bitbucket Repository name";
+read repo_name;
+
+git remote add origin "ssh://git@bitbucket.org/ajalovec/$repo_name.git";
+
+echo "# This is $repo_name README" >> README.md;
+
+git add .;
+
+echo "Commit message";
+read commit_message;
+git commit -m "$commit_message";
+
+git push -u origin master;

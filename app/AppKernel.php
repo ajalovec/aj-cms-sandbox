@@ -74,7 +74,7 @@ class AppKernel extends Kernel
 
             
             // Enable this if you want to audit backend action
-            new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
+            //new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle(),
 
             // CMF Integration
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
@@ -97,19 +97,20 @@ class AppKernel extends Kernel
             
             // CONTENT
             new Acme\ContentBundle\AcmeContentBundle(),
+            //new Acme\TestBundle\AcmeTestBundle(),
+            //new Acme\PageBundle\AcmePageBundle(),
+            //new Acme\TreeBundle\AcmeTreeBundle(),
+            //new Acme\TinyMceBundle\AcmeTinyMceBundle(),
+            //new Acme\NewsletterBundle\AcmeNewsletterBundle(),
+            //new Acme\FormBundle\AcmeFormBundle(),
+            //new Acme\FancyBundle\AcmeFancyBundle(),
+            //new Acme\EmailBundle\AcmeEmailBundle(),
+            //new Acme\ContactBundle\AcmeContactBundle(),
+            //new Acme\ElFinderBundle\AcmeElFinderBundle(),
+            //new Acme\UserBundle\AcmeUserBundle(),
+            //new Acme\AssortmentBundle\AcmeAssortmentBundle(),
         );
-        
 
-        /*
-         * Bundle application
-         */
-        $applicationBundles = array(
-            // CUSTOM BUNDLES
-            //new Application\Sonata\PageDataBundle\ApplicationSonataPageDataBundle(),
-            new JMI\SiteBundle\JMISiteBundle(),
-            
-        );
-        
         /*
          * Bundle frontend
          */
@@ -123,21 +124,15 @@ class AppKernel extends Kernel
             new Sonata\jQueryBundle\SonatajQueryBundle(),
         );
 
-        $acmeBundles = array(
-            //new Acme\TestBundle\AcmeTestBundle(),
-            //new Acme\PageBundle\AcmePageBundle(),
-            //new Acme\TreeBundle\AcmeTreeBundle(),
-            //new Acme\TinyMceBundle\AcmeTinyMceBundle(),
-            //new Acme\NewsletterBundle\AcmeNewsletterBundle(),
-            new Acme\ContentBundle\AcmeContentBundle(),
-            //new Acme\FormBundle\AcmeFormBundle(),
-            //new Acme\FancyBundle\AcmeFancyBundle(),
-            //new Acme\EmailBundle\AcmeEmailBundle(),
-            //new Acme\ContactBundle\AcmeContactBundle(),
-            //new Acme\ElFinderBundle\AcmeElFinderBundle(),
-            //new Acme\UserBundle\AcmeUserBundle(),
-            //new Acme\AssortmentBundle\AcmeAssortmentBundle(),
+        /*
+         * Bundle application
+         */
+        $applicationBundles = array(
+            // CUSTOM BUNDLES
+            new JMI\SiteBundle\JMISiteBundle(),
+            
         );
+        
         $bundles = array_merge(
             $bundles
           , $applicationBundles
@@ -147,12 +142,16 @@ class AppKernel extends Kernel
 
 
 
+        if (in_array($this->getEnvironment(), array('prod'))) {
+            $bundles[] = new SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle();
+        }
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
             $bundles[] = new Bazinga\Bundle\FakerBundle\BazingaFakerBundle();
             $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
+            $bundles[] = new Hautelook\AliceBundle\HautelookAliceBundle();
         }
 
         return $bundles;
