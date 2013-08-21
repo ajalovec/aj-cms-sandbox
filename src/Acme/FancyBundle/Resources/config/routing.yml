@@ -1,5 +1,0 @@
-acme_fancy_contents:
-    pattern:  /content/{id}/{filePath}
-    defaults: { _controller: AcmeFancyBundle:Content:content }
-    requirements:
-      filePath: ".+"

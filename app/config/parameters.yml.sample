@@ -1,7 +1,7 @@
 parameters:
     database_driver:   pdo_mysql
-    database_host:     localhost
-    database_name:     aj_cms_sandbox
+    database_host:     127.0.0.1
+    database_name:     baznik_web_site_dev
     database_user:     root
     database_password: root
 
@@ -12,19 +12,21 @@ parameters:
 
     locale:             en
 
+    aj_template_name:   JMISiteBundle
     secret:             asdjhkl5jkh43k6g3464i36l34ihzilr8tezwr8tz948z3
-
+    
     # Assetic paths
+    base_path:          /jmi
 
     #assetic.path.java:            c:\Windows\system32\java.exe
-    assetic.path.java:            %kernel.root_dir%/../bin/java.exe
+    assetic.path.java:            %kernel.root_dir%/Resources/java.exe
 
     #assetic.path.node:            C:\localhost\wamp\bin\node.exe
-    assetic.path.node:            %kernel.root_dir%/../bin/node.exe
-    assetic.path.node_paths:            [%kernel.root_dir%/../bin/node_modules]
+    assetic.path.node:            %kernel.root_dir%/Resources/node.exe
+    assetic.path.node_paths:      [%kernel.root_dir%/Resources/node_modules]
 
-    assetic.path.uglifycss:       %kernel.root_dir%/../bin/node_modules/uglifycss/uglifycss
-    assetic.path.uglifyjs:        %kernel.root_dir%/../bin/node_modules/uglify-js/uglify-js
+    assetic.path.uglifycss:       %kernel.root_dir%/Resources/node_modules/uglifycss/uglifycss
+    assetic.path.uglifyjs:        %kernel.root_dir%/Resources/node_modules/uglify-js/uglify-js
 
     # Sonata Admin Options
     sonata_admin.title:             "AJ CMS Project"

@@ -1,3 +1,0 @@
-acme_tiny_mce_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: AcmeTinyMceBundle:Default:index }

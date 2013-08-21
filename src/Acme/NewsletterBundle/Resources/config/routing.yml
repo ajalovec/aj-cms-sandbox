@@ -1,3 +1,0 @@
-acme_newsletter_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: AcmeNewsletterBundle:Default:index }

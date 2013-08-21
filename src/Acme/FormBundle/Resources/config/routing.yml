@@ -1,3 +1,0 @@
-acme_form_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: AcmeFormBundle:Default:index }

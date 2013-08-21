@@ -1,3 +1,0 @@
-acme_tree_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: AcmeTreeBundle:Default:index }

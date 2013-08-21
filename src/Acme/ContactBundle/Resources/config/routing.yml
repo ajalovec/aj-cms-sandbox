@@ -1,3 +1,0 @@
-acme_contact_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: AcmeContactBundle:Default:index }
