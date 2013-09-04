@@ -12,11 +12,11 @@
 
 
 
-t2_domene_home:
+jmi_site_home:
     path:      /
     defaults:  { _controller: JMISiteBundle:Default:oPodjetju, culture: si }
 
-t2_domene_home:
+jmi_site_storitve:
     path:      /storitve
     defaults:  { _controller: JMISiteBundle:Default:storitve, culture: si }
 

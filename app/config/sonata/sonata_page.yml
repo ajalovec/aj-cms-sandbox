@@ -15,7 +15,7 @@ sonata_page:
     default_page_service:  sonata.page.service.default
     default_template: default
     templates:
-        default: { path: 'SonataPageBundle::layout.html.twig', name: 'default' }
+        default: { path: 'JMISiteBundle::layout.html.twig', name: 'default' }
         jmi_default: { path: 'JMISiteBundle::layout.html.twig', name: 'jmi_default' }
 
     page_defaults:

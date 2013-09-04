@@ -13,19 +13,26 @@ namespace Application\Sonata\MediaBundle\Block;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Sonata\BlockBundle\Model\BlockInterface;
+use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\MediaBundle\Model\GalleryInterface;
 
 use Sonata\MediaBundle\Block\GalleryBlockService as BaseGalleryBlockService;
 
 class GalleryBlockService extends BaseGalleryBlockService
 {
-   
+   public function buildEditForm(FormMapper $formMapper, BlockInterface $block)
+    {
+        $block->setSetting('galleryId', is_object($block->getSetting('galleryId')) ? $block->getSetting('galleryId')->getId() : null);
+        
+        parent::buildEditForm($formMapper, $block);
+    }
     /**
      * {@inheritdoc}
      */
     public function setDefaultSettings(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'gallery'   => false,
+            'gallery'   => null,
             'title'     => false,
             'context'   => false,
             'format'    => false,

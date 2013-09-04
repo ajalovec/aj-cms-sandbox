@@ -1,8 +1,8 @@
 {#
 
-This file is part of the Sonata package.
+This file is part of the AJTemplate package.
 
-(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+(c) Andraž Jalovec <andraz.jalovec@gmail.com>
 
 For the full copyright and license information, please view the LICENSE
 file that was distributed with this source code.
@@ -22,6 +22,7 @@ file that was distributed with this source code.
             <div class="pull-right navigation">
                 {{ path(page) }}
                 {{ dump(page.url) }}
+                <
                 {{ sonata_page_render_container('header', 'global') }}
             </div>
         </div>
@@ -41,41 +42,6 @@ file that was distributed with this source code.
             {% endif %}
             
         </div>
-    {#    
-    {% if page is defined %}
-        <div class="contentTop page-section clearfix">
-            {% if page.name != 'global'%}
-                {{ sonata_page_render_container('content_top', 'global') }}
-            {% endif %}
-            {{ sonata_page_render_container('content_top', page) }}
-        </div>
-    {% endif %}
-        <div class="contentMain page-section clearfix">
-            {% if content is defined %}
-                {{ content|raw }}
-            {% else %}
-                {% set content = block('content') %}
-                {% if content|length > 0 %}
-                    {{ content|raw }}
-                {% elseif page is defined %}
-                    {{ sonata_page_render_container('content', page) }}
-                {% endif %}
-            {% endif %}
-        </div>
-
-    {% if page is defined %}
-        <div class="contentBottom page-section clearfix">
-            {{ sonata_page_render_container('content_bottom', page) }}
-
-            {% if page.name != 'global'%}
-                {{ sonata_page_render_container('content_bottom', 'global') }}
-            {% endif %}
-        </div>
-    {% endif %}
-    <footer class="footer">
-        {{ sonata_page_render_container('footer', 'global') }}
-    </footer>
-    #}
 
     </div>
 

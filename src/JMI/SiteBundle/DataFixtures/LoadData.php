@@ -39,9 +39,9 @@ class LoadData extends DataFixtureLoader implements OrderedFixtureInterface
         return strtotime($str);
     }
 
-    public function getPageTemplate()
+    public function pageTemplate($name = 'default')
     {
-        return "jmi_default";
+        return $name;
     }
 
     public function getCmsPageRouteName()

@@ -8,7 +8,7 @@ services:
     acme_content.admin.content:
         class: Acme\ContentBundle\Admin\ContentAdmin
         tags:
-            - { name: sonata.admin, manager_type: orm, group: acme_content, label: Content }
+            - { name: sonata.admin, manager_type: orm, group: Modules, label: Content }
         arguments: [null, Acme\ContentBundle\Entity\Content, SonataAdminBundle:CRUD]
 
     acme_content.block.service.content:

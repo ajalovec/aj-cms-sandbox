@@ -101,21 +101,6 @@ class PageAdmin extends BasePageAdmin implements AdminInterface
             array('uri' => $admin->generateUrl('sonata.page.admin.snapshot.list', array('id' => $id)))
         );
 
-        //** Page edit list * * * * * * * * * * *
-        $menu->addChild('page_list_divider')->setAttribute('class', 'divider');
-        $queryParams = array(
-            'site' => $this->getSubject()->getSite(),
-            'parent' => null,
-            'contentType'=>true,
-        );
-        $menu->addChild(
-            "Page list",
-            array('uri' => $admin->generateUrl('list', ['filter'=> ['parent'=> ['value'=> $this->getSubject()->getParent()]]]))
-        )->setAttribute('class', 'nav-header');
-
-        $this->buildPagesTree($menu, $this->pageManager->findBy($queryParams));
-
-
         //** Block list * * * * * * * * * * *
         $menu->addChild('block_list_divider')->setAttribute('class', 'divider');
         $menu->addChild(
@@ -125,6 +110,19 @@ class PageAdmin extends BasePageAdmin implements AdminInterface
 
         $this->buildBlocksTree($this->getBlockAdmin(), $menu, $this->getSubject());
 
+        //** Page edit list * * * * * * * * * * *
+        $menu->addChild('page_list_divider')->setAttribute('class', 'divider');
+        $queryParams = array(
+            'site' => $this->getSubject()->getSite(),
+            'parent' => null,
+            //'contentType'=>true,
+        );
+        $menu->addChild(
+            "Page list",
+            array('uri' => $admin->generateUrl('list', ['filter'=> ['parent'=> ['value'=> $this->getSubject()->getParent()]]]))
+        )->setAttribute('class', 'nav-header');
+
+        $this->buildPagesTree($menu, $this->pageManager->findBy($queryParams));
         //$this->buildPagesTree($menu, $this->pageManager->loadPages($this->getSubject()->getSite()));
     }
 

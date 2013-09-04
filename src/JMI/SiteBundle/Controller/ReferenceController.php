@@ -14,7 +14,7 @@ class ReferenceController extends Controller
 {
 
     /**
-     * @Route("")
+     * @Route()
      */
     public function indexAction($id = null)
     {

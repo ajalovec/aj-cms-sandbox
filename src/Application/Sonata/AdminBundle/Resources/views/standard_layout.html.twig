@@ -164,12 +164,18 @@ file that was distributed with this source code.
 
             <div class="row-fluid">
                 {% if _side_menu is not empty %}
-                    <div class="sidebar span2">
+                    {% if app.request.attributes.get('_route')[:22] == 'admin_sonata_page_page' %}
+                        {% set sideSpanSize = "span3" %}
+                        {% set contentSpanSize = "span9" %}
+                    {% else %}
+                        {% set sideSpanSize = "span2" %}
+                        {% set contentSpanSize = "span10" %}
+                    {% endif %}
+                    <div class="sidebar {{ sideSpanSize }}">
                         <div class="well sonata-ba-side-menu" style="padding: 8px 0;">{{ _side_menu|raw }}</div>
                     </div>
                 {% endif %}
-
-                <div class="content {{ _side_menu is not empty ? ' span10' : 'span12' }}">
+                <div class="content {{ _side_menu is not empty ? contentSpanSize : 'span12' }}">
                     {% block sonata_admin_content %}
 
                         {% if _preview is not empty %}
