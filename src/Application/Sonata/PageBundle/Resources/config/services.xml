@@ -18,6 +18,7 @@
 
         <!-- BLOCK -->
         <parameter key="app_sonata.page.admin.block.class">Application\Sonata\PageBundle\Admin\BlockAdmin</parameter>
+        <parameter key="app_sonata.page.block.children_pages.class">Application\Sonata\PageBundle\Block\ChildrenPagesBlockService</parameter>
         <!--
         <parameter key="sonata.page.admin.page.class">Application\Sonata\PageBundle\Admin\PageAdmin</parameter>
         <parameter key="sonata.page.admin.block.class">Application\Sonata\PageBundle\Admin\BlockAdmin</parameter>
@@ -25,7 +26,14 @@
     </parameters>
     
     <services>
-        
+        <service id="app_sonata.page.block.children_pages" class="%app_sonata.page.block.children_pages.class%">
+            <tag name="sonata.block" />
+            <argument>app_sonata.page.block.children_pages</argument>
+            <argument type="service" id="templating" />
+            <argument type="service" id="sonata.page.site.selector" />
+            <argument type="service" id="sonata.page.cms_manager_selector" />
+        </service>
+
         <service id="app_sonata.page.service.site" class="%app_sonata.page.service.site.class%">
             <tag name="sonata.page"/>
             <argument>Site</argument>

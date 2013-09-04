@@ -40,6 +40,7 @@ class ContentAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('title', null, array('label' => $this->trans('Title')))
+            ->add('parent', null,  array('label' => $this->trans('Parent')))
             ->add('description', null,  array('label' => $this->trans('Description')))
         ;
     }

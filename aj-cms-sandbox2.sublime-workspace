@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"bac",
+				"background-size"
+			],
+			[
 				"grou",
 				"groupManager"
 			],
@@ -82,10 +86,6 @@
 			[
 				"Templa",
 				"TemplateBundle"
-			],
-			[
-				"bac",
-				"background"
 			],
 			[
 				"cate",
@@ -191,34 +191,15 @@
 			"file": "src/JMI/SiteBundle/Controller/DefaultController.php",
 			"settings":
 			{
-				"buffer_size": 588,
+				"buffer_size": 475,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "\n@import 'less/normalize.less';\n@import 'less/global.less';\n\n",
-			"file": "src/AJ/Template/BootstrapBundle/Resources/public/bootstrap.less",
-			"file_size": 65,
-			"file_write_time": 130190971812531734,
-			"settings":
-			{
-				"buffer_size": 61,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/AJ/Template/BootstrapBundle/Resources/views/admin_layout.html.twig",
-			"settings":
-			{
-				"buffer_size": 6567,
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "src/AJ/Template/BootstrapBundle/Resources/views/base_layout.html.twig",
 			"settings":
 			{
-				"buffer_size": 2267,
+				"buffer_size": 1732,
 				"line_ending": "Windows"
 			}
 		},
@@ -226,51 +207,91 @@
 			"file": "src/JMI/SiteBundle/Resources/views/base_layout.html.twig",
 			"settings":
 			{
-				"buffer_size": 2271,
+				"buffer_size": 4164,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nSublimeLinter:\n-------------\n\n  SublimeLinter 1.7.2 changelog\n  =============================\n  \n  CHANGES/FIXES\n  -------------\n  - Update JSHint to v2.1.8\n  - Fixing compatibility regression with latest JSHint\n  - Fixing compatibility regression with latest Pyflakes\n  - Apologizing for hasty v1.7.1 release ;)\n  \n\n  SublimeLinter 1.7.1 changelog\n  =============================\n  \n  CHANGES/FIXES\n  -------------\n  - Update JSLint to latest\n  - Update JSHint to v2.1.5\n  - Updated link to JSHint documentation\n  - Updated PEP8 to v1.4.6\n  - Updated Pyflakes to v0.7.3\n  - Gutter mark icons are now retina quality\n  - Included Gutter mark icon PSD (for tinkering :)\n  \n",
-			"settings":
-			{
-				"buffer_size": 722,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"scratch": true
 			}
 		},
 		{
 			"file": "src/JMI/SiteBundle/Resources/views/layout.html.twig",
 			"settings":
 			{
-				"buffer_size": 2243,
+				"buffer_size": 2684,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Resources/boilerplates/_CNJ/spletne_strani/corpo/web/index.php",
+			"contents": "Searching 15608 files for \"sonata_page_render_container\" (whole word)\n\nC:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src\\JMI\\SiteBundle\\Resources\\views\\base_layout.html.twig:\n   71              <div class=\"page-header\">\n   72                  <div class=\"pull-left\">\n   73:                     {{ sonata_page_render_container('title', 'global') }}\n   74                  </div>\n   75  \n   76                  <div class=\"pull-right navigation\">\n   77:                     {{ sonata_page_render_container('header', 'global') }}\n   78                  </div>\n   79  \n   ..\n   84                  <div class=\"row\">\n   85                      {% if page.name != 'global'%}\n   86:                         {{ sonata_page_render_container('content_top', 'global') }}\n   87                      {% endif %}\n   88:                     {{ sonata_page_render_container('content_top', page) }}\n   89                  </div>\n   90              {% endif %}\n   ..\n   97                          {{ content|raw }}\n   98                      {% elseif page is defined %}\n   99:                         {{ sonata_page_render_container('content', page) }}\n  100                      {% endif %}\n  101                  {% endif %}\n  ...\n  104              {% if page is defined %}\n  105                  <div>\n  106:                     {{ sonata_page_render_container('content_bottom', page) }}\n  107  \n  108                      {% if page.name != 'global'%}\n  109:                         {{ sonata_page_render_container('content_bottom', 'global') }}\n  110                      {% endif %}\n  111                  </div>\n  ...\n  114  \n  115          <footer>\n  116:             {{ sonata_page_render_container('footer', 'global') }}\n  117          </footer>\n  118      </div>\n\nC:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src\\JMI\\SiteBundle\\Resources\\views\\layout.html.twig:\n   23              </a>\n   24              <div class=\"pull-right navigation\">\n   25:                 {{ sonata_page_render_container('header', 'global') }}\n   26              </div>\n   27          </div>\n   ..\n   29      <div class=\"body\">\n   30          <div class=\"main-page container\">\n   31:             {{ sonata_page_render_container('content_top', page) }}\n   32              {% if content is defined %}\n   33                  {{ content|raw }}\n   ..\n   37                      {{ content|raw }}\n   38                  {% elseif page is defined %}\n   39:                     {{ sonata_page_render_container('content', page) }}\n   40                  {% endif %}\n   41              {% endif %}\n   42:             {{ sonata_page_render_container('content_bottom', page) }}\n   43          </div>\n   44      {#    \n   ..\n   46          <div class=\"contentTop page-section clearfix\">\n   47              {% if page.name != 'global'%}\n   48:                 {{ sonata_page_render_container('content_top', 'global') }}\n   49              {% endif %}\n   50:             {{ sonata_page_render_container('content_top', page) }}\n   51          </div>\n   52      {% endif %}\n   ..\n   59                      {{ content|raw }}\n   60                  {% elseif page is defined %}\n   61:                     {{ sonata_page_render_container('content', page) }}\n   62                  {% endif %}\n   63              {% endif %}\n   ..\n   66      {% if page is defined %}\n   67          <div class=\"contentBottom page-section clearfix\">\n   68:             {{ sonata_page_render_container('content_bottom', page) }}\n   69  \n   70              {% if page.name != 'global'%}\n   71:                 {{ sonata_page_render_container('content_bottom', 'global') }}\n   72              {% endif %}\n   73          </div>\n   74      {% endif %}\n   75      <footer class=\"footer\">\n   76:         {{ sonata_page_render_container('footer', 'global') }}\n   77      </footer>\n   78      #}\n\nC:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src\\JMI\\SiteBundle\\Resources\\views\\layout2.html.twig:\n   24                          {{ content|raw }}\n   25                      {% elseif page is defined %}\n   26:                         {{ sonata_page_render_container('content', page) }}\n   27                      {% endif %}\n   28                  {% endif %}\n\nC:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor\\sonata-project\\page-bundle\\Sonata\\PageBundle\\Resources\\doc\\reference\\getting_started.rst:\n  139  ``SonataPageBundle::layout.html.twig``, it contains different methods call.\n  140  \n  141: * ``sonata_page_render_container('content', page)`` : render the container \n  142      ``content`` of the current page\n  143: * ``sonata_page_render_container('content_bottom', 'global')`` : render the \n  144      container ``content_bottom`` of the global page.\n  145      \n  ...\n  161  To add a new container block, simply render the container with the desired name:\n  162  \n  163: ``sonata_page_render_container('footer_left', 'global')``\n  164  \n  165  When the SonataPageBundle renders this container, it will automatically insert \n\nC:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor\\sonata-project\\page-bundle\\Sonata\\PageBundle\\Resources\\doc\\reference\\twig_helpers.rst:\n   31  .. code-block:: jinja\n   32  \n   33:     {{ sonata_page_render_container('name') }}\n   34  \n   35  Render a container using a transversal page named blog\n   ..\n   37  .. code-block:: jinja\n   38  \n   39:     {{ sonata_page_render_container('name', '_blog') }}\n   40  \n   41  Render a container using a page instance\n   ..\n   43  .. code-block:: jinja\n   44  \n   45:     {{ sonata_page_render_container('name', page) }}\n\nC:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor\\sonata-project\\page-bundle\\Sonata\\PageBundle\\Resources\\views\\layout.html.twig:\n   16              <div class=\"page-header\">\n   17                  <div class=\"pull-left\">\n   18:                     {{ sonata_page_render_container('title', 'global') }}\n   19                  </div>\n   20  \n   21                  <div class=\"pull-right navigation\">\n   22:                     {{ sonata_page_render_container('header', 'global') }}\n   23                  </div>\n   24  \n   ..\n   29                  <div class=\"row\">\n   30                      {% if page.name != 'global'%}\n   31:                         {{ sonata_page_render_container('content_top', 'global') }}\n   32                      {% endif %}\n   33:                     {{ sonata_page_render_container('content_top', page) }}\n   34                  </div>\n   35              {% endif %}\n   ..\n   43                          {{ content|raw }}\n   44                      {% elseif page is defined %}\n   45:                         {{ sonata_page_render_container('content', page) }}\n   46                      {% endif %}\n   47                  {% endif %}\n   ..\n   50              {% if page is defined %}\n   51                  <div>\n   52:                     {{ sonata_page_render_container('content_bottom', page) }}\n   53  \n   54                      {% if page.name != 'global'%}\n   55:                         {{ sonata_page_render_container('content_bottom', 'global') }}\n   56                      {% endif %}\n   57                  </div>\n   ..\n   60  \n   61          <footer>\n   62:             {{ sonata_page_render_container('footer', 'global') }}\n   63          </footer>\n   64      </div>\n\nC:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor\\sonata-project\\page-bundle\\Sonata\\PageBundle\\Twig\\Extension\\PageExtension.php:\n   84              'sonata_page_url'                 => new \\Twig_Function_Method($this, 'url'),\n   85              'sonata_page_breadcrumb'          => new \\Twig_Function_Method($this, 'breadcrumb', array('is_safe' => array('html'))),\n   86:             'sonata_page_render_container'    => new \\Twig_Function_Method($this, 'renderContainer', array('is_safe' => array('html'))),\n   87              'sonata_page_render_block'        => new \\Twig_Function_Method($this, 'renderBlock', array('is_safe' => array('html'))),\n   88          );\n\n34 matches across 7 files\n",
 			"settings":
 			{
-				"buffer_size": 12767,
-				"line_ending": "Unix"
+				"buffer_size": 7917,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
 			}
 		},
 		{
-			"file": "vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Templating/GlobalVariables.php",
+			"file": "vendor/sonata-project/page-bundle/Sonata/PageBundle/Twig/Extension/PageExtension.php",
 			"settings":
 			{
-				"buffer_size": 2659,
-				"line_ending": "Unix"
+				"buffer_size": 7456,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "load_data.php",
+			"settings":
+			{
+				"buffer_size": 2207,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/JMI/SiteBundle/Block/Data/PodatkiBlock.php",
+			"settings":
+			{
+				"buffer_size": 2247,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/JMI/SiteBundle/Resources/views/Default/storitve.html.twig",
+			"settings":
+			{
+				"buffer_size": 974,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/JMI/SiteBundle/Resources/config/routing.yml",
+			"settings":
+			{
+				"buffer_size": 1420,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "test.php",
+			"settings":
+			{
+				"buffer_size": 1144,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "Packages/User/PHP.sublime-build",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 104.0,
 		"selected_items":
 		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
 			[
 				"enab",
 				"Package Control: Enable Package"
@@ -285,10 +306,6 @@
 			],
 			[
 				"pacin",
-				"Package Control: Install Package"
-			],
-			[
-				"packa",
 				"Package Control: Install Package"
 			],
 			[
@@ -404,7 +421,7 @@
 				"Package Control: List Packages"
 			]
 		],
-		"width": 512.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -421,16 +438,90 @@
 	},
 	"file_history":
 	[
-		"/C/Users/AJ/Desktop/index.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/bootstrap/bootstrap.less",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/__Bundle/FrameworkBundle/DependencyInjection/Compiler/TemplateResourcesPass.php",
+		"/C/localhost/wamp/www/_git/aj-php-html-component/AJ/Template/Html/css.php",
+		"/C/localhost/wamp/www/_git/aj-php-html-component/AJ/Template/Html/style/property.php",
+		"/C/localhost/wamp/www/_git/aj-php-html-component/AJ/Template/Html/style/property/base.php",
+		"/C/localhost/wamp/www/_git/aj-php-html-component/AJ/Component/DependencyInjection/Params.php",
+		"/C/localhost/wamp/www/_git/aj-php-html-component/AJ/Template/Html/html.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Block/main_menu.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Controller/ReferenceController.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox-test/composer.json",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox-test/vendor/aj/template-bootstrap-bundle/AJ/Template/BootstrapBundle/composer.json",
+		"/C/localhost/wamp/www/_git/New folder/aj-template-bootstrap-bundle/.git/config",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox-test/vendor/aj/template-bootstrap-bundle/AJ/Template/BootstrapBundle/.git/config",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/composer.json",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/_CNJ/spletne_strani/framework/test1/src/Site/T2/Reality/SiteBundle/Controller/PageController.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/DependencyInjection/ApplicationSonataPageExtension.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/ApplicationSonataPageBundle.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerBuilder.php",
+		"/C/localhost/wamp/www/_projects/CNJ/_projekti/_CNJ/spletne_strani/framework/test1/src/Site/T2/Reality/SiteBundle/Resources/config/routing.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/less/grid.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox-test/app/config/parameters.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/routing.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/views/Block/block_core_children_pages.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Block/data_podatki.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/BootstrapBundle/Resources/views/admin_layout.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/parameters.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox-test/app/config/config.yml",
+		"/C/Users/AJ/.ssh/github_rsa",
+		"/C/Users/AJ/.ssh/github_rsa.pub",
+		"/C/localhost/wamp/www/_git/New folder/aj-template-bootstrap-bundle/composer.json",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/web/app_dev.php",
+		"/C/Users/AJ/Desktop/cookielaw/build",
+		"/C/Users/AJ/AppData/Local/Temp/scp41851/public_html/index.php",
+		"/C/Users/AJ/AppData/Local/Temp/scp57916/public_html/js/cookielaw.js",
+		"/C/Users/AJ/Desktop/cookielaw/cookielaw.min.js",
+		"/C/Users/AJ/Desktop/cookielaw/cookielaw.min.css",
+		"/C/Users/AJ/Desktop/cookielaw/style.css",
+		"/C/Users/AJ/Desktop/cookielaw/cookieconsent/style.min.css",
+		"/C/Users/AJ/Desktop/cookielaw/cookieconsent/plugin.js",
+		"/C/Users/AJ/AppData/Local/Temp/scp15925/public_html/js/cookielaw.min.js",
+		"/C/Users/AJ/Desktop/cookielaw/cookielaw.js",
+		"/C/Users/AJ/Desktop/cookielaw/cookielaw2.min.js.map",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/Pretty JSON/Pretty JSON.sublime-settings",
+		"/C/Users/AJ/Desktop/cookielaw/cookielaw-about.html",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/config/routing.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/less/mixins.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/views/Block/block_core_children_pages.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/views/Block/block_core_children_pages.html.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/aj-cms-sandbox2.sublime-project",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/bootstrap.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/config/blocks.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/config/services.xml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/DependencyInjection/JMISiteExtension.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Block/DataListBlock.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/js/button.js",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Default/kontakt.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Default/demo.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Twig/GlobalVariables.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Twig/GlobalVariables.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/seo-bundle/Sonata/SeoBundle/Seo/SeoPage.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/BootstrapBundle/Resources/bootstrap/bower.json",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/variables.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/BootstrapBundle/Resources/bootstrap/js/alert.js",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/bootstrap/.gitignore",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/layout.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/less/button-groups.less",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/BootstrapBundle/Resources/bootstrap/bootstrap.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/BootstrapBundle/Resources/bootstrap/index.html",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/theme/variables.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/theme/layout.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/theme/bootstrap.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/bootstrap/parameters.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/bootstrap/bootstrap.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/bootstrap/parameters.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/less/variables.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/bootstrap/assets/js/application.js",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/Resources/boilerplates/_CNJ/spletne_strani/corpo/web/index.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Templating/GlobalVariables.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/BootstrapBundle/Resources/public/bootstrap.less",
+		"/C/Users/AJ/Desktop/index.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/__Bundle/FrameworkBundle/DependencyInjection/Compiler/TemplateResourcesPass.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/BootstrapBundle/Resources/js/modernizr-2.6.2.min.js",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Sonata/Bootstrap/HTML5Bundle/Resources/lib/bootstrap/less/carousel.less",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/BootstrapBundle/Resources/less/component/carousel/carousel.css",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/BootstrapBundle/Resources/public/js/js/html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/LayoutBundle/Resources/config/services.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/aj-cms-sandbox2.sublime-project",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/views/layout.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/views/base_layout.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/public/theme.less",
@@ -438,7 +529,6 @@
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/admin_layout.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/base_error.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/internal_error.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Default/demo.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/LayoutBundle/Block/RowBlockService.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/LayoutBundle/Resources/views/Block/block_row.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/LayoutBundle/Resources/views/Block/block_base.html.twig",
@@ -454,7 +544,6 @@
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/SonataPageBundle/views/layout.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/views/base_layout.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/AppKernel.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/DependencyInjection/ApplicationSonataPageExtension.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/config/content_templates.xml",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Block/ContactPage.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/LayoutBundle/Resources/config/routing.xml",
@@ -476,79 +565,7 @@
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/config/services.yml",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/TwigBundle/views/Exception/error.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Controller/DefaultController.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Controller/DefaultController.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Resources/config/routing.yml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Resources/config/services.yml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Resources/views/Block/content.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Controller/DemoController.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Twig/Extension/PageExtension.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/web/bundles/sonatapage/default.css",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/public/default.css",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Bootstrap/DefaultBundle/AJBootstrapDefaultBundle.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Bootstrap/HTML5Bundle/AJBootstrapHTML5Bundle.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/composer.json",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/CNJ/Sonata/PageBundle/CNJSonataPageBundle.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/composer/include_paths.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/autoload.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/autoload.php",
-		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src2/AJ/Template/BlockBundle/AJTemplateBlockBundle.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src2/AJ/Template/BlockBundle/AJTemplateCoreBundle.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src2/AJ/Template/PageBundle/Resources/config/templating.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/views/Block/block_container.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/sonata/sonata_admin.yml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Template/Assetic/Extension/TwigFormulaLoader.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ParameterBag/FrozenParameterBag.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Component/DependencyInjection/ParamsBase.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Component/DependencyInjection/Params.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Component/DependencyInjection/Request.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Component/Form/Type.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/AJ/Component/EventListener/ControllerListener.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Resources/doc/reference/exceptions.rst",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Resources/config/routing/sonata_admin.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Sonata/Bundle/DemoBundle/DataFixtures/ORM/LoadUserData.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Sonata/Bundle/DemoBundle/DataFixtures/ORM/LoadUserGroupData.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Sonata/Bundle/DemoBundle/DataFixtures/ORM/LoadMediaData.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Sonata/Bundle/DemoBundle/DataFixtures/ORM/LoadNewsData.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Sonata/Bundle/DemoBundle/DataFixtures/ORM/LoadPageData.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Doctrine/GroupManager.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Model/User.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Entity/User.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/user-bundle/Sonata/UserBundle/Model/User.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/AbstractFixture.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Resources/views/Form/form_admin_fields.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/config/services.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/MediaBundle/DependencyInjection/ApplicationSonataMediaExtension.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/DependencyInjection/SonataMediaExtension.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/test.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/MediaBundle/Block/GalleryBlockService.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/MediaBundle/Entity/Gallery.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/MediaBundle/Resources/config/block.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/DependencyInjection/SonataBlockExtension.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Twig/Extension/FormatterMediaExtension.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Block/BlockContextManager.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/MediaBundle/ApplicationSonataMediaBundle.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/MediaBundle/___DependencyInjection/ApplicationSonataMediaExtension.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Block/GalleryBlockService.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/list.html.twig~",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/list.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/parameters_factory.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/base_list.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/New folder/base_list.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/New folder/list.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/list_inner_row.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/base_list_field.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/New folder/list_inner_row.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Admin/PageAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Resources/views/CRUD/base_list_field.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/DependencyInjection/ApplicationSonataAdminExtension.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminThemeBundle/DependencyInjection/AdminThemeExtension.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/PageBundle/Resources/config/services.yml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/ApplicationSonataAdminBundle.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/sonata/sonata_block.yml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Entity/Page.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/doctrine/doctrine-bundle/Doctrine/Bundle/DoctrineBundle/Registry.php"
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Controller/DefaultController.php"
 	],
 	"find":
 	{
@@ -559,6 +576,10 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src,C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src\\JMI\\SiteBundle\\Resources\\public\\less",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src\\JMI\\SiteBundle\\Resources\\public",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src\\JMI\\SiteBundle\\Resources\\public\\less",
 			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src,C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor",
 			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src,C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox",
 			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src,C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\app",
@@ -635,9 +656,41 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"git@bitbucket.org:ajalovec/aj-sonata-template.git",
+			"sonata_page_render_container",
+			"/",
+			"%}{",
+			"page_",
+			" = ",
+			"options.",
+			"Helper.",
+			"||{}",
+			"strings",
+			"extend",
+			"setup",
+			"onfirstload",
+			"defaultCookiesOptions",
+			"defaultOptions",
+			".make-row",
+			".container",
+			"block_core_children_pages.html.html",
+			"abstract",
+			"#",
+			"sonata.page.service.default",
+			"#",
+			".size",
+			"@import",
+			"page_",
+			"set",
+			"AJTemplateBootstrapBundle",
+			"@",
+			"asset",
+			"path",
+			"url",
+			"@import",
 			"framewo",
 			"asseti",
 			"kernel.root_dir",
@@ -733,39 +786,7 @@
 			"sonata_block",
 			"DemoBundle",
 			"site_audit",
-			"page__site_audit",
-			"sonata_admin:",
-			"sonata_admin",
-			"validation_parameters",
-			"production_parameters",
-			"symfony_cmf_routing_extra",
-			"\" -",
-			"\"-",
-			"\" -",
-			"\"-\"",
-			"d.",
-			"js",
-			"core_toString",
-			"class2type",
-			"$",
-			"jQuery",
-			"isFunction =",
-			"isFunction = f",
-			"isFunction ",
-			"jQuery.isFunction ",
-			"$.extend",
-			"extend",
-			"this.",
-			"app.",
-			"app",
-			"this.",
-			".test",
-			"kendoApp",
-			"APP_DEBUG",
-			"../vendor/aj/css/",
-			"userData",
-			".secured",
-			"secured"
+			"page__site_audit"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -847,13 +868,13 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": false,
+		"whole_word": true,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -861,15 +882,15 @@
 					"file": "src/JMI/SiteBundle/Controller/DefaultController.php",
 					"settings":
 					{
-						"buffer_size": 588,
+						"buffer_size": 475,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								575,
-								575
+								153,
+								153
 							]
 						],
 						"settings":
@@ -886,126 +907,25 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/AJ/Template/BootstrapBundle/Resources/public/bootstrap.less",
+					"file": "src/AJ/Template/BootstrapBundle/Resources/views/base_layout.html.twig",
 					"settings":
 					{
-						"buffer_size": 61,
+						"buffer_size": 1732,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								61,
-								61
+								110,
+								110
 							]
 						],
 						"settings":
 						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"sublime_auto_complete": true,
-							"syntax": "Packages/LESS/LESS.tmLanguage"
+							"syntax": "Packages/Twig/Syntaxes/HTML (Twig).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1015,18 +935,18 @@
 				},
 				{
 					"buffer": 2,
-					"file": "src/AJ/Template/BootstrapBundle/Resources/views/admin_layout.html.twig",
+					"file": "src/JMI/SiteBundle/Resources/views/base_layout.html.twig",
 					"settings":
 					{
-						"buffer_size": 6567,
+						"buffer_size": 4164,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								356,
-								342
+								468,
+								468
 							]
 						],
 						"settings":
@@ -1036,25 +956,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 166.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "src/AJ/Template/BootstrapBundle/Resources/views/base_layout.html.twig",
+					"file": "src/JMI/SiteBundle/Resources/views/layout.html.twig",
 					"settings":
 					{
-						"buffer_size": 2267,
+						"buffer_size": 2684,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1548,
-								1548
+								853,
+								881
 							]
 						],
 						"settings":
@@ -1064,79 +984,284 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 75.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "src/JMI/SiteBundle/Resources/views/base_layout.html.twig",
 					"settings":
 					{
-						"buffer_size": 2271,
+						"buffer_size": 7917,
 						"regions":
 						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										293,
+										321
+									],
+									[
+										471,
+										499
+									],
+									[
+										699,
+										727
+									],
+									[
+										825,
+										853
+									],
+									[
+										1084,
+										1112
+									],
+									[
+										1316,
+										1344
+									],
+									[
+										1471,
+										1499
+									],
+									[
+										1660,
+										1688
+									],
+									[
+										1956,
+										1984
+									],
+									[
+										2163,
+										2191
+									],
+									[
+										2437,
+										2465
+									],
+									[
+										2574,
+										2602
+									],
+									[
+										2813,
+										2841
+									],
+									[
+										2923,
+										2951
+									],
+									[
+										3154,
+										3182
+									],
+									[
+										3398,
+										3426
+									],
+									[
+										3537,
+										3565
+									],
+									[
+										3726,
+										3754
+									],
+									[
+										4049,
+										4077
+									],
+									[
+										4414,
+										4442
+									],
+									[
+										4540,
+										4568
+									],
+									[
+										4796,
+										4824
+									],
+									[
+										5135,
+										5163
+									],
+									[
+										5302,
+										5330
+									],
+									[
+										5464,
+										5492
+									],
+									[
+										5761,
+										5789
+									],
+									[
+										5939,
+										5967
+									],
+									[
+										6167,
+										6195
+									],
+									[
+										6293,
+										6321
+									],
+									[
+										6552,
+										6580
+									],
+									[
+										6784,
+										6812
+									],
+									[
+										6939,
+										6967
+									],
+									[
+										7128,
+										7156
+									],
+									[
+										7608,
+										7636
+									]
+								],
+								"scope": ""
+							}
 						},
 						"selection":
 						[
 							[
-								224,
-								224
+								7623,
+								7623
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Twig/Syntaxes/HTML (Twig).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2160.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
+					"file": "vendor/sonata-project/page-bundle/Sonata/PageBundle/Twig/Extension/PageExtension.php",
 					"settings":
 					{
-						"buffer_size": 722,
+						"buffer_size": 7456,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								722,
-								722
+								4460,
+								4460
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": true
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2025.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "src/JMI/SiteBundle/Resources/views/layout.html.twig",
+					"file": "load_data.php",
 					"settings":
 					{
-						"buffer_size": 2243,
+						"buffer_size": 2207,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								237,
-								250
+								506,
+								506
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/JMI/SiteBundle/Block/Data/PodatkiBlock.php",
+					"settings":
+					{
+						"buffer_size": 2247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1230,
+								1230
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 419.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/JMI/SiteBundle/Resources/views/Default/storitve.html.twig",
+					"settings":
+					{
+						"buffer_size": 974,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								766,
+								766
 							]
 						],
 						"settings":
@@ -1152,38 +1277,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "Resources/boilerplates/_CNJ/spletne_strani/corpo/web/index.php",
+					"buffer": 9,
+					"file": "src/JMI/SiteBundle/Resources/config/routing.yml",
 					"settings":
 					{
-						"buffer_size": 12767,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11559,
-								11559
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 422.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Templating/GlobalVariables.php",
-					"settings":
-					{
-						"buffer_size": 2659,
+						"buffer_size": 1420,
 						"regions":
 						{
 						},
@@ -1196,12 +1294,40 @@
 						],
 						"settings":
 						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "test.php",
+					"settings":
+					{
+						"buffer_size": 1144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								476,
+								476
+							]
+						],
+						"settings":
+						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1262,6 +1388,22 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"sonata/blockbundle/twig/globalvariables",
+				"Project files/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Twig/GlobalVariables.php"
+			],
+			[
+				"sonata/pagebundle/twig/globalvariables",
+				"Project files/vendor/sonata-project/page-bundle/Sonata/PageBundle/Twig/GlobalVariables.php"
+			],
+			[
+				"seopage",
+				"Project files/vendor/sonata-project/seo-bundle/Sonata/SeoBundle/Seo/SeoPage.php"
+			],
+			[
+				"onatapagebundleblockblock_core_children_pages.htm",
+				"Project files/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/views/Block/block_core_children_pages.html.twig"
+			],
 			[
 				"symfony/bundle/frameworkbundle/templating/globalvariables",
 				"Project files/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Templating/GlobalVariables.php"
@@ -1641,6 +1783,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 260.0,
+	"side_bar_width": 298.0,
 	"status_bar_visible": true
 }

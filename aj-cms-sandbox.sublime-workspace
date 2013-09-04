@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"sonata",
+				"Sonata"
+			],
+			[
+				"chil",
+				"childrenMenu"
+			],
+			[
+				"fun",
+				"fun	function …"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
 				"con",
 				"content"
 			],
@@ -18,10 +42,6 @@
 			[
 				"font",
 				"font-size"
-			],
-			[
-				"mar",
-				"margin-top"
 			],
 			[
 				"real",
@@ -124,10 +144,6 @@
 				"font-size"
 			],
 			[
-				"pad",
-				"padding"
-			],
-			[
 				"elem",
 				"elemText"
 			],
@@ -191,63 +207,7 @@
 			"file": "app/AppKernel.php",
 			"settings":
 			{
-				"buffer_size": 5985,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/JMI/SiteBundle/Resources/config/routing.yml",
-			"settings":
-			{
-				"buffer_size": 592,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/config/sonata/sonata_page.yml",
-			"settings":
-			{
-				"buffer_size": 2508,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/config/sonata/sonata_block.yml",
-			"settings":
-			{
-				"buffer_size": 617,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vendor/sonata-project/admin-bundle/Sonata/AdminBundle/DependencyInjection/Configuration.php",
-			"settings":
-			{
-				"buffer_size": 10314,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vendor/sonata-project/page-bundle/Sonata/PageBundle/DependencyInjection/Configuration.php",
-			"settings":
-			{
-				"buffer_size": 5351,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vendor/sonata-project/block-bundle/Sonata/BlockBundle/DependencyInjection/Configuration.php",
-			"settings":
-			{
-				"buffer_size": 6431,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vendor/sonata-project/media-bundle/Sonata/MediaBundle/DependencyInjection/Configuration.php",
-			"settings":
-			{
-				"buffer_size": 19979,
+				"buffer_size": 6172,
 				"line_ending": "Windows"
 			}
 		},
@@ -255,33 +215,93 @@
 			"file": "app/config/config.yml",
 			"settings":
 			{
-				"buffer_size": 3789,
+				"buffer_size": 3763,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/DependencyInjection/Configuration.php",
-			"settings":
-			{
-				"buffer_size": 8078,
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "app/config/parameters.yml",
 			"settings":
 			{
-				"buffer_size": 1748,
+				"buffer_size": 1733,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/config/sonata/sonata_page.yml",
+			"settings":
+			{
+				"buffer_size": 2772,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Application/Sonata/PageBundle/Admin/PageAdmin.php",
+			"settings":
+			{
+				"buffer_size": 7236,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/JMI/SiteBundle/Resources/config/routing.yml",
+			"settings":
+			{
+				"buffer_size": 1420,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "cmd/dbinit",
+			"settings":
+			{
+				"buffer_size": 156,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "vendor/hautelook/alice-bundle/Hautelook/AliceBundle/Alice/DataFixtureLoader.php",
+			"settings":
+			{
+				"buffer_size": 1783,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/JMI/SiteBundle/DataFixtures/fixtures/bootstrap.yml",
+			"settings":
+			{
+				"buffer_size": 3238,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/JMI/SiteBundle/DataFixtures/LoadData.php",
+			"settings":
+			{
+				"buffer_size": 5917,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "vendor/hautelook/alice-bundle/Hautelook/AliceBundle/Alice/Loader.php",
+			"settings":
+			{
+				"buffer_size": 3330,
+				"line_ending": "Unix"
 			}
 		}
 	],
 	"build_system": "Packages/User/PHP.sublime-build",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 104.0,
 		"selected_items":
 		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
 			[
 				"dis",
 				"Package Control: Disable Package"
@@ -407,7 +427,7 @@
 				"Package Control: List Packages"
 			]
 		],
-		"width": 536.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -424,134 +444,134 @@
 	},
 	"file_history":
 	[
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/user-bundle/Sonata/UserBundle/DependencyInjection/Configuration.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Admin/BlockAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/sonata/sonata_admin.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Entity/PageManager.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/DataFixtures/fixtures/pages.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/cmd/pagebuild",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/cmd/truncate2.html",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/sonata/sonata_seo.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/seo-bundle/Sonata/SeoBundle/DependencyInjection/Configuration.php",
+		"/C/Users/AJ/AppData/Local/Temp/sonata_sitemap_66ed75ba5dbdaea13724e45487959b6b/sitemap_00001.xml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/cmd/truncate",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/cmd/admin",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/proj-init",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/DataFixtures/LoadData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/DataFixtures/ORM/LoadData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/hautelook/alice-bundle/Hautelook/AliceBundle/Alice/DataFixtureLoader.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/OrderedFixtureInterface.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/DataFixtures/ORM/LoadUserGroupData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/DataFixtures/ORM/LoadUserData.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/config/services.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/notification-bundle/Sonata/NotificationBundle/Resources/config/admin.xml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/fixtures/bootstrap.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/fixtures/LoadUserGroupData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/fixtures/LoadUserData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/sonata/sonata_block.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/variables.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/layout.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/public/bootstrap.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/public/parameters.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/public/theme.less",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/page.xml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/config/orm.xml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Admin/BlockAdmin.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/doctrine/orm/lib/Doctrine/ORM/QueryBuilder.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/DependencyInjection/Compiler/SetPagePass.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/config_dev.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Sonata/Bundle/DemoBundle/Controller/DemoController.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Controller/ReferenceController.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Default/storitve.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Default/oPodjetju.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Reference/galerijaPoglej.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Resources/views/Media/view.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Controller/MediaController.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/symfony-cmf/routing-bundle/Symfony/Cmf/Bundle/RoutingBundle/Resources/config/chain_routing.xml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Resources/config/core.xml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Admin/PageAdmin.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Admin/PageAdmin.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Admin/Admin.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Gallery/index.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Gallery/view.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Resources/views/Gallery/index.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Block/ChildrenPagesBlockService.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Admin/ContentAdmin.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/DataFixtures/Users/LoadUserData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/DataFixtures/Users/LoadUserGroupData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/ApplicationSonataPageBundle.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/symfony-cmf/routing-bundle/Symfony/Cmf/Bundle/RoutingBundle/CmfRoutingBundle.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/symfony-cmf/routing-bundle/Symfony/Cmf/Bundle/RoutingBundle/DependencyInjection/Compiler/SetRouterPass.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Entity/Page.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageDataBundle/DataFixtures/Users/LoadUserData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageDataBundle/DataFixtures/Users/LoadUserGroupData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageDataBundle/DataFixtures/ORM/LoadNewsData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageDataBundle/DataFixtures/ORM/LoadMediaData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/sonata/sonata_formatter.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/sonata/sonata_media.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/DataFixtures/ORM/LoadPageData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/DataFixtures/ORM/LoadNewsData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/DataFixtures/ORM/LoadMediaData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox2/app/config/parameters.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox2/app/AppKernel.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Route/CmsPageRouter.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Model/Page.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/PageBundle/Entity/Page.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Entity/Content.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Entity/BaseContent.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/translations/SonataPageBundle.en.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Resources/views/CRUD/base_edit.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/knplabs/knp-menu/src/Knp/Menu/MenuItem.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/config/admin.xml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Sonata/Bundle/DemoBundle/DataFixtures/ORM/LoadPageData.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Admin/PageAdminExtension.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Admin/AdminExtensionInterface.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/web/bundles/applicationsonataadmin/bootstrap.css",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/public/bootstrap.css",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/PageBundle - Shortcut.lnk",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/aj-cms-sandbox.sublime-project",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Block/ContentBlockService.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/DependencyInjection/Compiler/AddDependencyCallsCompilerPass.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/doctrine/orm/lib/Doctrine/ORM/PersistentCollection.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/standard_layout.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Resources/doc/reference/dashboard.rst",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Admin/BlockAdmin.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Entity/Block.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Entity/BlockManager.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/news-bundle/Sonata/NewsBundle/Admin/PostAdmin.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Page/Type/SitePageService.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Admin/FieldDescriptionInterface.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/config/routing.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/config/page.xml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/translations/SonataPageBundle.sl.yml",
+		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/PhpNamespace/Default (Windows).sublime-keymap",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Resources/public/bootstrap/css/bootstrap.css",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/DependencyInjection/Configuration.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/DependencyInjection/Configuration.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/DependencyInjection/Configuration.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/DependencyInjection/Configuration.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/DependencyInjection/Configuration.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/base_list_field.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Resources/views/CRUD/base_list_field.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/_views/CRUD/base_list_field.html.twig",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/kriswallsmith/assetic/src/Assetic/Filter/LessFilter.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/user-bundle/Sonata/UserBundle/DependencyInjection/Configuration.php",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/sonata/sonata_admin.yml",
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/notification-bundle/Sonata/NotificationBundle/Resources/config/admin.xml",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Controller/PageController.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Page/Service/DefaultPageService.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Model/Block.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Block/GalleryBlockService.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Controller/BlockAdminController.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Admin/BlockAdmin.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox2/vendor/sonata-project/page-bundle/Sonata/PageBundle/Admin/BlockAdmin.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/DependencyInjection/SonataPageExtension.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/parameters.yml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/translations/SonataPageBundle.sl.yml",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Datagrid/ListMapper.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Mapper/BaseMapper.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Admin/PageAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Admin/PageAdmin.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Resources/config/services.yml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Admin/ContentAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Block/ContentBlockService.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/views/layout.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageDataBundle/DataFixtures/ORM/LoadPageData.php",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Sonata/Bundle/DemoBundle/Resources/config/routing/demo.xml",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Default/kontakt.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/JMI/SiteBundle/Resources/views/Default/demo.html.twig",
 		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/config/doctrine/Page.orm.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Controller/BlockController.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/views/BlockAdmin/create.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/config/routing/page.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Resources/views/Block/content.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/views/Block/block_core_children_pages.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/views/Block/block_container.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/views/layout2.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/translations/SonataPageBundle.en.yml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/translations/SonataPageBundle.en.xliff",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Resources/views/Block/block_core_text.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Entity/Block.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/README.md",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Block/BlockRenderer.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Model/PageInterface.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/routing.yml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Block/BlockContextInterface.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Block/ContainerBlockService.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Resources/views/Block/tt-content.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Block/BaseBlockService.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/symfony/symfony/src/Symfony/Component/OptionsResolver/Options.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/PageBundle/Admin/PageAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Form/Type/PageSelectorType.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/user-bundle/Sonata/UserBundle/Admin/Model/UserAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/news-bundle/Sonata/NewsBundle/Admin/PostAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/doctrine-orm-admin-bundle/Sonata/DoctrineORMAdminBundle/Builder/FormContractor.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Form/Type/ContentSelectorType.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Block/MediaBlockService.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/views/SonataAdminBundle/layout.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Block/ChildrenPagesBlockService.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Entity/BlockManager.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Tests/Block/Service/TextBlockServiceTest.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/doctrine-orm-admin-bundle/Sonata/DoctrineORMAdminBundle/Model/ModelManager.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Entity/Content.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Admin/AdminInterface.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/test.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/news-bundle/Sonata/NewsBundle/Admin/CommentAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Resources/views/Helper/short-object-description.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/AssortmentBundle/Admin/AssortmentPageAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Form/Type/CollectionType.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Form/Type/AdminType.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/config/sonata/sonata_block.yml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/config/admin.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Resources/config/doctrine_orm_admin.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/list_array.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Admin/BaseFieldDescription.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/doctrine-orm-admin-bundle/Sonata/DoctrineORMAdminBundle/Admin/FieldDescription.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Admin/GalleryHasMediaAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Admin/GalleryAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Admin/BaseMediaAdmin.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Admin/AdminExtensionInterface.php",
-		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/cache/dev/classes.php",
-		"/C/Users/AJ/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/show_array.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/base_list_field.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/base_show_field.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/ContentBundle/Resources/views/layout.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/DoctrineMigrations/Version20130726231141.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Block/BlockServiceInterface.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/EmailBundle/Entity/Email.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/FacebookBundle/Entity/FacebookFeed.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/FacebookBundle/Entity/FacebookUser.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/FormBundle/Entity/Form.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/NewsletterBundle/Entity/Newsletter.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/PageBundle/Entity/MenuGroup.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/PageBundle/Entity/Page.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/PageBundle/Entity/PageModule.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/PageBundle/Entity/Route.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/UserBundle/Entity/User.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/AssortmentBundle/Entity/AssortmentCategory.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/AssortmentBundle/Entity/AssortmentPage.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Acme/AssortmentBundle/Entity/AssortmentPageHasMedia.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/news-bundle/Sonata/NewsBundle/Resources/views/Post/view.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/news-bundle/Sonata/NewsBundle/Controller/PostController.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/AdminBundle/Resources/views/CRUD/base_list.html.twig",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Entity/Page.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/media-bundle/Sonata/MediaBundle/Resources/config/doctrine_mongodb_admin.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/DependencyInjection/Configuration.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/translations/SonataPageBundle.sl.xliff",
-		"/C/localhost/wamp/www/_projects/ATIS/_projekti/baznik/web/newpage/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/translations/SonataPageBundle.sl.xliff",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/translations/SonataPageBundle.sl.xlf",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/translations/SonataPageBundle.sl.xliff",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/app/Resources/translations/SonataPageBundle.sl.xliff",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/aj-cms-sandbox.sublime-project",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/translations/SonataAdminBundle.sl.xlf",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/translations/SonataPageBundle.en.xliff",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Admin/PageAdminExtension.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/block-bundle/Sonata/BlockBundle/Block/Service/TextBlockService.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Page/PageServiceManager.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/trans/SonataPageBundle.sl.xliff",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Admin/AdminExtension.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/DependencyInjection/Compiler/ExtensionCompilerPass.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/DependencyInjection/ApplicationSonataPageExtension.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Resources/config/doctrine/Block.orm.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/config/doctrine/BaseBlock.orm.xml",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Entity/BaseBlock.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Entity/Snapshot.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/src/Application/Sonata/PageBundle/Entity/Site.php",
-		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Resources/config/page.xml"
+		"/C/localhost/wamp/www/_git/aj-cms-sandbox/vendor/sonata-project/page-bundle/Sonata/PageBundle/Controller/BlockController.php"
 	],
 	"find":
 	{
@@ -562,6 +582,10 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor,C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src,*.php,*.xml,*.yml",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor,C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor\\sonata-project,C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src",
+			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\app\\Resources\\DataFixtures",
 			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor\\sonata-project,C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src",
 			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor\\sonata-project\\block-bundle\\Sonata\\BlockBundle\\Block",
 			"C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\vendor\\sonata-project,C:\\localhost\\wamp\\www\\_git\\aj-cms-sandbox\\src",
@@ -685,9 +709,7 @@
 			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\src\\Page\\Zare\\AppBundle",
 			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\src\\Page\\Zare",
 			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\",
-			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\src\\Page\\ZareBundle",
-			"C:\\localhost\\wamp\\www\\_code\\php\\symfony2",
-			""
+			"C:\\localhost\\wamp\\www\\_projects\\ATIS\\_projekti\\nemec-sp\\zare\\web\\src\\Page\\ZareBundle"
 		]
 	},
 	"find_state":
@@ -695,134 +717,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"getObject",
-			"sonata_demo_media",
-			"Media & Seo",
-			"create(",
-			"create",
-			"CRUD",
-			"message_create_block_not_available",
-			"block_core_children_pages",
-			"form.",
-			"function configureListFields(",
-			"->execute(",
-			"function execute(",
-			"@ex\n@ex\nfunction execute(",
-			"excecute(",
-			"body",
-			"AcmeContentBundle:Block",
-			"Block:content",
-			"AcmeContentBundle:Block:content",
-			"AcmeContentBundle:Block:content.html.twig",
-			"$block",
+			"core_routes",
+			"\\",
+			"$connection",
+			"Connection",
+			"connection",
+			"\"",
+			"'",
+			"homepage",
+			"'",
+			"sonata.page.cms.",
+			"sonata.page.cms.snapshot",
+			"manager",
+			")",
+			"fixtures",
+			"__DIR__ . '/..",
+			"\\\\",
+			"Application\\\\",
+			"getReferences",
+			"blockAdmin",
+			"$",
+			"$page",
+			"getChildBlocks",
+			"// ",
+			" => ",
+			"contentType",
+			"f.",
+			"ata.page.manager.page.cla",
+			"\"sonata.page.manager.page.class\"",
+			"Sonata\\PageBundle\\Entity\\PageManager",
+			"_id",
+			"qb",
+			"content_type",
 			"block",
-			"contentRepo",
-			"getContentAdmin",
-			"sonata_type_model",
-			"sonata_page_selector",
-			"sonata_notification",
-			"sonata_type_model",
-			"OptionsResolverInterface",
-			"name=\"sonata.admin\"",
-			"group=\"sonata_notifi",
-			"->contentAdmin",
-			"setContentAdmin",
-			"<tag name=\"sonata.block",
-			"getContentAdmin()",
-			"formMapper",
-			"$formMapper",
-			"formMapper",
-			"BlockServiceManagerInterface",
-			"blockManager",
-			"blockma",
-			"formMa",
-			"->buildEditForm(",
-			"function getNewFieldDescriptionInstance",
-			"function getNewFieldDescriptionInstance(",
-			"sonata_page_selector",
-			"galleryAdmin",
-			"getGalleryAdmin",
-			"sonata_type_model",
-			"sonata_type_admin",
-			"alias=\"sonata_type_admin",
-			"sonata_page_selector",
-			"sonata_type_immutable_array",
-			"sonata_type_collection",
-			"<tag name=\"form.type\" alias",
-			">Users<",
-			">User<",
-			"defau",
-			"@ORM\\Column(",
-			"def",
-			"@ORM\\Column(",
-			"<tag name=\"form.type\" alias",
-			"sonata_page_selector",
-			"__toString",
-			"configureListFields",
-			"show_in_dashboard=\"",
-			"$listMapper",
-			"function configureListFields(",
-			"getFieldV",
-			"function getNewFieldDescriptionInstance(",
-			"@ORM\\Table(name=\"",
-			"@ORM\\Table(",
-			"sonata.user.admin.groupname",
-			" group=\"",
-			" group=\"sonata_",
-			" group=\"",
-			"notification",
-			"sonata.media.admin.media.translation_domain",
-			"sonata.media.admin.gallery.translation_domain",
-			"tag name=\"sonata.admin\"",
-			"tage=\"sonata.admin",
-			":",
-			"form.label_page_alias",
-			"form.label_content_type",
-			"pageAlias",
-			"Main",
-			"sonata.admin.extension",
-			"id=\"sonata.page.admin.page",
-			"tag name=\"sonata.admin.extension\"",
-			"sonata.page.service.manager.class",
-			"sonata.page.page_service_manager.c",
-			"sonata.page.page_service_manager",
-			"pageType",
-			"pageTy",
-			"BasePost",
-			"Post",
-			"post",
-			"<entity",
-			"notification",
-			"sonata.notification.backend",
-			"%sonata.notification.backend%",
-			"\"sonata.notification.backend\"",
-			"sonata.notification.backend",
-			"Sonata\\Bundle\\DemoBundle\\DataFixtures\\ORM",
-			"noti",
-			"sonata_news_view",
-			"Option \"base-console\" is not executable.",
-			"frontendBundles",
-			",",
-			", ",
-			"sonata_media_type",
-			"medi",
-			"sonata_media_type",
-			"sonata_post_comment",
-			"CommentType",
-			"sonata_demo_form_type_car",
-			"tag name=\"form.type\" alias=",
-			"med",
-			"cate",
-			"tag name=\"form.type\"",
-			"category",
-			"sonata_type_model",
-			"sonata_media_type",
-			"Category",
-			"model_list",
-			"sonata_type_model",
-			"sonata_type_model_list",
-			"tag name=\"form.type",
-			"sonata_type_model_list"
+			"blockAdmin",
+			"buildMenuTree",
+			"pageManager",
+			"app_sonata",
+			"sonata.page.admin.page",
+			"app.sonata",
+			"- ",
+			"id",
+			"sonata.media.manager.gallery",
+			"group=\"sonata_page\"",
+			"sonata.page.admin.block.translation_domain",
+			"app_sonata_page",
+			"translation_domain%",
+			"->",
+			"sonata.admin.label.strategy.underscore",
+			"sonata.page.service.site",
+			"app_sonata_page",
+			"_",
+			"app_sonata_page.",
+			".controller\"",
+			"app.sonata.page",
+			"Sonata\\PageBundle",
+			"app.app",
+			"sonata.page.",
+			"sonata.page.admin.page",
+			"sonata.page.admin.",
+			"page",
+			":Gallery",
+			"Gallery",
+			"SonataMediaBundle",
+			"<yourname>",
+			"id=\"cmf_routing.router",
+			"id=\"session.storage",
+			"id=\"sonata.block.context_manager",
+			"aj",
+			"AJ",
+			"namespace Application\\Sonata\\PageDataBundle\\DataFixtures\\Users;",
+			"namespace Application\\Sonata\\PageDataBundle\\DataFixtures\\ORM;",
+			"news",
+			"new",
+			"form",
+			"Gedmo",
+			"parents",
+			"Page",
+			"setParents",
+			"parents",
+			"$pare",
+			"Please provide a `path` parameters",
+			"path",
+			" ContainerAware",
+			"hybrid",
+			"protected function",
+			"getNewInstance()",
+			"\\",
+			"demo",
+			"\"name\"",
+			"knp_menu.factory",
+			"setMenuFactory",
+			"$menuFactory",
+			"->configureSideMenu(",
+			"buildTreeMenu",
+			"block",
+			"false",
+			"$menu",
+			"sonata.page.admin.page",
+			"\"",
+			"page",
+			"parent",
+			"sonata.page.admin.block.list",
+			"$this->datagridValues",
+			"getParentName",
+			"          ",
+			"         ",
+			"list.",
+			"<source>",
+			"parent",
+			".controls ",
+			".controls",
+			"controls",
+			"formMapper->with($this->trans('form_page.group_main_label')",
+			";\n",
+			"_list_filters",
+			"style",
+			"sonata.page.service.default",
+			"<tag name=\"form.",
+			"tag=\"form.",
+			"sonata.seo.page",
+			"seo",
+			"le",
+			"lea",
+			"$BodyFormatter",
+			"BodyFormatter",
+			"Content",
+			"content",
+			"contentFormatter"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -830,6 +852,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"buildBlocksTree",
+			"app.sonata.page.admin.page",
+			"",
 			"@ORM\\Table(name=\"acme_",
 			"Application\\Sonata\\PageDataBundle\\DataFixtures\\ORM",
 			"kendo",
@@ -906,13 +931,13 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -920,7 +945,7 @@
 					"file": "app/AppKernel.php",
 					"settings":
 					{
-						"buffer_size": 5985,
+						"buffer_size": 6172,
 						"regions":
 						{
 							"bookmarks":
@@ -930,8 +955,12 @@
 								"regions":
 								[
 									[
-										4381,
-										4381
+										2836,
+										2836
+									],
+									[
+										5294,
+										5294
 									]
 								],
 								"scope": "bookmarks"
@@ -940,8 +969,8 @@
 						"selection":
 						[
 							[
-								2220,
-								2220
+								5390,
+								5390
 							]
 						],
 						"settings":
@@ -1054,132 +1083,29 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 698.0,
+						"translation.y": 1940.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/JMI/SiteBundle/Resources/config/routing.yml",
+					"file": "app/config/config.yml",
 					"settings":
 					{
-						"buffer_size": 592,
+						"buffer_size": 3763,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								590,
-								590
+								578,
+								578
 							]
 						],
 						"settings":
 						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"sublime_auto_complete": true,
 							"syntax": "Packages/YAML/YAML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -1192,10 +1118,38 @@
 				},
 				{
 					"buffer": 2,
+					"file": "app/config/parameters.yml",
+					"settings":
+					{
+						"buffer_size": 1733,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								120,
+								120
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "app/config/sonata/sonata_page.yml",
 					"settings":
 					{
-						"buffer_size": 2508,
+						"buffer_size": 2772,
 						"regions":
 						{
 							"bookmarks":
@@ -1211,8 +1165,8 @@
 						"selection":
 						[
 							[
-								641,
-								642
+								708,
+								708
 							]
 						],
 						"settings":
@@ -1325,25 +1279,150 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/config/sonata/sonata_block.yml",
+					"buffer": 4,
+					"file": "src/Application/Sonata/PageBundle/Admin/PageAdmin.php",
 					"settings":
 					{
-						"buffer_size": 617,
+						"buffer_size": 7236,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										4312,
+										4312
+									],
+									[
+										6749,
+										6749
+									]
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								2399,
+								2399
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1062.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/JMI/SiteBundle/Resources/config/routing.yml",
+					"settings":
+					{
+						"buffer_size": 1420,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								454,
-								454
+								133,
+								133
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "cmd/dbinit",
+					"settings":
+					{
+						"buffer_size": 156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								156,
+								156
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "vendor/hautelook/alice-bundle/Hautelook/AliceBundle/Alice/DataFixtureLoader.php",
+					"settings":
+					{
+						"buffer_size": 1783,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								520,
+								520
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 75.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/JMI/SiteBundle/DataFixtures/fixtures/bootstrap.yml",
+					"settings":
+					{
+						"buffer_size": 3238,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								793,
+								793
 							]
 						],
 						"settings":
@@ -1359,19 +1438,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "vendor/sonata-project/admin-bundle/Sonata/AdminBundle/DependencyInjection/Configuration.php",
+					"buffer": 9,
+					"file": "src/JMI/SiteBundle/DataFixtures/LoadData.php",
 					"settings":
 					{
-						"buffer_size": 10314,
+						"buffer_size": 5917,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								258,
-								264
+								1047,
+								1054
 							]
 						],
 						"settings":
@@ -1381,81 +1460,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "vendor/sonata-project/page-bundle/Sonata/PageBundle/DependencyInjection/Configuration.php",
+					"buffer": 10,
+					"file": "vendor/hautelook/alice-bundle/Hautelook/AliceBundle/Alice/Loader.php",
 					"settings":
 					{
-						"buffer_size": 5351,
+						"buffer_size": 3330,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								723,
-								736
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "vendor/sonata-project/block-bundle/Sonata/BlockBundle/DependencyInjection/Configuration.php",
-					"settings":
-					{
-						"buffer_size": 6431,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								423,
-								423
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "vendor/sonata-project/media-bundle/Sonata/MediaBundle/DependencyInjection/Configuration.php",
-					"settings":
-					{
-						"buffer_size": 19979,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								437,
+								437
 							]
 						],
 						"settings":
@@ -1466,90 +1489,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/config/config.yml",
-					"settings":
-					{
-						"buffer_size": 3789,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1567,
-								1567
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/DependencyInjection/Configuration.php",
-					"settings":
-					{
-						"buffer_size": 8078,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 585.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "app/config/parameters.yml",
-					"settings":
-					{
-						"buffer_size": 1748,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								143,
-								143
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1610,6 +1549,94 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"hautelook/alicebundle/alice/loader",
+				"Project files/vendor/hautelook/alice-bundle/Hautelook/AliceBundle/Alice/Loader.php"
+			],
+			[
+				"pagemanager",
+				"Sonata - PageBundle/Entity/PageManager.php"
+			],
+			[
+				"datafixtureloader",
+				"Project files/vendor/hautelook/alice-bundle/Hautelook/AliceBundle/Alice/DataFixtureLoader.php"
+			],
+			[
+				"seobundleconfigu",
+				"Sonata - SeoBundle/DependencyInjection/Configuration.php"
+			],
+			[
+				"doctrine/common/datafixtures/orderedfixtureinterface",
+				"Project files/vendor/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures/OrderedFixtureInterface.php"
+			],
+			[
+				"hautelook/alicebundle/alice/datafixtureloader",
+				"Project files/vendor/hautelook/alice-bundle/Hautelook/AliceBundle/Alice/DataFixtureLoader.php"
+			],
+			[
+				"doctrine/orm/querybuilder",
+				"Project files/vendor/doctrine/orm/lib/Doctrine/ORM/QueryBuilder.php"
+			],
+			[
+				"sonatamediabundlegalleryinde",
+				"Sonata - MediaBundle/Resources/views/Gallery/index.html.twig"
+			],
+			[
+				"sonata/adminbundle/admin/adminextensioninterface",
+				"Project files/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Admin/AdminExtensionInterface.php"
+			],
+			[
+				"doctrine/orm/persistentcollection",
+				"Project files/vendor/doctrine/orm/lib/Doctrine/ORM/PersistentCollection.php"
+			],
+			[
+				"knp/menu/menuitem",
+				"Project files/vendor/knplabs/knp-menu/src/Knp/Menu/MenuItem.php"
+			],
+			[
+				"pageadmin",
+				"Sonata - PageBundle/Admin/PageAdmin.php"
+			],
+			[
+				"blockmana",
+				"Sonata - PageBundle/Entity/BlockManager.php"
+			],
+			[
+				"blockadmin",
+				"Sonata - PageBundle/Admin/BlockAdmin.php"
+			],
+			[
+				"sonata/pagebundle/admin/blockadmin",
+				"Project files/vendor/sonata-project/page-bundle/Sonata/PageBundle/Admin/BlockAdmin.php"
+			],
+			[
+				"admin",
+				"Sonata - AdminBundle/Admin/Admin.php"
+			],
+			[
+				"fielddescriptioninterface",
+				"Sonata - AdminBundle/Admin/FieldDescriptionInterface.php"
+			],
+			[
+				"sonata/adminbundle/admin/admin",
+				"Project files/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Admin/Admin.php"
+			],
+			[
+				"sonatapageadmin",
+				"Sonata - PageBundle/Admin/PageAdmin.php"
+			],
+			[
+				"sonataadminbase_list",
+				"Sonata - AdminBundle/Resources/views/CRUD/base_list_field.html.twig"
+			],
+			[
+				"/defaultpageservice",
+				"Sonata - PageBundle/Page/Service/DefaultPageService.php"
+			],
+			[
+				"asseticfilterless",
+				"Project files/vendor/kriswallsmith/assetic/src/Assetic/Filter/LessFilter.php"
+			],
 			[
 				"asseticconfigurati",
 				"Project files/vendor/symfony/assetic-bundle/Symfony/Bundle/AsseticBundle/DependencyInjection/Configuration.php"
@@ -1679,10 +1706,6 @@
 				"Project files/vendor/symfony/symfony/src/Symfony/Component/OptionsResolver/Options.php"
 			],
 			[
-				"blockmana",
-				"Sonata - PageBundle/Entity/BlockManager.php"
-			],
-			[
 				"sonataadminbundlehelpershort-object-description.html.twig",
 				"Sonata - AdminBundle/Resources/views/Helper/short-object-description.html.twig"
 			],
@@ -1697,10 +1720,6 @@
 			[
 				"admininterface",
 				"Sonata - AdminBundle/Admin/AdminInterface.php"
-			],
-			[
-				"sonata/adminbundle/admin/admin",
-				"Project files/vendor/sonata-project/admin-bundle/Sonata/AdminBundle/Admin/Admin.php"
 			],
 			[
 				"crudlist_array.html.twig",
@@ -2041,86 +2060,6 @@
 			[
 				"kerne",
 				"vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php"
-			],
-			[
-				"symfony/component/dependencyinjection/container",
-				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Container.php"
-			],
-			[
-				"container",
-				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerBuilder.php"
-			],
-			[
-				"symfony/bridge/twig/node/searchandrenderblocknode",
-				"vendor/symfony/symfony/src/Symfony/Bridge/Twig/Node/SearchAndRenderBlockNode.php"
-			],
-			[
-				"configuration",
-				"vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/DependencyInjection/Configuration.php"
-			],
-			[
-				"assetic/asset/base",
-				"vendor/kriswallsmith/assetic/src/Assetic/Asset/BaseAsset.php"
-			],
-			[
-				"ajfil",
-				"src/Framework/TemplateBundle/Assetic/Filter/AjCssFilter.php"
-			],
-			[
-				"component/dependencyinjection/parameterbag/parameterbag",
-				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ParameterBag/ParameterBag.php"
-			],
-			[
-				"symfony/component/config/definition/configurationinterface",
-				"vendor/symfony/symfony/src/Symfony/Component/Config/Definition/ConfigurationInterface.php"
-			],
-			[
-				"configurationinterface",
-				"vendor/sensio/framework-extra-bundle/Sensio/Bundle/FrameworkExtraBundle/Configuration/ConfigurationInterface.php"
-			],
-			[
-				"symfony/component/config/definition/builder/treebuilder",
-				"vendor/symfony/symfony/src/Symfony/Component/Config/Definition/Builder/TreeBuilder.php"
-			],
-			[
-				"bundleinterface",
-				"vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Bundle/BundleInterface.php"
-			],
-			[
-				"containeraware",
-				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerAware.php"
-			],
-			[
-				"symfony/component/httpkernel/bundle/bundle",
-				"vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Bundle/Bundle.php"
-			],
-			[
-				"symfony/component/dependencyinjection/extension/configurationextensioninterface",
-				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Extension/ConfigurationExtensionInterface.php"
-			],
-			[
-				"symfony/component/dependencyinjection/extension/extensioninterface",
-				"vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/Extension/ExtensionInterface.php"
-			],
-			[
-				"symfony/component/httpkernel/dependencyinjection/extension",
-				"vendor/symfony/symfony/src/Symfony/Component/HttpKernel/DependencyInjection/Extension.php"
-			],
-			[
-				"choicelistinterface",
-				"vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Core/ChoiceList/ChoiceListInterface.php"
-			],
-			[
-				"nameparse",
-				"vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Tests/Templating/Helper/Fixtures/StubTemplateNameParser.php"
-			],
-			[
-				"frameworkbundle/controller/controllernameparser",
-				"vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerNameParser.php"
-			],
-			[
-				"frameworkbundle/templating/templatenameparser",
-				"vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Templating/TemplateNameParser.php"
 			]
 		],
 		"width": 0.0

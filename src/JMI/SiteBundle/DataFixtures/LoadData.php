@@ -34,9 +34,9 @@ class LoadData extends DataFixtureLoader implements OrderedFixtureInterface
         );
     }
 
-    public function getTest()
+    public function strtotime($str = 'now')
     {
-        return array('name'=>"jmi_default");
+        return strtotime($str);
     }
 
     public function getPageTemplate()

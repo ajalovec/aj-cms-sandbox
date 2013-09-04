@@ -62,7 +62,7 @@ class BlockAdmin extends BaseBlockAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $block = $this->getSubject();
-        if(null == $block->getType())
+        if(is_object($block) && null == $block->getType())
         {
             //$block->setType("sonata.page.block.container");
         }

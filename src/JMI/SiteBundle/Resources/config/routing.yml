@@ -12,13 +12,13 @@
 
 
 
-#jmi_site_o_podjetju:
-#    path:      /o-podjetju
-#    defaults:  { _controller: JMISiteBundle:Default:oPodjetju, culture: si }
-#
-#jmi_site_storitve:
-#    path:      /storitve
-#    defaults:  { _controller: JMISiteBundle:Default:storitve, culture: si }
+t2_domene_home:
+    path:      /
+    defaults:  { _controller: JMISiteBundle:Default:oPodjetju, culture: si }
+
+t2_domene_home:
+    path:      /storitve
+    defaults:  { _controller: JMISiteBundle:Default:storitve, culture: si }
 
 jmi_site_reference:
     prefix:   /reference
@@ -34,6 +34,7 @@ jmi_site_reference:
 #    defaults:  { _controller: SonataMediaBundle:Media:view, format: jpg }
 
 
+
 # Gallery bundle
 #sonata_media_gallery:
 #    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
@@ -46,12 +47,5 @@ jmi_site_reference:
 #sonata_media_pixlr:
 #    resource: '@SonataMediaBundle/Resources/config/routing/pixlr.xml'
 #    prefix: /admin/media
-
-
-
-# Blog bundle
-#blog:
-#    resource: '@SonataNewsBundle/Resources/config/routing/news.xml'
-#    prefix: /blog
 
 

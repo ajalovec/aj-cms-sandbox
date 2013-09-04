@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @ORM\Entity
  * @ORM\Table(name="acme_content")
+ * @ORM\Entity(repositoryClass="ContentRepository")
  */
 class Content
 {
@@ -23,7 +24,7 @@ class Content
     protected $title;
 
     /**
-     * @ORM\Column(type="string", length=140)
+     * @ORM\Column(type="string", length=140, nullable=true)
      */
     protected $description;
 
@@ -37,11 +38,6 @@ class Content
      * @ORM\Column(type="text")
      */
     protected $body;
-
-    /**
-     * @ORM\Column(type="text")
-     */
-    protected $rawBody;
     
     /**
      * @ORM\Column(type="string", length=140, nullable=true)
@@ -237,7 +233,7 @@ class Content
     /**
      * {@inheritdoc}
      */
-    public function addChildren(PageInterface $children)
+    public function addChildren(Content $children)
     {
         $this->children[] = $children;
 
@@ -263,7 +259,7 @@ class Content
     /**
      * {@inheritdoc}
      */
-    public function setParent(PageInterface $parent = null)
+    public function setParent(Content $parent = null)
     {
         $this->parent = $parent;
     }

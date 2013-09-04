@@ -5,11 +5,11 @@ Application\Sonata\PageBundle\Entity\Site:
         relativePath:   /_git/aj-cms-sandbox/web
         enabled:        true
         isDefault:      true
-        enabledFrom:    <dateTimeBetween('-1 day', 'now')>
-        enabledTo:      <dateTimeBetween($enabledFrom, '+20 years')>
+        enabledFrom:    <strtotime('-1 day')>
+        enabledTo:      <strtotime('+20 years')>
 
 Application\Sonata\PageBundle\Entity\Page:
-    page0:
+    page0: 
         name:           homepage
         url:            /
         slug:           $url
@@ -19,8 +19,20 @@ Application\Sonata\PageBundle\Entity\Page:
         templateCode:   <getPageTemplate()>
         routeName:      <getCmsPageRouteName()>
         site:           @site0
-        contentType:	true
-        type:			sonata.page.service.site
+        contentType:    true
+        type:           app_sonata.page.service.site
+    page1:
+        name:           krneki
+        url:            /krneki
+        enabled:        true
+        decorate:       0
+        requestMethod:  GET|POST|HEAD|DELETE|PUT
+        templateCode:   <getPageTemplate()>
+        routeName:      <getCmsPageRouteName()>
+        site:           @site0
+        contentType:    true
+        type:           app_sonata.page.service.site
+        parent:         @page0
     #page1: [<getTest()>]
 
 #

@@ -121,7 +121,7 @@ class ChildrenPagesBlockService extends BaseBlockService
      */
     public function getName()
     {
-        return 'Children Page (core)';
+        return 'Page menu';
     }
 
     /**

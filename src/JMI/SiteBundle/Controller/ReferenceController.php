@@ -9,13 +9,12 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 
-//@Template()
-//* @Route("/{id}")
+
 class ReferenceController extends Controller
 {
 
     /**
-     * @Route("/", defaults={"culture" = "si"})
+     * @Route("")
      */
     public function indexAction($id = null)
     {
