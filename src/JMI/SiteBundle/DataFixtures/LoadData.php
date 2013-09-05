@@ -34,6 +34,21 @@ class LoadData extends DataFixtureLoader implements OrderedFixtureInterface
         );
     }
 
+    public function truncateEntity($className)
+    {
+        $em = $this->container->get('doctrine.orm.entity_manager');
+        $cmd    = $em->getClassMetadata($className);
+        $db     = $em->getConnection();
+
+        $db->query('SET FOREIGN_KEY_CHECKS=0');
+
+        $db->executeUpdate(
+            $db->getDatabasePlatform()->getTruncateTableSql($cmd->getTableName())
+        );
+
+        $db->query('SET FOREIGN_KEY_CHECKS=1');
+    }
+    
     public function strtotime($str = 'now')
     {
         return strtotime($str);
@@ -141,20 +156,6 @@ CONTENT
         $pageManager->save($homepage);
     }
 
-    public function truncateEntity($className)
-    {
-        $em = $this->container->get('doctrine.orm.entity_manager');
-        $cmd    = $em->getClassMetadata($className);
-        $db     = $em->getConnection();
-
-        $db->query('SET FOREIGN_KEY_CHECKS=0');
-
-        $db->executeUpdate(
-            $db->getDatabasePlatform()->getTruncateTableSql($cmd->getTableName())
-        );
-
-        $db->query('SET FOREIGN_KEY_CHECKS=1');
-    }
     /**
      * @return \Sonata\PageBundle\Model\SiteManagerInterface
      */

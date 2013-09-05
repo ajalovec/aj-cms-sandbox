@@ -42,7 +42,7 @@ class GalleryBlockService extends BaseGalleryBlockService
             'directionNav' => true,
             'progressBar'  => true,
             'template'     => 'SonataMediaBundle:Block:block_gallery.html.twig',
-            'galleryId'    => false
+            'galleryId'    => null
         ));
     }
 

@@ -45,6 +45,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
         $this->createUserPage($site);
     }
 
+
     public function createSite()
     {
         $site = $this->getSiteManager()->create();
@@ -61,82 +62,31 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
 
         return $site;
     }
-
-    /**
-     * @param SiteInterface $site
-     */
-    public function createBlogIndex(SiteInterface $site)
+    public function createPage($data = array(), $callback = null)
+    {
+        
+    }
+    public function createPage($data = array(), $callback = null)
     {
         $pageManager = $this->getPageManager();
 
-        $blogIndex = $pageManager->create();
-        $blogIndex->setSlug('blog');
-        $blogIndex->setUrl('/blog');
-        $blogIndex->setName('News');
-        $blogIndex->setEnabled(true);
-        $blogIndex->setDecorate(1);
-        $blogIndex->setRequestMethod('GET|POST|HEAD|DELETE|PUT');
-        $blogIndex->setTemplateCode('default');
-        $blogIndex->setRouteName('sonata_news_home');
-        $blogIndex->setParent($this->getReference('page-homepage'));
-        $blogIndex->setSite($site);
+        $page = $pageManager->create();
+        
+        $page->setSlug('/');
+        $page->setUrl('/');
+        $page->setName('homepage');
+        $page->setEnabled(true);
+        $page->setDecorate(0);
+        $page->setRequestMethod('GET|POST|HEAD|DELETE|PUT');
+        $page->setTemplateCode('default');
+        $page->setRouteName(PageInterface::PAGE_ROUTE_CMS_NAME);
+        $page->setSite($site);
 
-        $pageManager->save($blogIndex);
+        $this->addReference('page-homepage', $page);
+
+        $pageManager->save($page);
     }
 
-    /**
-     * @param SiteInterface $site
-     */
-    public function createGalleryIndex(SiteInterface $site)
-    {
-        $pageManager = $this->getPageManager();
-        $blockManager = $this->getBlockManager();
-        $blockInteractor = $this->getBlockInteractor();
-
-        $galleryIndex = $pageManager->create();
-        $galleryIndex->setSlug('gallery');
-        $galleryIndex->setUrl('/media/gallery');
-        $galleryIndex->setName('Gallery');
-        $galleryIndex->setEnabled(true);
-        $galleryIndex->setDecorate(1);
-        $galleryIndex->setRequestMethod('GET|POST|HEAD|DELETE|PUT');
-        $galleryIndex->setTemplateCode('default');
-        $galleryIndex->setRouteName('sonata_media_gallery_index');
-        $galleryIndex->setParent($this->getReference('page-homepage'));
-        $galleryIndex->setSite($site);
-
-        // CREATE A HEADER BLOCK
-        $galleryIndex->addBlocks($content = $blockInteractor->createNewContainer(array(
-            'enabled' => true,
-            'page' => $galleryIndex,
-            'code' => 'content_top',
-        )));
-
-        $content->setName('The content_top container');
-
-        // add a block text
-        $content->addChildren($text = $blockManager->create());
-        $text->setType('sonata.block.service.text');
-        $text->setSetting('content', <<<CONTENT
-
-<p>
-    This current text is defined in a <code>text block</code> linked to a custom symfony action <code>GalleryController::indexAction</code>
-    the SonataPageBundle can encapsulate an action into a dedicated template. <br /><br />
-
-    If you are connected as an admin you can click on <code>Show Zone</code> to see the different editable areas. Once
-    areas are displayed, just double click on one to edit it.
-</p>
-
-<h1>Gallery List</h1>
-CONTENT
-);
-        $text->setPosition(1);
-        $text->setEnabled(true);
-        $text->setPage($galleryIndex);
-
-
-        $pageManager->save($galleryIndex);
-    }
 
     /**
      * @param SiteInterface $site
@@ -230,6 +180,61 @@ CONTENT
         $pageManager->save($homepage);
     }
 
+    /**
+     * @param SiteInterface $site
+     */
+    public function createGalleryIndex(SiteInterface $site)
+    {
+        $pageManager = $this->getPageManager();
+        $blockManager = $this->getBlockManager();
+        $blockInteractor = $this->getBlockInteractor();
+
+        $galleryIndex = $pageManager->create();
+        $galleryIndex->setSlug('gallery');
+        $galleryIndex->setUrl('/media/gallery');
+        $galleryIndex->setName('Gallery');
+        $galleryIndex->setEnabled(true);
+        $galleryIndex->setDecorate(1);
+        $galleryIndex->setRequestMethod('GET|POST|HEAD|DELETE|PUT');
+        $galleryIndex->setTemplateCode('default');
+        $galleryIndex->setRouteName('sonata_media_gallery_index');
+        $galleryIndex->setParent($this->getReference('page-homepage'));
+        $galleryIndex->setSite($site);
+
+        // CREATE A HEADER BLOCK
+        $galleryIndex->addBlocks($content = $blockInteractor->createNewContainer(array(
+            'enabled' => true,
+            'page' => $galleryIndex,
+            'code' => 'content_top',
+        )));
+
+        $content->setName('The content_top container');
+
+        // add a block text
+        $content->addChildren($text = $blockManager->create());
+        $text->setType('sonata.block.service.text');
+        $text->setSetting('content', <<<CONTENT
+
+<p>
+    This current text is defined in a <code>text block</code> linked to a custom symfony action <code>GalleryController::indexAction</code>
+    the SonataPageBundle can encapsulate an action into a dedicated template. <br /><br />
+
+    If you are connected as an admin you can click on <code>Show Zone</code> to see the different editable areas. Once
+    areas are displayed, just double click on one to edit it.
+</p>
+
+<h1>Gallery List</h1>
+CONTENT
+);
+        $text->setPosition(1);
+        $text->setEnabled(true);
+        $text->setPage($galleryIndex);
+
+
+        $pageManager->save($galleryIndex);
+    }
+
+    
     /**
      * @param SiteInterface $site
      */
