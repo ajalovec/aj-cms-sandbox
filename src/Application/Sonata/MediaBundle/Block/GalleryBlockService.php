@@ -21,9 +21,7 @@ use Sonata\MediaBundle\Block\GalleryBlockService as BaseGalleryBlockService;
 class GalleryBlockService extends BaseGalleryBlockService
 {
    public function buildEditForm(FormMapper $formMapper, BlockInterface $block)
-    {
-        $block->setSetting('galleryId', is_object($block->getSetting('galleryId')) ? $block->getSetting('galleryId')->getId() : null);
-        
+    {   
         parent::buildEditForm($formMapper, $block);
     }
     /**
@@ -32,7 +30,7 @@ class GalleryBlockService extends BaseGalleryBlockService
     public function setDefaultSettings(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'gallery'   => null,
+            'gallery'   => false,
             'title'     => false,
             'context'   => false,
             'format'    => false,

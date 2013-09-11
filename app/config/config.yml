@@ -41,9 +41,9 @@ twig:
 assetic:
     debug:          %kernel.debug%
     use_controller: %kernel.debug%
-    java: %assetic.path.java%
-    node: %assetic.path.node%
-    node_paths: %assetic.path.node_paths%
+    java:           %assetic.path.java%
+    node:           %assetic.path.node%
+    node_paths:     %assetic.path.node_paths%
     bundles:
         - AJTemplateBootstrapBundle
         - JMISiteBundle
