@@ -1,5 +1,19 @@
-Application\Sonata\PageBundle\Entity\Site:
-    site0:
+defaults:
+    page:
+        content:
+            slug:           $url
+            routeName:      page_slug
+            requestMethod:  GET|HEAD
+            templateCode:   default
+            parent:         @page.homepage
+            site:           @site.jmi
+            type:           app_sonata.page.service.site
+            contentType:    true
+            decorate:       0
+            enabled:        true
+
+site:
+    jmi:
         name:           jmi
         host:           localhost
         relativePath:   /_git/aj-cms-sandbox/web
@@ -8,31 +22,16 @@ Application\Sonata\PageBundle\Entity\Site:
         enabledFrom:    <strtotime('-1 day')>
         enabledTo:      <strtotime('+20 years')>
 
-Application\Sonata\PageBundle\Entity\Page:
-    page0: 
+page:
+    homepage|content: 
         name:           homepage
         url:            /
-        slug:           $url
-        enabled:        true
-        decorate:       0
-        requestMethod:  GET|POST|HEAD|DELETE|PUT
-        templateCode:   <getPageTemplate()>
-        routeName:      <getCmsPageRouteName()>
-        site:           @site0
-        contentType:    true
-        type:           app_sonata.page.service.site
-    page1:
-        name:           krneki
+        parent:         null
+    global|content:
+        name:           global
         url:            /krneki
-        enabled:        true
-        decorate:       0
-        requestMethod:  GET|POST|HEAD|DELETE|PUT
-        templateCode:   <getPageTemplate()>
-        routeName:      <getCmsPageRouteName()>
-        site:           @site0
-        contentType:    true
-        type:           app_sonata.page.service.site
-        parent:         @page0
+        routeName:      /_page_internal_global
+        parent:         @page.homepage
     #page1: [<getTest()>]
 
 #

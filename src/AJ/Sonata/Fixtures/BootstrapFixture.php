@@ -24,25 +24,54 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 use Hautelook\AliceBundle\Alice\DataFixtureLoader;
 
+use Symfony\Component\Config\Resource\FileResource;
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\Yaml\Yaml as YamlParser;
+use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 
-abstract class BootstrapFixture extends DataFixtureLoader implements ContainerAwareInterface, OrderedFixtureInterface
+
+abstract class BootstrapFixture extends AbstractFixture implements ContainerAwareInterface
 {
     protected $container;
-    abstract protected $order;
+    protected $defaults = array();
 
-    public function getOrder()
-    {
-        return (int) $this->order;
-    }
+    private $entityClass = array(
+        "page"      => "Application\\Sonata\\PageBundle\\Entity\\Page",
+        "snapshot"  => "Application\\Sonata\\PageBundle\\Entity\\Snapshot",
+        "block"     => "Application\\Sonata\\PageBundle\\Entity\\Block",
+        "site"      => "Application\\Sonata\\PageBundle\\Entity\\Site",
+    );
 
     public function setContainer(ContainerInterface $container = null)
     {
         $this->container = $container;
     }
 
-    protected function truncateEntity($className)
+
+    
+    //abstract protected function getFixtures();
+
+    public function strtotime($str = 'now')
     {
-        $em     = $this->container->get('doctrine.orm.entity_manager');
+        return strtotime($str);
+    }
+    public function PageTemplate($name = 'default')
+    {
+        return $name;
+    }
+
+    public function CmsRoute()
+    {
+        return PageInterface::PAGE_ROUTE_CMS_NAME;
+    }
+
+    protected function truncateEntity($name)
+    {
+        if(! $className = $this->entityClass[$name]) {
+            return;
+        }
+
+        $em     = $this->container->get('sonata.page.entity_manager');
         $cmd    = $em->getClassMetadata($className);
         $db     = $em->getConnection();
 
@@ -56,28 +85,54 @@ abstract class BootstrapFixture extends DataFixtureLoader implements ContainerAw
     }
 
 
-    protected function createSite()
+    public function parseYaml($file)
     {
-        $site = $this->getSiteManager()->create();
+        $data = (array) $this->loadFile($file);
+        
+        if(isset($data['defaults'])) {
+            $this->defaults = array_replace_recursive($this->defaults, (array) $data['defaults']);
+            unset($data['defaults']);
+        }
 
-        $site->setHost('localhost');
-        $site->setEnabled(true);
-        $site->setName('jmi');
-        $site->setEnabledFrom(new \DateTime('now'));
-        $site->setEnabledTo(new \DateTime('+20 years'));
-        $site->setRelativePath("/_git/aj-cms-sandbox/web");
-        $site->setIsDefault(true);
+        foreach ($data as $type => $value) {
 
-        $this->getSiteManager()->save($site);
+            switch ($type) {
+                case 'page':
+                    $this->createNewInstances($type, $value, $this->getPageManager());
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
 
-        return $site;
+        }
+
+        //var_dump($this->defaults);
+
+    }
+
+    protected function createNewInstances($type, array $array, $manager)
+    {
+        foreach ($array as  $reference => $data) {
+            list($referenceName, $referenceDefault) = explode('|', (string)$reference, 2);
+            
+            $defaultData = isset($this->defaults[$type]) && is_array($this->defaults[$type][$referenceDefault]) ? $this->defaults[$type][$referenceDefault] : array();
+            
+            $data = array_replace_recursive($defaultData, $data);
+            $instance = $manager->create();
+
+            var_dump($data);
+        }
+
+
     }
 
     protected function createPage($data = array(), $callback = null)
     {
-        $pageManager = $this->getPageManager();
+        $manager = $this->getPageManager();
 
-        $page = $pageManager->create();
+        $page = $manager->create();
         
         $page->setSlug('/');
         $page->setUrl('/');
@@ -91,7 +146,20 @@ abstract class BootstrapFixture extends DataFixtureLoader implements ContainerAw
 
         $this->addReference('page-homepage', $page);
 
-        $pageManager->save($page);
+        $manager->save($page);
+    }
+
+    protected function loadFile($file)
+    {
+        if (!stream_is_local($file)) {
+            throw new InvalidArgumentException(sprintf('This is not a local file "%s".', $file));
+        }
+
+        if (!file_exists($file)) {
+            throw new InvalidArgumentException(sprintf('The service file "%s" is not valid.', $file));
+        }
+        
+        return YamlParser::parse(file_get_contents($file));
     }
 
     /**

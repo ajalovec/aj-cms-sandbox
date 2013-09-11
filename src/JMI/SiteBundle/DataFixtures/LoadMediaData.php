@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Application\Sonata\PageDataBundle\DataFixtures\ORM;
+namespace JMI\SiteBundle\DataFixtures;
 
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
@@ -40,6 +40,7 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
 
     public function load(ObjectManager $manager)
     {
+        return;
         $mediaData = array(
             "files" => Finder::create()
                         ->name('*.JPG')
@@ -54,7 +55,7 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
             $gallery->setName($galleryName);
             $gallery->setDefaultFormat('small');
             $gallery->setContext('default');
-        })
+        });
     }
 
     public function createGallery($mediaData, $galleryDataCallback)
@@ -65,7 +66,7 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
         $gallery->setEnabled(true);
         $gallery->setDefaultFormat('small');
         $gallery->setContext('default');
-        
+
         $galleryDataCallback($gallery);
 
         $this->getGalleryManager()->update($gallery);

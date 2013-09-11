@@ -1,3 +1,4 @@
+
 <h2>Form Media Type & SEO</h2>
 
 <div>
@@ -19,21 +20,18 @@
             <li>Mercator</li>
             <li>Titan Kamnik</li>
         </ul>
+        {{ sonata_block_render({
+            'type': 'sonata.block.service.text',
+                'name': 'sonata.block.service.text::storitve',
+            'settings': {
+                'content': 'This page also uses the <code>SonataSeoBundle</code> to inject specific headers information. This is done by reading the Media information'
+            }
+        }) }}
     </div>
-    <h2>One more thing</h2>
-    <p>
-        This page also uses the <code>SonataSeoBundle</code> to inject specific headers information. This is done by reading the Media information
-    </p>
 </div>
 
+
 {#
-{{ sonata_block_render({
-    'type': 'sonata.block.service.rss',
-    'settings': {
-        'title': 'Sonata Projects Feeds',
-        'url': 'http://sonata-project.org/blog/archive.rss'
-    }
-}) }}
 #}
 
 

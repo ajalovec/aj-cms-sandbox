@@ -1,5 +1,7 @@
 <?php
 
+namespace JMI\SiteBundle\DataFixtures;
+
 /*
  * This file is part of the Sonata package.
  *
@@ -16,37 +18,49 @@ use Doctrine\Common\Persistence\ObjectManager;
 
 use Sonata\PageBundle\Model\SiteInterface;
 use Sonata\PageBundle\Model\PageInterface;
-
+use AJ\Sonata\Fixtures\BootstrapFixture;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class LoadPageData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
+class LoadPageData extends BootstrapFixture implements OrderedFixtureInterface
 {
-    private $container;
-
-    function getOrder()
+    
+    public function getOrder()
     {
         return 500;
     }
 
-    public function setContainer(ContainerInterface $container = null)
+    protected function getFixtures()
     {
-        $this->container = $container;
+        $baseDir = __DIR__ . '/..';
+        $baseDir = __DIR__;
+        return  array(
+            $baseDir . '/fixtures/bootstrap.yml',
+            //$baseDir . '/fixtures/pages.yml',
+            //$baseDir . '/fixtures/blocks.yml',
+        );
     }
 
     public function load(ObjectManager $manager)
     {
-        $site = $this->createSite();
-        $this->createGlobalPage($site);
-        $this->createHomePage($site);
-        $this->createBlogIndex($site);
-        $this->createGalleryIndex($site);
-        $this->createMediaPage($site);
-        $this->createUserPage($site);
+        $this->truncateEntity('page');
+        $this->truncateEntity('site');
+
+        $this->parseYaml(__DIR__ . '/fixtures/bootstrap.yml');
+        //$this->parseYaml(__DIR__ . '/fixtures/pages.yml');
+
+        //$site = $this->createSite();
+
+
+        //$this->createGlobalPage($site);
+        //$this->createHomePage($site);
+        //$this->createBlogIndex($site);
+        //$this->createGalleryIndex($site);
+        //$this->createMediaPage($site);
+        //$this->createUserPage($site);
     }
 
-
-    public function createSite()
+   public function createSite()
     {
         $site = $this->getSiteManager()->create();
 
@@ -61,30 +75,6 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
         $this->getSiteManager()->save($site);
 
         return $site;
-    }
-    public function createPage($data = array(), $callback = null)
-    {
-        
-    }
-    public function createPage($data = array(), $callback = null)
-    {
-        $pageManager = $this->getPageManager();
-
-        $page = $pageManager->create();
-        
-        $page->setSlug('/');
-        $page->setUrl('/');
-        $page->setName('homepage');
-        $page->setEnabled(true);
-        $page->setDecorate(0);
-        $page->setRequestMethod('GET|POST|HEAD|DELETE|PUT');
-        $page->setTemplateCode('default');
-        $page->setRouteName(PageInterface::PAGE_ROUTE_CMS_NAME);
-        $page->setSite($site);
-
-        $this->addReference('page-homepage', $page);
-
-        $pageManager->save($page);
     }
 
 
@@ -102,12 +92,12 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
         $this->addReference('page-homepage', $homepage = $pageManager->create());
         $homepage->setSlug('/');
         $homepage->setUrl('/');
+        $homepage->setRouteName(PageInterface::PAGE_ROUTE_CMS_NAME);
         $homepage->setName('homepage');
         $homepage->setEnabled(true);
         $homepage->setDecorate(0);
         $homepage->setRequestMethod('GET|POST|HEAD|DELETE|PUT');
         $homepage->setTemplateCode('default');
-        $homepage->setRouteName(PageInterface::PAGE_ROUTE_CMS_NAME);
         $homepage->setSite($site);
 
         $pageManager->save($homepage);
@@ -407,43 +397,4 @@ FOOTER
         $pageManager->save($global);
     }
 
-    /**
-     * @return \Sonata\PageBundle\Model\SiteManagerInterface
-     */
-    public function getSiteManager()
-    {
-        return $this->container->get('sonata.page.manager.site');
-    }
-
-    /**
-     * @return \Sonata\PageBundle\Model\PageManagerInterface
-     */
-    public function getPageManager()
-    {
-        return $this->container->get('sonata.page.manager.page');
-    }
-
-    /**
-     * @return \Sonata\BlockBundle\Model\BlockManagerInterface
-     */
-    public function getBlockManager()
-    {
-        return $this->container->get('sonata.page.manager.block');
-    }
-
-    /**
-     * @return \Faker\Generator
-     */
-    public function getFaker()
-    {
-        return $this->container->get('faker.generator');
-    }
-
-    /**
-     * @return \Sonata\PageBundle\Entity\BlockInteractor
-     */
-    public function getBlockInteractor()
-    {
-        return $this->container->get('sonata.page.block_interactor');
-    }
 }

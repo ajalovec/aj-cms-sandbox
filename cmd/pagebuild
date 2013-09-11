@@ -4,21 +4,31 @@ if [ "$1" = "-l" ]; then
   exit 0
 fi
 
-app/console doctrine:fixtures:load --fixtures=src/JMI/SiteBundle/DataFixtures --append;
+app/console doctrine:fixtures:load --fixtures=src/JMI/SiteBundle/DataFixtures --append \
 
-echo -n "Load core routes? [siteId/n/l]: "
-read core_routes
+exit 0
 
+echo -n "Load core routes [no]?"
+read $core_routes
 
-if [ "$core_routes" = "" ]; then
-  exit 0
-elif [ "$core_routes" = "n" ]; then
-  exit 0
-elif [ "$core_routes" = "l" ]; then
+if [ "$core_routes" = "y" ]; then
   app/console sonata:page:update-core-routes --site;
+elif [ "$core_routes" = "yes" ]; then
+  app/console sonata:page:update-core-routes --site;
+else 
+  exit 0
+fi
+
+
+echo -n "Select site [site_id]?"
+read $site_id
+
+if [ "$site_id" = "" ]; then
+  app/console sonata:page:update-core-routes --site=all;
+elif [ "$site_id" = "no" ]; then
   exit 0
 else 
-  app/console sonata:page:update-core-routes --site=$core_routes;
+  app/console sonata:page:update-core-routes --site=$site_id;
 fi
 
 exit;
