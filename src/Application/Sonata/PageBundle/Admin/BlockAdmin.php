@@ -80,7 +80,7 @@ sonata_type_immutable_array
             ->add('enabled')
             ->add('type', null, array('disabled' => true))
             ->add('page')
-            ->add('parent')
+            //->add('parent')
         ->end()
         ;
 
