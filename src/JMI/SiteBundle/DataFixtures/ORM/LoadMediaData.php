@@ -27,10 +27,20 @@ use Symfony\Component\Finder\Finder;
 class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
 {
     private $container;
+    private $testMedia = array(
+        //"files" => Finder::create()
+        //            ->name('*.JPG')
+        //            ->in(__DIR__.'/../data/files'),
+        "videos" => array(
+            'ocAyDZC2aiU' => 'sonata.media.provider.youtube',
+            'xdw0tz'      => 'sonata.media.provider.dailymotion',
+            '9636197'     => 'sonata.media.provider.vimeo'
+        )
+    );
 
     function getOrder()
     {
-        return 3;
+        return 20;
     }
 
     public function setContainer(ContainerInterface $container = null)
@@ -40,53 +50,67 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
 
     public function load(ObjectManager $manager)
     {
-        $gallery = $this->getGalleryManager()->create();
+        
+        $this->createGallery(array(
+            "files" => array(__DIR__.'/../fixtures/media/A-Banka', '*.JPG'),
+            "name" => "A-Banka",
+            "description" => "Dobava in montaža talnih konvektorjev in zračne zavese.",
+            "defaultFormat" => "small",
+            "context" => "default",
+        ));
 
-        $manager = $this->getMediaManager();
+    }
+
+    public function createGallery(array $data)
+    {
+        $faker      = $this->getFaker();
+        $manager    = $this->getGalleryManager();
+        $gallery    = $manager->create();
+        
+        $this->loadMediaData($gallery, $data);
+        $gallery->setEnabled(true);
+        $gallery->setName($data['name'] ?: $faker->sentence(12));
+        $gallery->setDescription($data['description'] ?: null);
+        $gallery->setContext($data['context'] ?: 'default');
+        $gallery->setDefaultFormat($data['defaultFormat'] ?: 'small');
+
+        $manager->update($gallery);
+
+        $this->addReference('gallery-'.$gallery->getName(), $gallery);
+    }
+
+    private function loadMediaData($gallery, array $mediaData = array())
+    {
         $faker = $this->getFaker();
-
+        $manager      = $this->getMediaManager();
         $files = Finder::create()
-            ->name('*.JPG')
-            ->in(__DIR__.'/../fixtures/media');
+                    ->name($mediaData['files'][1])
+                    ->in($mediaData['files'][0]);
 
+        
         $i = 0;
         foreach ($files as $pos => $file) {
             $media = $manager->create();
             $media->setBinaryContent($file);
             $media->setEnabled(true);
-            $media->setDescription($faker->sentence(15));
-
-            $this->addReference('sonata-media-'.($i++), $media);
+            //$media->setDescription($faker->sentence(15));
 
             $manager->save($media, 'default', 'sonata.media.provider.image');
 
             $this->addMedia($gallery, $media);
         }
 
-        $videos = array(
-            'ocAyDZC2aiU' => 'sonata.media.provider.youtube',
-            'xdw0tz'      => 'sonata.media.provider.dailymotion',
-            '9636197'     => 'sonata.media.provider.vimeo'
-        );
+        if(is_array($mediaData['videos'])) {
+            foreach ($mediaData['videos'] as $video => $provider) {
+                $media = $manager->create();
+                $media->setBinaryContent($video);
+                $media->setEnabled(true);
 
-        foreach ($videos as $video => $provider) {
-            $media = $manager->create();
-            $media->setBinaryContent($video);
-            $media->setEnabled(true);
+                $manager->save($media, 'default', $provider);
 
-            $manager->save($media, 'default', $provider);
-
-            $this->addMedia($gallery, $media);
+                $this->addMedia($gallery, $media);
+            }
         }
-
-        $gallery->setEnabled(true);
-        $gallery->setName($faker->sentence(4));
-        $gallery->setDefaultFormat('small');
-        $gallery->setContext('default');
-
-        $this->getGalleryManager()->update($gallery);
-
-        $this->addReference('media-gallery', $gallery);
     }
 
     /**

@@ -28,7 +28,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
 
     function getOrder()
     {
-        return 10;
+        return 100;
     }
 
     public function setContainer(ContainerInterface $container = null)
@@ -208,7 +208,7 @@ CONTENT
         // add a gallery
         $content->addChildren($gallery = $blockManager->create());
         $gallery->setType('sonata.media.block.gallery');
-        $gallery->setSetting('galleryId', $this->getReference('media-gallery')->getId());
+        $gallery->setSetting('galleryId', $this->getReference('gallery-A-Banka')->getId());
         $gallery->setSetting('title', $faker->sentence(4));
         $gallery->setSetting('context', 'default');
         $gallery->setSetting('format', 'big');

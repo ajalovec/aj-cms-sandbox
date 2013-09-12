@@ -136,13 +136,16 @@ class PageAdmin extends BasePageAdmin implements AdminInterface
             if(0 < $level)
                 $prefix .= "- ";
             //$prefix = "";
+            $i = 0;
 
             foreach($children as $page)
             {
+                $name = $prefix . ($page->getName());
+
                 $menu->addChild(
-                    ( $prefix . ($page->getName()) ),
-                    //( $level . '. ' . ($page->getName() ?: $page->getType()) ),
+                    ( $name . ++$i ),
                     array(
+                        'label' => $name,
                         'uri' => $pageAdmin->generateUrl('edit', array('id' => $page->getId()))
                     )
                 )
@@ -177,13 +180,14 @@ class PageAdmin extends BasePageAdmin implements AdminInterface
             if(0 < $level)
                 $prefix .= "- ";
             //$prefix = "";
-
+            $i = 0;
             foreach($children as $block)
             {
+                $name = $prefix . ($block->getName() ?: $block->getType());
                 $menu->addChild(
-                    ( $prefix . ($block->getName() ?: $block->getType()) ),
-                    //( $level . '. ' . ($block->getName() ?: $block->getType()) ),
+                    ( $name . ++$i ),
                     array(
+                        'label' => $name,
                         //'uri' => $admin->generateUrl('edit', array('id' => $block->getId()))
                         'uri' => $admin->generateUrl('sonata.page.admin.block.edit', array('id' => $id, 'childId'=>$block->getId()))
                     )

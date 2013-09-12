@@ -29,6 +29,11 @@ class Gallery extends BaseGallery
     protected $id;
 
     /**
+     * @var integer $description
+     */
+    protected $description;
+
+    /**
      * Get id
      *
      * @return integer $id
@@ -36,5 +41,24 @@ class Gallery extends BaseGallery
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set description
+     *
+     * @return string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    /**
+     * Get description
+     *
+     * @return string $description
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }
