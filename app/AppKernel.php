@@ -81,7 +81,7 @@ class AppKernel extends Kernel
 
 
             //new AJ\Template\AssetsBundle\AJTemplateAssetsBundle(),
-            //new AJ\Template\ComponentBundle\AJTemplateComponentBundle(),
+            new AJ\Template\ComponentBundle\AJTemplateComponentBundle(),
             //new AJ\Template\LayoutBundle\AJTemplateLayoutBundle(),
             new AJ\Template\BootstrapBundle\AJTemplateBootstrapBundle(),
         );
