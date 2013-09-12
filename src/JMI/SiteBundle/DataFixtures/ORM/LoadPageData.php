@@ -21,23 +21,32 @@ use Sonata\PageBundle\Model\PageInterface;
 
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use AJ\Sonata\Fixtures\BaseFixture;
 
-class LoadPageData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
+class LoadPageData extends BaseFixture implements OrderedFixtureInterface
 {
-    private $container;
 
     function getOrder()
     {
         return 100;
     }
-
-    public function setContainer(ContainerInterface $container = null)
+    protected function getEntityManager()
     {
-        $this->container = $container;
+        return $this->container->get('sonata.media.entity_manager');;
+    }
+
+    protected function truncateEntity($className = null)
+    {
+        parent::truncateEntity("Application\\Sonata\\PageBundle\\Entity\\Page");
+        parent::truncateEntity("Application\\Sonata\\PageBundle\\Entity\\Snapshot");
+        parent::truncateEntity("Application\\Sonata\\PageBundle\\Entity\\Block");
+        parent::truncateEntity("Application\\Sonata\\PageBundle\\Entity\\Site");
     }
 
     public function load(ObjectManager $manager)
     {
+        $this->truncateEntity();
+        
         $site = $this->createSite();
         $this->createGlobalPage($site);
         $this->createHomePage($site);
@@ -65,6 +74,26 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
     }
 
     
+    public function createBlock($type, array $data)
+    {
+        $blockManager = $this->getBlockManager();
+        $blockInteractor = $this->getBlockInteractor();
+
+        if('container' === $type) {
+            $block = $blockInteractor->createNewContainer(array(
+                'enabled' => true,
+                'page' => $data['page'] ?: null,
+                'code' => $data['code'] ?: 'content',
+            ));
+        }
+        else {
+            $block = $blockManager->create();
+        }
+
+        return $block;
+    }
+
+    
     public function createGlobalPage(SiteInterface $site)
     {
         $pageManager = $this->getPageManager();
@@ -89,7 +118,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
 
         $title->addChildren($text = $blockManager->create());
 
-        $text->setType('sonata.block.service.text');
+        $text->setType('aj_template_component.block.service.text_block');
         $text->setSetting('content', '<h2><a href="/">Sonata Sandbox</a></h2>');
         $text->setPosition(1);
         $text->setEnabled(true);
@@ -121,7 +150,7 @@ class LoadPageData extends AbstractFixture implements ContainerAwareInterface, O
 
         $footer->addChildren($text = $blockManager->create());
 
-        $text->setType('sonata.block.service.text');
+        $text->setType('aj_template_component.block.service.text_block');
         $text->setSetting('content', <<<FOOTER
         <a href="http://www.sonata-project.org">Sonata Project</a> sandbox demonstration.
 
@@ -178,13 +207,13 @@ FOOTER
             'code' => 'content',
         )));
 
-        $content->setName('The container container');
+        $content->setName('content');
 
         $blockManager->save($content);
 
         // add a block text
         $content->addChildren($text = $blockManager->create());
-        $text->setType('sonata.block.service.text');
+        $text->setType('aj_template_component.block.service.text_block');
         $text->setSetting('content', <<<CONTENT
 <h1>Welcome</h1>
 
@@ -217,7 +246,7 @@ CONTENT
         $gallery->setPage($homepage);
 
         $content->addChildren($text = $blockManager->create());
-        $text->setType('sonata.block.service.text');
+        $text->setType('aj_template_component.block.service.text_block');
 
         $text->setPosition(3);
         $text->setEnabled(true);
@@ -292,7 +321,7 @@ CONTENT
 
         // add a block text
         $content->addChildren($text = $blockManager->create());
-        $text->setType('sonata.block.service.text');
+        $text->setType('aj_template_component.block.service.text_block');
         $text->setSetting('content', <<<CONTENT
 
 <h2>Admin Bundle</h2>
@@ -383,7 +412,7 @@ CONTENT
 
         // add a block text
         $content->addChildren($text = $blockManager->create());
-        $text->setType('sonata.block.service.text');
+        $text->setType('aj_template_component.block.service.text_block');
         $text->setSetting('content', <<<CONTENT
 
 <p>

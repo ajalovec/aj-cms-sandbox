@@ -1,10 +1,11 @@
-
-if [ "$1" = "-l" ]; then
-  app/console sonata:page:update-core-routes --site
-  exit 0
+if [ "$1" = "page" ]; then
+	app/console doctrine:fixtures:load --fixtures=src/JMI/SiteBundle/DataFixtures/ORM -n --append
+elif [ "$1" = "media" ]; then
+	app/console doctrine:fixtures:load --fixtures=src/JMI/SiteBundle/DataFixtures/ORM -n --append
+else
+	cmd/truncate;
+	app/console doctrine:fixtures:load -n;
 fi
-
-app/console doctrine:fixtures:load --fixtures=src/JMI/SiteBundle/DataFixtures --append \
 
 exit 0
 

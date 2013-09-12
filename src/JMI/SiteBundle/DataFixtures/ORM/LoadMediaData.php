@@ -23,14 +23,11 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Finder\Finder;
+use AJ\Sonata\Fixtures\BaseFixture;
 
-class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, OrderedFixtureInterface
+class LoadMediaData extends BaseFixture implements OrderedFixtureInterface
 {
-    private $container;
     private $testMedia = array(
-        //"files" => Finder::create()
-        //            ->name('*.JPG')
-        //            ->in(__DIR__.'/../data/files'),
         "videos" => array(
             'ocAyDZC2aiU' => 'sonata.media.provider.youtube',
             'xdw0tz'      => 'sonata.media.provider.dailymotion',
@@ -43,16 +40,24 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
         return 20;
     }
 
-    public function setContainer(ContainerInterface $container = null)
+    protected function getEntityManager()
     {
-        $this->container = $container;
+        return $this->container->get('sonata.page.entity_manager');
+    }
+
+    protected function truncateEntity($className = null)
+    {
+        parent::truncateEntity("Application\\Sonata\\MediaBundle\\Entity\\Gallery");
+        parent::truncateEntity("Application\\Sonata\\MediaBundle\\Entity\\GalleryHasMedia");
+        parent::truncateEntity("Application\\Sonata\\MediaBundle\\Entity\\Media");
     }
 
     public function load(ObjectManager $manager)
     {
-        
+        $this->truncateEntity();
+
         $this->createGallery(array(
-            "files" => array(__DIR__.'/../fixtures/media/A-Banka', '*.JPG'),
+            "files" => array(__DIR__.'/../fixtures/media/A-Banka', '/.(JPG|jpg|jpeg)$/'),
             "name" => "A-Banka",
             "description" => "Dobava in montaža talnih konvektorjev in zračne zavese.",
             "defaultFormat" => "small",
@@ -61,6 +66,8 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
 
     }
 
+
+    
     public function createGallery(array $data)
     {
         $faker      = $this->getFaker();
@@ -128,27 +135,5 @@ class LoadMediaData extends AbstractFixture implements ContainerAwareInterface, 
         $gallery->addGalleryHasMedias($galleryHasMedia);
     }
 
-    /**
-     * @return \Sonata\MediaBundle\Model\MediaManagerInterface
-     */
-    public function getMediaManager()
-    {
-        return $this->container->get('sonata.media.manager.media');
-    }
-
-    /**
-     * @return \Sonata\MediaBundle\Model\MediaManagerInterface
-     */
-    public function getGalleryManager()
-    {
-        return $this->container->get('sonata.media.manager.gallery');
-    }
-
-    /**
-     * @return \Faker\Generator
-     */
-    public function getFaker()
-    {
-        return $this->container->get('faker.generator');
-    }
+    
 }

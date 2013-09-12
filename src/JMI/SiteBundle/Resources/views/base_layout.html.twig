@@ -13,7 +13,7 @@ file that was distributed with this source code.
 
 {% block page_stylesheets %}
     {% stylesheets
-        '@JMISiteBundle/Resources/public/layout.less'
+        '@JMISiteBundle/Resources/theme/default/less/layout.less'
         filter='cssrewrite,?uglifycss'
         output='css/bootstrap.css'
     %}
@@ -27,19 +27,19 @@ file that was distributed with this source code.
     <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     {% javascripts
-        '@JMISiteBundle/Resources/public/js/transition.js'
-        '@JMISiteBundle/Resources/public/js/tooltip.js'
-        '@JMISiteBundle/Resources/public/js/popover.js'
-        '@JMISiteBundle/Resources/public/js/button.js'
-        '@JMISiteBundle/Resources/public/js/dropdown.js'
-        '@JMISiteBundle/Resources/public/js/collapse.js'
-        '@JMISiteBundle/Resources/public/js/tab.js'
-        '@JMISiteBundle/Resources/public/js/alert.js'
-        '@JMISiteBundle/Resources/public/js/modal.js'
-        '@JMISiteBundle/Resources/public/js/affix.js'
-        '@JMISiteBundle/Resources/public/js/scrollspy.js'
-        '@JMISiteBundle/Resources/public/js/carousel.js'
-        filter='?uglifyjs2'
+        '@JMISiteBundle/Resources/theme/default/js/transition.js'
+        '@JMISiteBundle/Resources/theme/default/js/tooltip.js'
+        '@JMISiteBundle/Resources/theme/default/js/popover.js'
+        '@JMISiteBundle/Resources/theme/default/js/button.js'
+        '@JMISiteBundle/Resources/theme/default/js/dropdown.js'
+        '@JMISiteBundle/Resources/theme/default/js/collapse.js'
+        '@JMISiteBundle/Resources/theme/default/js/tab.js'
+        '@JMISiteBundle/Resources/theme/default/js/alert.js'
+        '@JMISiteBundle/Resources/theme/default/js/modal.js'
+        '@JMISiteBundle/Resources/theme/default/js/affix.js'
+        '@JMISiteBundle/Resources/theme/default/js/scrollspy.js'
+        '@JMISiteBundle/Resources/theme/default/js/carousel.js'
+        filter='less,?uglifyjs2'
         output='js/bootstrap.js'
     %}
     <script src="{{ asset_url }}"></script>

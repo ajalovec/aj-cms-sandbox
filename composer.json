@@ -59,7 +59,8 @@
         "simplethings/entity-audit-bundle": "dev-master",
         "willdurand/faker-bundle": "dev-master",
         "leafo/lessphp": "0.3.9",
-        "hautelook/alice-bundle": "~0.1"
+        "hautelook/alice-bundle": "~0.1",
+        "twitter/bootstrap": "dev-master"
     },
 
     "require-dev": {
