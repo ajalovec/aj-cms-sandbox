@@ -14,7 +14,7 @@ file that was distributed with this source code.
 {% block page_stylesheets %}
     {% stylesheets
         '@JMISiteBundle/Resources/theme/default/less/layout.less'
-        filter='cssrewrite,?uglifycss'
+        filter='less, cssrewrite,?uglifycss'
         output='css/bootstrap.css'
     %}
     <link rel="stylesheet" href="{{ asset_url }}">
@@ -39,7 +39,7 @@ file that was distributed with this source code.
         '@JMISiteBundle/Resources/theme/default/js/affix.js'
         '@JMISiteBundle/Resources/theme/default/js/scrollspy.js'
         '@JMISiteBundle/Resources/theme/default/js/carousel.js'
-        filter='less,?uglifyjs2'
+        filter='?uglifyjs2'
         output='js/bootstrap.js'
     %}
     <script src="{{ asset_url }}"></script>

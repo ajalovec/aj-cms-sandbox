@@ -21,6 +21,7 @@ use Sonata\PageBundle\Model\PageInterface;
 use AJ\Sonata\Fixtures\BootstrapFixture;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Nelmio\Alice\Fixtures;
 
 class LoadPageData extends BootstrapFixture implements OrderedFixtureInterface
 {
@@ -43,6 +44,8 @@ class LoadPageData extends BootstrapFixture implements OrderedFixtureInterface
 
     public function load(ObjectManager $manager)
     {
+        Fixtures::load(__DIR__.'/fixtures/bootstrap.yml', $manager);
+        
         $this->truncateEntity('page');
         $this->truncateEntity('site');
 

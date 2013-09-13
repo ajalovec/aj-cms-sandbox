@@ -11,8 +11,9 @@ class AppKernel extends Kernel
         umask(0002);
 
         ini_set('date.timezone', 'Europe/Ljubljana');
-
+        ini_set('xdebug.max_nesting_level', 1000);
         parent::init();
+
     }
 
     protected function getKernelParameters()

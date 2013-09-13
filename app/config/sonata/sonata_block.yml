@@ -15,8 +15,8 @@ sonata_block:
         sonata.media.block.gallery:
         sonata.media.block.feature_media:
 
-        sonata.block.service.text:
-        sonata.block.service.rss:
+        #sonata.block.service.text:
+        #sonata.block.service.rss:
 
         acme_content.block.service.content:
         aj_template_component.block.service.text:

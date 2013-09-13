@@ -136,14 +136,13 @@ class PageAdmin extends BasePageAdmin implements AdminInterface
             if(0 < $level)
                 $prefix .= "- ";
             //$prefix = "";
-            $i = 0;
 
             foreach($children as $page)
             {
                 $name = $prefix . ($page->getName());
 
                 $menu->addChild(
-                    ( $name . ++$i ),
+                    ( $name . $page->getId() ),
                     array(
                         'label' => $name,
                         'uri' => $pageAdmin->generateUrl('edit', array('id' => $page->getId()))
@@ -172,22 +171,25 @@ class PageAdmin extends BasePageAdmin implements AdminInterface
         if(!$page) return;
         $admin = $this;
 //        $menu->addChild('tpl_divider')->setAttribute('class', 'divider');
-        $id = $admin->getRequest()->get('id');
-        $id = $page->getId();
+        $id = $admin->getRequest()->get('id');        
+
         $buildTreeMenu = function($children, $level = -1) use ($admin, &$buildTreeMenu, &$menu, $id) {
             ++$level;
             $prefix = str_repeat('&nbsp;&nbsp;', $level);
             if(0 < $level)
                 $prefix .= "- ";
             //$prefix = "";
+            
             $i = 0;
             foreach($children as $block)
             {
-                $name = $prefix . ($block->getName() ?: $block->getType());
+
+                $name = ($block->getName() ?: $block->getType());
+                
                 $menu->addChild(
-                    ( $name . ++$i ),
+                    ( $name . $block->getId() ),
                     array(
-                        'label' => $name,
+                        'label' => $prefix . $name,
                         //'uri' => $admin->generateUrl('edit', array('id' => $block->getId()))
                         'uri' => $admin->generateUrl('sonata.page.admin.block.edit', array('id' => $id, 'childId'=>$block->getId()))
                     )

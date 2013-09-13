@@ -3,21 +3,25 @@
 <container xmlns="http://symfony.com/schema/dic/services"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    
     <parameters>
         <parameter key="aj_template_component.block.service.text.class">AJ\Template\ComponentBundle\Block\TextService</parameter>
         <parameter key="aj_template_component.block.service.text_block.class">AJ\Template\ComponentBundle\Block\TextBlockService</parameter>
     </parameters>
 
     <services>
+
         <service id="aj_template_component.block.service.text" class="%aj_template_component.block.service.text.class%">
             <tag name="sonata.block"/>
             <argument>aj_template_component.block.service.text</argument>
             <argument type="service" id="templating" />
         </service>
+
         <service id="aj_template_component.block.service.text_block" class="%aj_template_component.block.service.text_block.class%">
             <tag name="sonata.block"/>
             <argument>aj_template_component.block.service.text_block</argument>
             <argument type="service" id="templating" />
         </service>
+
     </services>
 </container>
