@@ -37,6 +37,11 @@ class Block extends BaseBlock
         return $this->id;
     }
 
+    public function __toString()
+    {
+        return sprintf('%s (%d)', $this->getNamespace(), $this->getId());
+    }
+
     /**
      * {@inheritDoc}
      */

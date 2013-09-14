@@ -1,0 +1,4 @@
+
+acme_services_homepage:
+    pattern:  /storitve
+    defaults: { _controller: AcmeServicesBundle:Default:index }

@@ -3,10 +3,11 @@
 
 {% extends sonata_block.templates.block_base %}
 
+{# block classes are prepended with a container class #}
+{% block block_class %} cms-content{% endblock %}
 
-{% block block_class %} {{ parent() }} cms-content{% endblock %}
+{# identify a block role used by the page editor #}
 {% block block_role %}content{% endblock %}
-
 
 {# render container block #}
 {% block block %}

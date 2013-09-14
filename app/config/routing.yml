@@ -4,51 +4,26 @@
 #   prefix:   /_internal
 
 
-# AJ Template bundle
 
-#aj_template_assets:
-#    resource: "@AJTemplateAssetsBundle/Resources/config/routing.xml"
-#    prefix:   /aj-template
+#fos_user_security:
+#    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 #
-#aj_template_component:
-#    resource: "@AJTemplateComponentBundle/Resources/config/routing.xml"
-#    prefix:   /aj-template
+#fos_user_profile:
+#    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+#    prefix: /profile
 #
-#aj_template_layout:
-#    resource: "@AJTemplateLayoutBundle/Resources/config/routing.xml"
-#    prefix:   /aj-template
+#fos_user_register:
+#    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+#    prefix: /register
 #
-
-aj_template_bootstrap:
-    resource: "@AJTemplateBootstrapBundle/Resources/config/routing.xml"
-    prefix:   /template-bootstrap
-
-
-# Site bundle
-jmi_site:
-    resource: "@JMISiteBundle/Resources/config/routing.yml"
-
-
-
-fos_user_security:
-    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
-
-fos_user_profile:
-    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
-    prefix: /profile
-
-fos_user_register:
-    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
-    prefix: /register
-
-fos_user_resetting:
-    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
-    prefix: /resetting
-
-fos_user_change_password:
-    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
-    prefix: /change-password
-
+#fos_user_resetting:
+#    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+#    prefix: /resetting
+#
+#fos_user_change_password:
+#    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+#    prefix: /change-password
+#
 sonata_cache_cache:
     resource: '@SonataCacheBundle/Resources/config/routing/cache.xml'
     prefix: /
@@ -65,6 +40,35 @@ sonata_page_exceptions:
 #_imagine:
 #    resource: .
 #    type:     imagine
+
+
+
+# AJ Template bundle
+aj_template_bootstrap:
+    resource: "@AJTemplateBootstrapBundle/Resources/config/routing.xml"
+    prefix:   /template-bootstrap
+
+# Site bundle
+jmi_site:
+    resource: "@JMISiteBundle/Resources/config/routing.yml"
+
+acme_services:
+    resource: "@AcmeServicesBundle/Resources/config/routing.yml"
+
+
+# Gallery bundle
+#sonata_media_gallery:
+#    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
+#    prefix: /media/gallery
+#
+#sonata_media_media:
+#    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
+#    prefix: /media
+#
+#sonata_media_pixlr:
+#    resource: '@SonataMediaBundle/Resources/config/routing/pixlr.xml'
+#    prefix: /admin/media
+
 
 
 # Admin bundle

@@ -1,3 +1,4 @@
-acme_content_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: AcmeContentBundle:Default:index }
+
+#acme_content_homepage:
+#    pattern:  /hello/{name}
+#    defaults: { _controller: AcmeContentBundle:Default:index }

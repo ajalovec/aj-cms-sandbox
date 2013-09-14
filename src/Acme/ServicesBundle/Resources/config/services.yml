@@ -1,0 +1,33 @@
+parameters:
+#    acme_services.example.class: Acme\ServicesBundle\Example
+
+services:
+#    acme_services.example:
+#        class: %acme_services.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    acme_services.admin.content:
+        class: Acme\ServicesBundle\Admin\ServicesAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Modules, label: Services }
+        arguments: [null, Acme\ServicesBundle\Entity\Services, SonataAdminBundle:CRUD]
+
+#    acme_services.block.service.content:
+#        class: Acme\ServicesBundle\Block\ContentBlockService
+#        tags:
+#            - {name: "sonata.block"}
+#        arguments: [acme_services.block.service.content, @templating, @doctrine.orm.entity_manager]
+
+#    acme_services.block.service.content:
+#            class: Acme\ServicesBundle\Block\ContentBlockService
+#            tags:
+#                - {name: "sonata.block"}
+#            arguments: [acme_services.block.service.content, @templating]
+#            calls:
+#                - [setContentAdmin, [@acme_services.admin.content]]
+#                - [setEntityManager, [@doctrine.orm.entity_manager]]
+
+#    acme_services.form.type.content_selector:
+#        class: Acme\ServicesBundle\Form\Type\ContentSelectorType
+#        tags:
+#            - {name: "form.type", alias: acme_services_selector}
+#        arguments: [@acme_services.admin.content]

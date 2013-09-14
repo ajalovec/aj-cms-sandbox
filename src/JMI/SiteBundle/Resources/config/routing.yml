@@ -12,18 +12,11 @@
 
 
 
-jmi_site_home:
-    path:      /
-    defaults:  { _controller: JMISiteBundle:Default:oPodjetju, culture: si }
+#jmi_site_reference:
+#    prefix:   /reference
+#    resource: "@JMISiteBundle/Controller/ReferenceController.php"
+#    type:     annotation
 
-jmi_site_storitve:
-    path:      /storitve
-    defaults:  { _controller: JMISiteBundle:Default:storitve, culture: si }
-
-jmi_site_reference:
-    prefix:   /reference
-    resource: "@JMISiteBundle/Controller/ReferenceController.php"
-    type:     annotation
 
 
 #jmi_site_media_view:
@@ -33,19 +26,5 @@ jmi_site_reference:
 #    path:      "/slike/{id}/{format}"
 #    defaults:  { _controller: SonataMediaBundle:Media:view, format: jpg }
 
-
-
-# Gallery bundle
-#sonata_media_gallery:
-#    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
-#    prefix: /media/gallery
-#
-#sonata_media_media:
-#    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
-#    prefix: /media
-#
-#sonata_media_pixlr:
-#    resource: '@SonataMediaBundle/Resources/config/routing/pixlr.xml'
-#    prefix: /admin/media
 
 

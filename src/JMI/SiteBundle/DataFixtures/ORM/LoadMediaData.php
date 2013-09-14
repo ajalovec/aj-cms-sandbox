@@ -25,7 +25,8 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Finder\Finder;
 use AJ\Sonata\Fixtures\BaseFixture;
 
-class LoadMediaData extends BaseFixture implements OrderedFixtureInterface
+class LoadMediaData
+//extends BaseFixture implements OrderedFixtureInterface
 {
     private $testMedia = array(
         "videos" => array(
@@ -67,7 +68,7 @@ class LoadMediaData extends BaseFixture implements OrderedFixtureInterface
     }
 
 
-    
+
     public function createGallery(array $data)
     {
         $faker      = $this->getFaker();

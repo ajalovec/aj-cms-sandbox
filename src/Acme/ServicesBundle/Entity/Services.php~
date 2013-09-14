@@ -1,0 +1,57 @@
+<?php
+namespace Acme\ServicesBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="acme_services")
+ * @ORM\Entity(repositoryClass="ServicesRepository")
+ */
+class Services
+{
+    /**
+     * @ORM\Id()
+     * @ORM\Column(type = "integer")
+     * @ORM\GeneratedValue()
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string", length=64)
+     */
+    protected $name;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    protected $description;
+
+    /**
+     * @ORM\Column()
+     */
+    protected $bodyFormatter;
+
+    /**
+     * @ORM\Column(type = "text", nullable=true)
+     */
+    protected $body;
+
+    /**
+     * @ORM\Column(type = "text", nullable=true)
+     */
+    protected $rawBody;
+    
+
+    public function __construct()
+    {
+        $this->children = new ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return (string) $this->getTitle();
+    }
+
+}

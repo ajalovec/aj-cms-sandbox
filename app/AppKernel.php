@@ -98,6 +98,7 @@ class AppKernel extends Kernel
             
             // CONTENT
             new Acme\ContentBundle\AcmeContentBundle(),
+            new Acme\ServicesBundle\AcmeServicesBundle(),
             //new Acme\TestBundle\AcmeTestBundle(),
             //new Acme\PageBundle\AcmePageBundle(),
             //new Acme\TreeBundle\AcmeTreeBundle(),

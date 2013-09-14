@@ -10,12 +10,16 @@
 			"path": "app/Resources"
 		},
 		{
+			"name": "Modules",
+			"path": "src/Acme"
+		},
+		{
 			"name": "JMISite",
 			"path": "src/JMI/SiteBundle"
 		},
 		{
-			"name": "Application",
-			"path": "src/Application"
+			"name": "ApplicationSonata",
+			"path": "src/Application/Sonata"
 		},
 		{
 			"name": "AJTemplate",

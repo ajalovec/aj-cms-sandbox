@@ -1,7 +1,8 @@
 sonata_block:
     context_manager: sonata.page.block.context_manager
     default_contexts: [cms]
-
+    templates:
+        block_base: SonataPageBundle:Block:block_base.html.twig
     blocks:
         sonata.admin.block.admin_list:
             contexts:   [admin]
@@ -10,16 +11,22 @@ sonata_block:
 #            contexts:   [admin]
 
         sonata.page.block.container:
+            contexts:   [cms]
         sonata.page.block.children_pages:
+            contexts:   [cms]
         sonata.media.block.media:
+            contexts:   [cms]
         sonata.media.block.gallery:
-        sonata.media.block.feature_media:
-
-        #sonata.block.service.text:
-        #sonata.block.service.rss:
+            contexts:   [cms]
+#        sonata.media.block.feature_media:
+#        sonata.block.service.text:
+#        sonata.block.service.rss:
 
         acme_content.block.service.content:
+            contexts:   [cms,component]
         aj_template_component.block.service.text:
+            contexts:   [cms,component]
         aj_template_component.block.service.text_block:
+            contexts:   [cms,component]
 
         #aj_template.layout.block.row:

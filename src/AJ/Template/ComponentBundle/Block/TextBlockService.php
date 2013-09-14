@@ -57,7 +57,9 @@ class TextBlockService extends BaseBlockService
                     'source' => 'content',
                     'target' => 'content'
                 )),
-                array('content', 'textarea', array()),
+                array('content', 'textarea', array(
+                    'attr' => array('class'=>"span12", 'rows'=> 8)
+                )),
             )
         ));
     }
@@ -77,7 +79,8 @@ class TextBlockService extends BaseBlockService
     {
         $resolver->setDefaults(array(
             'content'  => 'Vpišite text',
-            'template' => 'AJTemplateComponentBundle:Block:text_block_basic.html.twig'
+            'template' => 'AJTemplateComponentBundle:Block:text_block_basic.html.twig',
+            'contentFormatter' => "richhtml"
         ));
     }
 }

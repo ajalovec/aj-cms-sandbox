@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\ContentBundle\Controller;
+namespace Acme\ServicesBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction($name)
     {
-        return $this->render('AcmeContentBundle:Default:index.html.twig', array('name' => $name));
+        return $this->render('AcmeServicesBundle:Default:index.html.twig', array('name' => $name));
     }
 }

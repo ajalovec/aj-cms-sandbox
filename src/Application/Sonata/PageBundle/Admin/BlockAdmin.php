@@ -48,7 +48,7 @@ class BlockAdmin extends BaseBlockAdmin
     {
         $listMapper
             ->add('page', null, array())
-            ->addIdentifier('full_name', null, array('editable' => true))
+            ->addIdentifier('full_name')
             ->add('type')
             ->add('enabled')
             ->add('updatedAt')
@@ -62,50 +62,76 @@ class BlockAdmin extends BaseBlockAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $block = $this->getSubject();
+
         if(is_object($block) && null == $block->getType())
         {
-            //$block->setType("sonata.page.block.container");
+            $block->setType("sonata.page.block.container");
         }
-        /*
+/*
 sonata_type_model_list
 sonata_type_model_reference
 sonata_type_immutable_array
 */
-        // add name on all forms
-        $formMapper
-        ->with($this->trans('form_page.group_main_label'))
-            ->add('name')
-        ->end()
-        ->with($this->trans('form_page.group_advanced_label'))
-            ->add('enabled')
-            ->add('type', null, array('disabled' => true))
-            ->add('page')
-            //->add('parent')
-        ->end()
-        ;
-
         $isContainerRoot = $block && $block->getType() == 'sonata.page.block.container' && !$this->hasParentFieldDescription();
         $isStandardBlock = $block && $block->getType() != 'sonata.page.block.container' && !$this->hasParentFieldDescription();
 
-        if (($isContainerRoot || $isStandardBlock)) {
-            
-            $service = $this->blockManager->get($block);
+        
+        $formMapper
+            ->with($this->trans('form_page.group_main_label'), array(
+                'fields' => array(
+                    'name' => 'name',
+                    'position' => 'position',
+                )
+            ))
+            ->end()
+            ->with($this->trans('form_page.group_advanced_label'), array(
+                'fields' => array(
+                    'type' => 'type',
+                    'parent' => 'parent',
+                    'page' => 'page',
+                    'enabled' => 'enabled',
+                )
+            ))
+        ;
 
-            if ($block->getId() > 0) {
-                $service->buildEditForm($formMapper->with($this->trans('form_page.group_main_label')), $block);
-            } else {
-                $service->buildCreateForm($formMapper->with($this->trans('form_page.group_main_label')), $block);
-            }
-
-            $formMapper->end();
+        // add name on all forms
+        $formMapper
+            ->add('name', null, array('attr'=> array('class'=>"span12")))
+        ;
+        
+        if(($isContainerRoot || $isStandardBlock)) {
+            $readonly = true;
+            $formMapper
+                ->add('type', 'sonata_block_service_choice', array(
+                    'context' => 'cms', 'required' => false,
+                    'attr'=> array('class'=>"span12", 'disabled'=>"")
+                ))
+                ->add('parent', null, array('attr'=> array('class'=>"span12")))
+                ->add('page', null, array('attr'=> array('class'=>"span12")))
+            ;
 
         } else {
             $formMapper
                 ->add('type', 'sonata_block_service_choice', array(
-                    'context' => 'cms'
+                    'context' => 'cms', 'required' => true,
+                    'attr'=> array('class'=>"span12")
                 ))
-                ->add('position');
+                ->add('enabled', null, array(
+                    'label'=> $this->trans('On'),
+                    'attr'=> array('title'=>'Show/hide block'),
+                ))
+                ->add('position')
+            ;
         }
+
+
+        if(($isContainerRoot || $isStandardBlock)) {
+            $formMapper->with($this->trans('form_page.group_main_label'));
+            $buildFormTypeName = $block->getId() > 0 ? 'buildEditForm' : 'buildCreateForm';
+            $this->blockManager->get($block)->$buildFormTypeName($formMapper, $block);
+            $formMapper->end();
+        }
+
     }
 
     public function setContainer($container)

@@ -3,6 +3,7 @@ namespace Acme\ContentBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
@@ -12,56 +13,68 @@ use Doctrine\Common\Collections\ArrayCollection;
 class Content
 {
     /**
-     * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Id()
+     * @ORM\Column(type = "integer")
+     * @ORM\GeneratedValue()
      */
     protected $id;
 
     /**
-     * @ORM\Column(type="string", length=1000)
+     * @ORM\Column(length = 1000)
+     *
+     * @Assert\NotBlank()
      */
     protected $title;
 
     /**
-     * @ORM\Column(type="string", length=140, nullable=true)
+     * @ORM\Column(length = 140, nullable = true)
      */
     protected $description;
 
-
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column()
      */
     protected $bodyFormatter;
 
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(type = "text")
      */
     protected $body;
-    
-    /**
-     * @ORM\Column(type="string", length=140, nullable=true)
-     */
-    protected $type;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Content", inversedBy="children")
-     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="SET NULL")
+     * @var Group
+     *
+     * @ORM\ManyToOne(targetEntity = "Group", inversedBy = "contents")
+     */
+    protected $group;
+
+    /**
+     * @var Content
+     *
+     * @ORM\ManyToOne(targetEntity = "Content", inversedBy = "children")
      */
     protected $parent;
 
     protected $parents;
-    
+
     /**
-     * @ORM\OneToMany(targetEntity="Content", mappedBy="parent")
+     * @var Content[]|ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity = "Content", mappedBy = "parent")
      */
     protected $children;
-    
+
     /**
-     * @ORM\Column(type="boolean", nullable=true, name="absolute_path_flag")
+     * @ORM\Column(type = "boolean", nullable = true)
      */
     protected $absolutePathFlag;
-    
+
+    /**
+     * @ORM\Column(type = "integer")
+     */
+    protected $position = 1;
+
+
     public function __construct()
     {
         $this->children = new ArrayCollection();
@@ -73,9 +86,7 @@ class Content
     }
 
     /**
-     * Get id
-     *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -91,7 +102,7 @@ class Content
     }
 
     /**
-     * {@inheritdoc}
+     * @return string
      */
     public function getBodyFormatter()
     {
@@ -99,7 +110,7 @@ class Content
     }
 
     /**
-     * {@inheritdoc}
+     * @param string $rawBody
      */
     public function setRawBody($rawBody)
     {
@@ -107,7 +118,7 @@ class Content
     }
 
     /**
-     * {@inheritdoc}
+     * @return string
      */
     public function getRawBody()
     {
@@ -115,22 +126,19 @@ class Content
     }
 
     /**
-     * Set title
+     * @param  string  $title
      *
-     * @param string $title
-     * @return Content
+     * @return self
      */
     public function setTitle($title)
     {
         $this->title = $title;
-    
+
         return $this;
     }
 
     /**
-     * Get title
-     *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -138,22 +146,21 @@ class Content
     }
 
     /**
-     * Set description
+     * @param  string  $description
      *
-     * @param string $description
-     * @return Content
+     * @return self
      */
     public function setDescription($description)
     {
         $this->description = $description;
-    
+
         return $this;
     }
 
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -163,20 +170,20 @@ class Content
     /**
      * Set body
      *
-     * @param string $body
-     * @return Content
+     * @param  string  $body
+     * @return self
      */
     public function setBody($body)
     {
         $this->body = $body;
-    
+
         return $this;
     }
 
     /**
      * Get body
      *
-     * @return string 
+     * @return string
      */
     public function getBody()
     {
@@ -184,22 +191,19 @@ class Content
     }
 
     /**
-     * Set type
+     * @param  string  $type
      *
-     * @param string $type
-     * @return Content
+     * @return self
      */
     public function setType($type)
     {
         $this->type = $type;
-    
+
         return $this;
     }
 
     /**
-     * Get type
-     *
-     * @return string 
+     * @return string
      */
     public function getType()
     {
@@ -207,28 +211,26 @@ class Content
     }
 
     /**
-     * Set absolutePathFlag
+     * @param  boolean $absolutePathFlag
      *
-     * @param boolean $absolutePathFlag
-     * @return Content
+     * @return self
      */
     public function setAbsolutePathFlag($absolutePathFlag)
     {
         $this->absolutePathFlag = $absolutePathFlag;
-    
+
         return $this;
     }
 
     /**
      * Get absolutePathFlag
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getAbsolutePathFlag()
     {
         return $this->absolutePathFlag;
     }
-
 
     /**
      * {@inheritdoc}
@@ -255,7 +257,7 @@ class Content
     {
         $this->children = $children;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -311,4 +313,23 @@ class Content
         return $this->parents;
     }
 
+    /**
+     * @return Group
+     */
+    public function getGroup()
+    {
+        return $this->group;
+    }
+
+    /**
+     * @param Group $group
+     *
+     * @return self
+     */
+    public function setGroup(Group $group)
+    {
+        $this->group = $group;
+
+        return $this;
+    }
 }

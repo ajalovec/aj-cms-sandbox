@@ -74,25 +74,6 @@ class LoadPageData extends BaseFixture implements OrderedFixtureInterface
     }
 
     
-    public function createBlock($type, array $data)
-    {
-        $blockManager = $this->getBlockManager();
-        $blockInteractor = $this->getBlockInteractor();
-
-        if('container' === $type) {
-            $block = $blockInteractor->createNewContainer(array(
-                'enabled' => true,
-                'page' => $data['page'] ?: null,
-                'code' => $data['code'] ?: 'content',
-            ));
-        }
-        else {
-            $block = $blockManager->create();
-        }
-
-        return $block;
-    }
-
     
     public function createGlobalPage(SiteInterface $site)
     {
@@ -176,6 +157,37 @@ FOOTER
         $pageManager->save($global);
     }
 
+
+    public function createContainerBlock($code, $page)
+    {
+        $blockManager = $this->getBlockManager();
+        $blockInteractor = $this->getBlockInteractor();
+
+        $container = $blockInteractor->createNewContainer(array(
+            'enabled' => true,
+            'page' => $page,
+            'code' => $code,
+        ));
+        $container->setName($code);
+
+        $page->addBlocks($container);
+        $blockManager->save($container);
+
+        return $container;
+    }
+
+    public function createBlock($type, $container)
+    {
+        $blockManager = $this->getBlockManager();
+        $blockInteractor = $this->getBlockInteractor();
+        $block = $blockManager->create();
+        $block->setType($type);
+        $block->setEnabled(true);
+        $container->addChildren($block);
+
+        return $block;
+    }
+    
     /**
      * @param SiteInterface $site
      */
@@ -201,40 +213,11 @@ FOOTER
         $pageManager->save($homepage);
 
         // CREATE A HEADER BLOCK
-        $homepage->addBlocks($content = $blockInteractor->createNewContainer(array(
-            'enabled' => true,
-            'page' => $homepage,
-            'code' => 'content',
-        )));
+        $content = $this->createContainerBlock('content', $homepage);
+        $content_left = $this->createContainerBlock('content_left', $homepage);
+        
 
-        $content->setName('content');
-
-        $blockManager->save($content);
-
-        // add a block text
-        $content->addChildren($text = $blockManager->create());
-        $text->setType('aj_template_component.block.service.text_block');
-        $text->setSetting('content', <<<CONTENT
-<h1>Welcome</h1>
-
-<p>
-    This page is a demo of the Sonata Sandbox available on <a href="https://github.com/sonata-project/sandbox">github</a>.
-    This demo try to be interactive so you will be able to found out the different features provided by the Sonata's Bundle.
-</p>
-
-<p>
-    First this page and all the other pages are served by the <code>SonataPageBundle</code>, a page is composed by different
-    blocks. A block is linked to a service. For instance the current gallery is served by a
-    <a href="https://github.com/sonata-project/SonataMediaBundle/blob/master/Block/GalleryBlockService.php">Block service</a>
-    provided by the <code>SonataMediaBundle</code>.
-</p>
-CONTENT
-);
-        $text->setPosition(1);
-        $text->setEnabled(true);
-        $text->setPage($homepage);
-
-        // add a gallery
+ /*       // add a gallery
         $content->addChildren($gallery = $blockManager->create());
         $gallery->setType('sonata.media.block.gallery');
         $gallery->setSetting('galleryId', $this->getReference('gallery-A-Banka')->getId());
@@ -244,26 +227,12 @@ CONTENT
         $gallery->setPosition(2);
         $gallery->setEnabled(true);
         $gallery->setPage($homepage);
-
-        $content->addChildren($text = $blockManager->create());
-        $text->setType('aj_template_component.block.service.text_block');
-
+*/
+        
+        $text = $this->createBlock('acme_content.block.service.content', $content_left);
         $text->setPosition(3);
-        $text->setEnabled(true);
-        $text->setSetting('content', <<<CONTENT
-<h3>Sonata's bundles</h3>
+        $text->setSetting('contentId', 1);
 
-<p>
-    Some bundles does not have direct visual representation as they provide services. However, others does have
-    a lot to show :
-
-    <ul>
-        <li><a href="/admin/dashboard">Admin (SonataAdminBundle)</a></li>
-        <li><a href="/blog">Blog (SonataNewsBundle)</a></li>
-    </ul>
-</p>
-CONTENT
-);
 
         $pageManager->save($homepage);
     }
