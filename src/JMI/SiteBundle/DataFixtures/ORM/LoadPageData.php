@@ -48,7 +48,7 @@ class LoadPageData extends BaseFixture implements OrderedFixtureInterface
         $this->truncateEntity();
         
         $site = $this->createSite();
-        $this->createGlobalPage($site);
+        //$this->createGlobalPage($site);
         $this->createHomePage($site);
         //$this->createBlogIndex($site);
         //$this->createGalleryIndex($site);
@@ -156,35 +156,48 @@ FOOTER
 
         $pageManager->save($global);
     }
+    const NAMESPACE_DELIMITER = ":";
 
-
-    public function createContainerBlock($code, $page)
+    public function createContainerBlock($namespace, $name = null)
     {
-        $blockManager = $this->getBlockManager();
-        $blockInteractor = $this->getBlockInteractor();
+        list($pageName, $containerName) = explode(self::NAMESPACE_DELIMITER, $namespace, 2);
 
-        $container = $blockInteractor->createNewContainer(array(
-            'enabled' => true,
-            'page' => $page,
-            'code' => $code,
+        $page = $this->getReference($pageName);
+        
+        $container = $this->getBlockInteractor()->createNewContainer(array(
+            'enabled'   => true,
+            'page'      => $page,
+            'code'      => $containerName,
         ));
-        $container->setName($code);
+        $container->setName($name ?: $containerName);
 
         $page->addBlocks($container);
-        $blockManager->save($container);
+        $this->getBlockManager()->save($container);
+
+        $this->addReference($namespace, $container);
 
         return $container;
     }
+    protected $currentPage = null;
 
-    public function createBlock($type, $container)
+    public function createBlock($namespace, $type, array $settings = array())
     {
-        $blockManager = $this->getBlockManager();
-        $blockInteractor = $this->getBlockInteractor();
-        $block = $blockManager->create();
-        $block->setType($type);
+        $strpos = strrpos($namespace, self::NAMESPACE_DELIMITER);
+        $containerName  = substr($namespace, 0, $strpos);
+        $blockName      = substr($namespace, $strpos+1);
+
+        $block = $this->getBlockManager()->create();
         $block->setEnabled(true);
+        $block->setType($type);
+        $block->setName($blockName);
+        $block->setSettings($settings);
+        //$block->setPosition($data['position']);
+        
+        $container = $this->getReference($containerName);
         $container->addChildren($block);
 
+        $this->addReference($namespace, $block);
+        
         return $block;
     }
     
@@ -194,12 +207,9 @@ FOOTER
     public function createHomePage(SiteInterface $site)
     {
         $pageManager = $this->getPageManager();
-        $blockManager = $this->getBlockManager();
-        $blockInteractor = $this->getBlockInteractor();
 
-        $faker = $this->getFaker();
 
-        $this->addReference('page-homepage', $homepage = $pageManager->create());
+        $this->addReference('homepage', $homepage = $pageManager->create());
         $homepage->setSlug('/');
         $homepage->setUrl('/');
         $homepage->setName('homepage');
@@ -210,29 +220,28 @@ FOOTER
         $homepage->setRouteName(PageInterface::PAGE_ROUTE_CMS_NAME);
         $homepage->setSite($site);
 
-        $pageManager->save($homepage);
 
-        // CREATE A HEADER BLOCK
-        $content = $this->createContainerBlock('content', $homepage);
-        $content_left = $this->createContainerBlock('content_left', $homepage);
+        // CONTAINERS
+        $this->createContainerBlock('homepage:content');
+        $this->createContainerBlock('homepage:content_left');
+        
+        // BLOCKS
+        $gallery = $this->createBlock("homepage:content:galerija", 'sonata.media.block.gallery', array(            
+            'galleryId' => 1, //$this->getReference('gallery-A-Banka')->getId(),
+            'title'     => "A-Banka", //$this->getReference('gallery-A-Banka')->getName(),
+            'context'   => 'default',
+            'format'    => 'big',
+        ));
+        $gallery->setPosition(1);
         
 
- /*       // add a gallery
-        $content->addChildren($gallery = $blockManager->create());
-        $gallery->setType('sonata.media.block.gallery');
-        $gallery->setSetting('galleryId', $this->getReference('gallery-A-Banka')->getId());
-        $gallery->setSetting('title', $faker->sentence(4));
-        $gallery->setSetting('context', 'default');
-        $gallery->setSetting('format', 'big');
-        $gallery->setPosition(2);
-        $gallery->setEnabled(true);
-        $gallery->setPage($homepage);
-*/
-        
-        $text = $this->createBlock('acme_content.block.service.content', $content_left);
-        $text->setPosition(3);
-        $text->setSetting('contentId', 1);
+        $text = $this->createBlock('homepage:content_left:text 1', 'acme_content.block.service.content', array(
+            'contentId' => 1,
+        ));
+        $text->setPosition(2);
 
+
+        
 
         $pageManager->save($homepage);
     }
