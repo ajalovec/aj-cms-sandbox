@@ -1,4 +1,8 @@
 
-acme_services_homepage:
+acme_services_index:
     pattern:  /storitve
     defaults: { _controller: AcmeServicesBundle:Default:index }
+
+acme_services_view:
+    pattern:  /storitve/view/{name}
+    defaults: { _controller: AcmeServicesBundle:Default:view }

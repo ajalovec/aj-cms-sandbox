@@ -1,5 +1,25 @@
 <?php
+function extractKey(& $array, $key)
+{
+    if(isset($array[$key])) {
+        $var = $array[$key];
+        unset($array[$key]);
+    }
+    return $var;
+}
+function splitNamespace($string, $limit = 1)
+{
+    $delimiter = ':';
+    $explode = function($_delimiter, $_string, $_limit = null) {
+        return (null === $_limit ? explode($_delimiter, $_string) : explode($_delimiter, $_string, ++$_limit));
+    };
 
+    if((int) $limit < 0) {
+        return (array_map('strrev', $explode($delimiter, strrev($string), abs($limit))));
+    }
+
+    return $explode($delimiter, $string, $limit);
+}
 
 
 $bundles2 = array(
@@ -24,8 +44,8 @@ $bundles = array(
     "new JMS\SecurityExtraBundle\JMSSecurityExtraBundle()",
 );
 
-$a = array_merge($bundles, $bundles2);
-var_dump($a);
-$b = "sonata.page.sdsa.sadas";
-$c = ltrim($b, "sonata.");
-var_dump($c);
+$var = extractKey($bundles, 4);
+
+//var_dump(splitNamespace(':', "page:container:content"));
+var_dump(splitNamespace("homepage:content:container:text1", -2));
+//var_dump($bundles);
